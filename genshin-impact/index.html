@@ -5,10 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/global.css">
+    <style>
+        div {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            background-color: black;
+        }
+        div * {
+            font-family: monospace;
+        }
+        div p           { color: rgb(000,000,000); background-color: rgb(255,255,255, 1); }
+        div p.common    { color: rgb(064,064,064); background-color: rgb(128,128,128, 1); }
+        div p.un-common { color: rgb(000,128,000); background-color: rgb(000,255,000, 1); }
+        div p.rare      { color: rgb(000,128,128); background-color: rgb(000,255,255, 1); }
+        div p.epic      { color: rgb(128,000,128); background-color: rgb(255,000,255, 1); }
+        div p.legendary { color: rgb(128,128,000); background-color: rgb(255,255,000, 1); }
+        div p span { color: transparent;}
+    </style>
 </head>
 <body>
     <header></header>
-    <main></main>
+    <main>
+        <div>
+
+        </div>
+    </main>
     <footer></footer>
     <script src="../script/dom_elements.js"></script>
     <script type="module" src="./database/main.js"></script>
