@@ -7,6 +7,7 @@ import { Inventory } from "./misc.js";
 function ToPreHTML(total_mats){
     for (const mat of total_mats) {
         const p = document.createElement("p");
+        p.title = mat.dest;
         switch(Items.get(mat.item).get_rarity()){
             case 1: p.setAttribute(`class`, `common`); break;
             case 2: p.setAttribute(`class`, `un-common`); break;
@@ -14,7 +15,7 @@ function ToPreHTML(total_mats){
             case 4: p.setAttribute(`class`, `epic`); break;
             case 5: p.setAttribute(`class`, `legendary`); break;
         }
-        let innerHTML = `<span>${"-".repeat(50-mat.item.length)}</span>${mat.item} x${mat.amount.toLocaleString("es-ES")}\n`;
+        let innerHTML = `<span>${mat.item}</span><span>x${mat.amount.toLocaleString("es-ES")}</span>\n`;
         p.innerHTML += innerHTML;
         document.querySelector("main div").appendChild(p)
     }
@@ -24,7 +25,15 @@ ItemsToJson();
 ElementsToJson();
 CharactersToJson();
 LangsToJson();
-
+Characters.AMBER.get_data().level.min = 1;
+Characters.AMBER.get_data().level.max = 90;
+Characters.AMBER.get_data().elements[0].talents.normal_attack.min = 1;
+Characters.AMBER.get_data().elements[0].talents.normal_attack.max = 10;
+Characters.AMBER.get_data().elements[0].talents.elemental_skill.min = 1;
+Characters.AMBER.get_data().elements[0].talents.elemental_skill.max = 10;
+Characters.AMBER.get_data().elements[0].talents.elemental_burst.min = 1;
+Characters.AMBER.get_data().elements[0].talents.elemental_burst.max = 10;
 ToPreHTML(Characters.get_materials());
+// ToPreHTML(Characters.get_materials());
 console.log(MISSING_ITEMS)
 // GeneratePreHTML();

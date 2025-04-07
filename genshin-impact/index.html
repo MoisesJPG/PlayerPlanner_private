@@ -17,13 +17,24 @@
         div * {
             font-family: monospace;
         }
-        div p           { color: rgb(000,000,000); background-color: rgb(255,255,255, 1); }
+        div p           {
+            display: flex;
+            gap: 8px; 
+            color: rgb(000,000,000); background-color: rgb(255,255,255, 1); 
+        }
         div p.common    { color: rgb(064,064,064); background-color: rgb(128,128,128, 1); }
         div p.un-common { color: rgb(000,128,000); background-color: rgb(000,255,000, 1); }
         div p.rare      { color: rgb(000,128,128); background-color: rgb(000,255,255, 1); }
         div p.epic      { color: rgb(128,000,128); background-color: rgb(255,000,255, 1); }
         div p.legendary { color: rgb(128,128,000); background-color: rgb(255,255,000, 1); }
-        div p span { color: transparent;}
+        div p span {
+            display: block;
+            width: calc((100% - 8px) / 2);
+            flex: 0 0 auto;
+            overflow: hidden;
+        }
+        div p span:first-child { text-align: end;}
+        div p span:last-child { text-align: start;}
     </style>
 </head>
 <body>

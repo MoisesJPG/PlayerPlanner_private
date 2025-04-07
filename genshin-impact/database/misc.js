@@ -10,6 +10,10 @@ export class InventoryMat {
      */
     amount;
     /**
+     * @type {string[]}
+     */
+    dest = [];
+    /**
      * @param {Item} item 
      */
     set_item(item){
@@ -29,20 +33,29 @@ export class Inventory {
      * @param   {InventoryMat[]} new_mats
      * @returns {InventoryMat[]}
      */
-    static merge_materials(now_mats, new_mats){
-        // let start_ms = performance.now()
+    static merge_materials(now_mats, new_mats) {
         const map = new Map();
-        if(now_mats.length > 0){
-            for (const mat of now_mats) {
-                map.set(mat.item, (map.get(mat.item) || 0) + mat.amount);
+    
+        // Combinar materiales por item
+        for (const mat of [...now_mats, ...new_mats]) {
+            if(!("dest" in mat)) { mat.dest = []; }
+            const key = mat.item;
+            if (map.has(key)) {
+                const existing = map.get(key);
+                existing.amount += mat.amount;
+                // Combinar dest sin duplicados
+                existing.dest = Array.from(new Set([...existing.dest, ...mat.dest]));
+            } else {
+                // Clonar el objeto para evitar mutaciones externas
+                map.set(key, { item: mat.item, amount: mat.amount, dest: [...mat.dest] });
             }
         }
-        for (const mat of new_mats) {
-            map.set(mat.item, (map.get(mat.item) || 0) + mat.amount);
-        }
-        let order_map = Array.from(map, ([item, amount]) => ({ item, amount })).sort((a, b) => Items.get(a.item).get_id() - Items.get(b.item).get_id());
-        // let end_ms = performance.now()
-        // console.log("start ms:",start_ms, "end ms:", end_ms, "total ms:", end_ms - start_ms)
-        return order_map;
+    
+        // Ordenar por ID del item
+        const ordered = Array.from(map.values()).sort(
+            (a, b) => Items.get(a.item).get_id() - Items.get(b.item).get_id()
+        );
+    
+        return ordered;
     }
 }

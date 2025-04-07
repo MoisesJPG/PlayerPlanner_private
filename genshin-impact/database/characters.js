@@ -123,101 +123,101 @@ class CharacterDataElement {
     talents = new CharacterDataElementTalents();
 }
 class CharacterDataLevelMaterials {
-    "2"   = [{ item: Items.EXP.get_base_name(), amount:   1000 }, { item: Items.MORA.get_base_name(), amount:    200 }];
-    "3"   = [{ item: Items.EXP.get_base_name(), amount:   1325 }, { item: Items.MORA.get_base_name(), amount:    265 }];
-    "4"   = [{ item: Items.EXP.get_base_name(), amount:   1700 }, { item: Items.MORA.get_base_name(), amount:    340 }];
-    "5"   = [{ item: Items.EXP.get_base_name(), amount:   2150 }, { item: Items.MORA.get_base_name(), amount:    430 }];
-    "6"   = [{ item: Items.EXP.get_base_name(), amount:   2625 }, { item: Items.MORA.get_base_name(), amount:    525 }];
-    "7"   = [{ item: Items.EXP.get_base_name(), amount:   3150 }, { item: Items.MORA.get_base_name(), amount:    630 }];
-    "8"   = [{ item: Items.EXP.get_base_name(), amount:   3725 }, { item: Items.MORA.get_base_name(), amount:    745 }];
-    "9"   = [{ item: Items.EXP.get_base_name(), amount:   4350 }, { item: Items.MORA.get_base_name(), amount:    870 }];
-    "10"  = [{ item: Items.EXP.get_base_name(), amount:   5000 }, { item: Items.MORA.get_base_name(), amount:   1000 }];
-    "11"  = [{ item: Items.EXP.get_base_name(), amount:   5700 }, { item: Items.MORA.get_base_name(), amount:   1140 }];
-    "12"  = [{ item: Items.EXP.get_base_name(), amount:   6450 }, { item: Items.MORA.get_base_name(), amount:   1290 }];
-    "13"  = [{ item: Items.EXP.get_base_name(), amount:   7225 }, { item: Items.MORA.get_base_name(), amount:   1445 }];
-    "14"  = [{ item: Items.EXP.get_base_name(), amount:   8050 }, { item: Items.MORA.get_base_name(), amount:   1610 }];
-    "15"  = [{ item: Items.EXP.get_base_name(), amount:   8925 }, { item: Items.MORA.get_base_name(), amount:   1785 }];
-    "16"  = [{ item: Items.EXP.get_base_name(), amount:   9825 }, { item: Items.MORA.get_base_name(), amount:   1965 }];
-    "17"  = [{ item: Items.EXP.get_base_name(), amount:  10750 }, { item: Items.MORA.get_base_name(), amount:   2150 }];
-    "18"  = [{ item: Items.EXP.get_base_name(), amount:  11725 }, { item: Items.MORA.get_base_name(), amount:   2345 }];
-    "19"  = [{ item: Items.EXP.get_base_name(), amount:  12725 }, { item: Items.MORA.get_base_name(), amount:   2545 }];
-    "20"  = [{ item: Items.EXP.get_base_name(), amount:  13775 }, { item: Items.MORA.get_base_name(), amount:   2755 }];
+    "2"   = [{ item: Items.EXP.get_base_name(), amount:   1000 }];
+    "3"   = [{ item: Items.EXP.get_base_name(), amount:   1325 }];
+    "4"   = [{ item: Items.EXP.get_base_name(), amount:   1700 }];
+    "5"   = [{ item: Items.EXP.get_base_name(), amount:   2150 }];
+    "6"   = [{ item: Items.EXP.get_base_name(), amount:   2625 }];
+    "7"   = [{ item: Items.EXP.get_base_name(), amount:   3150 }];
+    "8"   = [{ item: Items.EXP.get_base_name(), amount:   3725 }];
+    "9"   = [{ item: Items.EXP.get_base_name(), amount:   4350 }];
+    "10"  = [{ item: Items.EXP.get_base_name(), amount:   5000 }];
+    "11"  = [{ item: Items.EXP.get_base_name(), amount:   5700 }];
+    "12"  = [{ item: Items.EXP.get_base_name(), amount:   6450 }];
+    "13"  = [{ item: Items.EXP.get_base_name(), amount:   7225 }];
+    "14"  = [{ item: Items.EXP.get_base_name(), amount:   8050 }];
+    "15"  = [{ item: Items.EXP.get_base_name(), amount:   8925 }];
+    "16"  = [{ item: Items.EXP.get_base_name(), amount:   9825 }];
+    "17"  = [{ item: Items.EXP.get_base_name(), amount:  10750 }];
+    "18"  = [{ item: Items.EXP.get_base_name(), amount:  11725 }];
+    "19"  = [{ item: Items.EXP.get_base_name(), amount:  12725 }];
+    "20"  = [{ item: Items.EXP.get_base_name(), amount:  13775 }];
     "20+" = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:  20000 }];
-    "21"  = [{ item: Items.EXP.get_base_name(), amount:  14875 }, { item: Items.MORA.get_base_name(), amount:   2975 }];
-    "22"  = [{ item: Items.EXP.get_base_name(), amount:  16800 }, { item: Items.MORA.get_base_name(), amount:   3360 }];
-    "23"  = [{ item: Items.EXP.get_base_name(), amount:  18000 }, { item: Items.MORA.get_base_name(), amount:   3600 }];
-    "24"  = [{ item: Items.EXP.get_base_name(), amount:  19250 }, { item: Items.MORA.get_base_name(), amount:   3850 }];
-    "25"  = [{ item: Items.EXP.get_base_name(), amount:  20550 }, { item: Items.MORA.get_base_name(), amount:   4110 }];
-    "26"  = [{ item: Items.EXP.get_base_name(), amount:  21875 }, { item: Items.MORA.get_base_name(), amount:   4375 }];
-    "27"  = [{ item: Items.EXP.get_base_name(), amount:  23250 }, { item: Items.MORA.get_base_name(), amount:   4650 }];
-    "28"  = [{ item: Items.EXP.get_base_name(), amount:  24650 }, { item: Items.MORA.get_base_name(), amount:   4930 }];
-    "29"  = [{ item: Items.EXP.get_base_name(), amount:  26100 }, { item: Items.MORA.get_base_name(), amount:   5220 }];
-    "30"  = [{ item: Items.EXP.get_base_name(), amount:  27575 }, { item: Items.MORA.get_base_name(), amount:   5515 }];
-    "31"  = [{ item: Items.EXP.get_base_name(), amount:  29100 }, { item: Items.MORA.get_base_name(), amount:   5820 }];
-    "32"  = [{ item: Items.EXP.get_base_name(), amount:  30650 }, { item: Items.MORA.get_base_name(), amount:   6130 }];
-    "33"  = [{ item: Items.EXP.get_base_name(), amount:  32250 }, { item: Items.MORA.get_base_name(), amount:   6450 }];
-    "34"  = [{ item: Items.EXP.get_base_name(), amount:  33875 }, { item: Items.MORA.get_base_name(), amount:   6775 }];
-    "35"  = [{ item: Items.EXP.get_base_name(), amount:  35550 }, { item: Items.MORA.get_base_name(), amount:   7110 }];
-    "36"  = [{ item: Items.EXP.get_base_name(), amount:  37250 }, { item: Items.MORA.get_base_name(), amount:   7450 }];
-    "37"  = [{ item: Items.EXP.get_base_name(), amount:  38975 }, { item: Items.MORA.get_base_name(), amount:   7795 }];
-    "38"  = [{ item: Items.EXP.get_base_name(), amount:  40750 }, { item: Items.MORA.get_base_name(), amount:   8150 }];
-    "39"  = [{ item: Items.EXP.get_base_name(), amount:  42575 }, { item: Items.MORA.get_base_name(), amount:   8515 }];
-    "40"  = [{ item: Items.EXP.get_base_name(), amount:  44425 }, { item: Items.MORA.get_base_name(), amount:   8885 }];
+    "21"  = [{ item: Items.EXP.get_base_name(), amount:  14875 }];
+    "22"  = [{ item: Items.EXP.get_base_name(), amount:  16800 }];
+    "23"  = [{ item: Items.EXP.get_base_name(), amount:  18000 }];
+    "24"  = [{ item: Items.EXP.get_base_name(), amount:  19250 }];
+    "25"  = [{ item: Items.EXP.get_base_name(), amount:  20550 }];
+    "26"  = [{ item: Items.EXP.get_base_name(), amount:  21875 }];
+    "27"  = [{ item: Items.EXP.get_base_name(), amount:  23250 }];
+    "28"  = [{ item: Items.EXP.get_base_name(), amount:  24650 }];
+    "29"  = [{ item: Items.EXP.get_base_name(), amount:  26100 }];
+    "30"  = [{ item: Items.EXP.get_base_name(), amount:  27575 }];
+    "31"  = [{ item: Items.EXP.get_base_name(), amount:  29100 }];
+    "32"  = [{ item: Items.EXP.get_base_name(), amount:  30650 }];
+    "33"  = [{ item: Items.EXP.get_base_name(), amount:  32250 }];
+    "34"  = [{ item: Items.EXP.get_base_name(), amount:  33875 }];
+    "35"  = [{ item: Items.EXP.get_base_name(), amount:  35550 }];
+    "36"  = [{ item: Items.EXP.get_base_name(), amount:  37250 }];
+    "37"  = [{ item: Items.EXP.get_base_name(), amount:  38975 }];
+    "38"  = [{ item: Items.EXP.get_base_name(), amount:  40750 }];
+    "39"  = [{ item: Items.EXP.get_base_name(), amount:  42575 }];
+    "40"  = [{ item: Items.EXP.get_base_name(), amount:  44425 }];
     "40+" = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:  40000 }];
-    "41"  = [{ item: Items.EXP.get_base_name(), amount:  46300 }, { item: Items.MORA.get_base_name(), amount:   9260 }];
-    "42"  = [{ item: Items.EXP.get_base_name(), amount:  50625 }, { item: Items.MORA.get_base_name(), amount:  10125 }];
-    "43"  = [{ item: Items.EXP.get_base_name(), amount:  52700 }, { item: Items.MORA.get_base_name(), amount:  10540 }];
-    "44"  = [{ item: Items.EXP.get_base_name(), amount:  54775 }, { item: Items.MORA.get_base_name(), amount:  10955 }];
-    "45"  = [{ item: Items.EXP.get_base_name(), amount:  56900 }, { item: Items.MORA.get_base_name(), amount:  11380 }];
-    "46"  = [{ item: Items.EXP.get_base_name(), amount:  59075 }, { item: Items.MORA.get_base_name(), amount:  11815 }];
-    "47"  = [{ item: Items.EXP.get_base_name(), amount:  61275 }, { item: Items.MORA.get_base_name(), amount:  12255 }];
-    "48"  = [{ item: Items.EXP.get_base_name(), amount:  63525 }, { item: Items.MORA.get_base_name(), amount:  12705 }];
-    "49"  = [{ item: Items.EXP.get_base_name(), amount:  65800 }, { item: Items.MORA.get_base_name(), amount:  13160 }];
-    "50"  = [{ item: Items.EXP.get_base_name(), amount:  68125 }, { item: Items.MORA.get_base_name(), amount:  13625 }];
+    "41"  = [{ item: Items.EXP.get_base_name(), amount:  46300 }];
+    "42"  = [{ item: Items.EXP.get_base_name(), amount:  50625 }];
+    "43"  = [{ item: Items.EXP.get_base_name(), amount:  52700 }];
+    "44"  = [{ item: Items.EXP.get_base_name(), amount:  54775 }];
+    "45"  = [{ item: Items.EXP.get_base_name(), amount:  56900 }];
+    "46"  = [{ item: Items.EXP.get_base_name(), amount:  59075 }];
+    "47"  = [{ item: Items.EXP.get_base_name(), amount:  61275 }];
+    "48"  = [{ item: Items.EXP.get_base_name(), amount:  63525 }];
+    "49"  = [{ item: Items.EXP.get_base_name(), amount:  65800 }];
+    "50"  = [{ item: Items.EXP.get_base_name(), amount:  68125 }];
     "50+" = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:  60000 }];
-    "51"  = [{ item: Items.EXP.get_base_name(), amount:  70475 }, { item: Items.MORA.get_base_name(), amount:  14095 }];
-    "52"  = [{ item: Items.EXP.get_base_name(), amount:  76500 }, { item: Items.MORA.get_base_name(), amount:  15300 }];
-    "53"  = [{ item: Items.EXP.get_base_name(), amount:  79050 }, { item: Items.MORA.get_base_name(), amount:  15810 }];
-    "54"  = [{ item: Items.EXP.get_base_name(), amount:  81650 }, { item: Items.MORA.get_base_name(), amount:  16330 }];
-    "55"  = [{ item: Items.EXP.get_base_name(), amount:  84275 }, { item: Items.MORA.get_base_name(), amount:  16855 }];
-    "56"  = [{ item: Items.EXP.get_base_name(), amount:  86950 }, { item: Items.MORA.get_base_name(), amount:  17390 }];
-    "57"  = [{ item: Items.EXP.get_base_name(), amount:  89650 }, { item: Items.MORA.get_base_name(), amount:  17930 }];
-    "58"  = [{ item: Items.EXP.get_base_name(), amount:  92400 }, { item: Items.MORA.get_base_name(), amount:  18480 }];
-    "59"  = [{ item: Items.EXP.get_base_name(), amount:  95175 }, { item: Items.MORA.get_base_name(), amount:  19035 }];
-    "60"  = [{ item: Items.EXP.get_base_name(), amount:  98000 }, { item: Items.MORA.get_base_name(), amount:  19600 }];
+    "51"  = [{ item: Items.EXP.get_base_name(), amount:  70475 }];
+    "52"  = [{ item: Items.EXP.get_base_name(), amount:  76500 }];
+    "53"  = [{ item: Items.EXP.get_base_name(), amount:  79050 }];
+    "54"  = [{ item: Items.EXP.get_base_name(), amount:  81650 }];
+    "55"  = [{ item: Items.EXP.get_base_name(), amount:  84275 }];
+    "56"  = [{ item: Items.EXP.get_base_name(), amount:  86950 }];
+    "57"  = [{ item: Items.EXP.get_base_name(), amount:  89650 }];
+    "58"  = [{ item: Items.EXP.get_base_name(), amount:  92400 }];
+    "59"  = [{ item: Items.EXP.get_base_name(), amount:  95175 }];
+    "60"  = [{ item: Items.EXP.get_base_name(), amount:  98000 }];
     "60+" = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:  80000 }];
-    "61"  = [{ item: Items.EXP.get_base_name(), amount: 100875 }, { item: Items.MORA.get_base_name(), amount:  20175 }];
-    "62"  = [{ item: Items.EXP.get_base_name(), amount: 108950 }, { item: Items.MORA.get_base_name(), amount:  21790 }];
-    "63"  = [{ item: Items.EXP.get_base_name(), amount: 112050 }, { item: Items.MORA.get_base_name(), amount:  22410 }];
-    "64"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "65"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "66"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "67"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "68"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "69"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "70"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
+    "61"  = [{ item: Items.EXP.get_base_name(), amount: 100875 }];
+    "62"  = [{ item: Items.EXP.get_base_name(), amount: 108950 }];
+    "63"  = [{ item: Items.EXP.get_base_name(), amount: 112050 }];
+    "64"  = [{ item: Items.EXP.get_base_name(), amount: 115175 }];
+    "65"  = [{ item: Items.EXP.get_base_name(), amount: 118325 }];
+    "66"  = [{ item: Items.EXP.get_base_name(), amount: 121525 }];
+    "67"  = [{ item: Items.EXP.get_base_name(), amount: 124775 }];
+    "68"  = [{ item: Items.EXP.get_base_name(), amount: 128075 }];
+    "69"  = [{ item: Items.EXP.get_base_name(), amount: 131400 }];
+    "70"  = [{ item: Items.EXP.get_base_name(), amount: 134775 }];
     "70+" = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount: 100000 }];
-    "71"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "72"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "73"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "74"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "75"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "76"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "77"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "78"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "79"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "80"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
+    "71"  = [{ item: Items.EXP.get_base_name(), amount: 138175 }];
+    "72"  = [{ item: Items.EXP.get_base_name(), amount: 148700 }];
+    "73"  = [{ item: Items.EXP.get_base_name(), amount: 152375 }];
+    "74"  = [{ item: Items.EXP.get_base_name(), amount: 156075 }];
+    "75"  = [{ item: Items.EXP.get_base_name(), amount: 159825 }];
+    "76"  = [{ item: Items.EXP.get_base_name(), amount: 163600 }];
+    "77"  = [{ item: Items.EXP.get_base_name(), amount: 167425 }];
+    "78"  = [{ item: Items.EXP.get_base_name(), amount: 171300 }];
+    "79"  = [{ item: Items.EXP.get_base_name(), amount: 175225 }];
+    "80"  = [{ item: Items.EXP.get_base_name(), amount: 179175 }];
     "80+" = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount: 120000 }];
-    "81"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "82"  = [{ item: Items.EXP.get_base_name(), amount: 216225 }, { item: Items.MORA.get_base_name(), amount:  43245 }];
-    "83"  = [{ item: Items.EXP.get_base_name(), amount: 243025 }, { item: Items.MORA.get_base_name(), amount:  48605 }];
-    "84"  = [{ item: Items.EXP.get_base_name(), amount: 273100 }, { item: Items.MORA.get_base_name(), amount:  54620 }];
-    "85"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "86"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "87"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "88"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "89"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
-    "90"  = [{ item: Items.EXP.get_base_name(), amount:      0 }, { item: Items.MORA.get_base_name(), amount:      0 }];
+    "81"  = [{ item: Items.EXP.get_base_name(), amount: 183175 }];
+    "82"  = [{ item: Items.EXP.get_base_name(), amount: 216225 }];
+    "83"  = [{ item: Items.EXP.get_base_name(), amount: 243025 }];
+    "84"  = [{ item: Items.EXP.get_base_name(), amount: 273100 }];
+    "85"  = [{ item: Items.EXP.get_base_name(), amount: 306800 }];
+    "86"  = [{ item: Items.EXP.get_base_name(), amount: 344600 }];
+    "87"  = [{ item: Items.EXP.get_base_name(), amount: 386950 }];
+    "88"  = [{ item: Items.EXP.get_base_name(), amount: 434425 }];
+    "89"  = [{ item: Items.EXP.get_base_name(), amount: 487625 }];
+    "90"  = [{ item: Items.EXP.get_base_name(), amount: 547200 }];
 }
 class CharacterDataLevel {
     /**
@@ -342,6 +342,7 @@ export class Character {
             if(mat === undefined) continue;
             mat.amount = mat.amount % 20000 > 0 ? mat.amount + 20000 - mat.amount % 20000: mat.amount;
             mats.push({item: Items["HERO'S_WIT"].get_base_name(), amount: mat.amount / 20000 })
+            mats.push({item: Items.MORA.get_base_name(), amount: mat.amount / 20000 * 4000 })
         }
         mats = Inventory.merge_materials([], mats)
         return mats;
@@ -1327,149 +1328,146 @@ export class CharacterList {
             }}
         ]
     });
-    static DILUC              = new Character({ name: "DILUC",              
+    static DILUC              = new Character({ name: "DILUC",              /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.AGNIDUS_AGATE_SLIVER,   amount: 1 },                                             { item: Items.SMALL_LAMP_GRASS, amount:  3 }, { item: Items["RECRUIT'S_INSIGNIA"], amount:  3 }], 
+            "40+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 3 }, { item: Items.EVERFLAME_SEED, amount:  2 }, { item: Items.SMALL_LAMP_GRASS, amount: 10 }, { item: Items["RECRUIT'S_INSIGNIA"], amount: 15 }], 
+            "50+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 6 }, { item: Items.EVERFLAME_SEED, amount:  4 }, { item: Items.SMALL_LAMP_GRASS, amount: 20 }, { item: Items["SEARGENT'S_INSIGNIA"], amount: 12 }], 
+            "60+": [{ item: Items.AGNIDUS_AGATE_CHUNK,    amount: 3 }, { item: Items.EVERFLAME_SEED, amount:  8 }, { item: Items.SMALL_LAMP_GRASS, amount: 30 }, { item: Items["SEARGENT'S_INSIGNIA"], amount: 18 }], 
+            "70+": [{ item: Items.AGNIDUS_AGATE_CHUNK,    amount: 6 }, { item: Items.EVERFLAME_SEED, amount: 12 }, { item: Items.SMALL_LAMP_GRASS, amount: 45 }, { item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }], 
+            "80+": [{ item: Items.AGNIDUS_AGATE_GEMSTONE, amount: 6 }, { item: Items.EVERFLAME_SEED, amount: 20 }, { item: Items.SMALL_LAMP_GRASS, amount: 60 }, { item: Items["LIEUTENANT'S_INSIGNIA"], amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.PYRO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  6 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  4 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  4 }, { item: Items["DVALIN'S_PLUME"], amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  6 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  6 }, { item: Items["DVALIN'S_PLUME"], amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  6 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  4 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  4 }, { item: Items["DVALIN'S_PLUME"], amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  6 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  6 }, { item: Items["DVALIN'S_PLUME"], amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  6 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  4 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  4 }, { item: Items["DVALIN'S_PLUME"], amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  6 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  6 }, { item: Items["DVALIN'S_PLUME"], amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
-    static QIQI               = new Character({ name: "QIQI",               
+    static QIQI               = new Character({ name: "QIQI",               /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.SHIVADA_JADE_SLIVER,   amount: 1 },                                             { item: Items.VIOLETGRASS, amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  3 }], 
+            "40+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 3 }, { item: Items.HOARFROST_CORE, amount:  2 }, { item: Items.VIOLETGRASS, amount: 10 }, { item: Items.DIVINING_SCROLL,        amount: 15 }], 
+            "50+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 6 }, { item: Items.HOARFROST_CORE, amount:  4 }, { item: Items.VIOLETGRASS, amount: 20 }, { item: Items.SEALED_SCROLL,          amount: 12 }], 
+            "60+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 3 }, { item: Items.HOARFROST_CORE, amount:  8 }, { item: Items.VIOLETGRASS, amount: 30 }, { item: Items.SEALED_SCROLL,          amount: 18 }], 
+            "70+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 6 }, { item: Items.HOARFROST_CORE, amount: 12 }, { item: Items.VIOLETGRASS, amount: 45 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }], 
+            "80+": [{ item: Items.SHIVADA_JADE_GEMSTONE, amount: 6 }, { item: Items.HOARFROST_CORE, amount: 20 }, { item: Items.VIOLETGRASS, amount: 60 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.CRYO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
-    static MONA               = new Character({ name: "MONA",               
+    static MONA               = new Character({ name: "MONA",               /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.VARUNADA_LAZURITE_SLIVER,   amount: 1 },                                              { item: Items.PHILANEMO_MUSHROOM, amount:  3 }, { item: Items.WHOPPERFLOWER_NECTAR, amount:  3 }], 
+            "40+": [{ item: Items.VARUNADA_LAZURITE_FRAGMENT, amount: 3 }, { item: Items.CLEANSING_HEART, amount:  2 }, { item: Items.PHILANEMO_MUSHROOM, amount: 10 }, { item: Items.WHOPPERFLOWER_NECTAR, amount: 15 }], 
+            "50+": [{ item: Items.VARUNADA_LAZURITE_FRAGMENT, amount: 6 }, { item: Items.CLEANSING_HEART, amount:  4 }, { item: Items.PHILANEMO_MUSHROOM, amount: 20 }, { item: Items.SHIMMERING_NECTAR,    amount: 12 }], 
+            "60+": [{ item: Items.VARUNADA_LAZURITE_CHUNK,    amount: 3 }, { item: Items.CLEANSING_HEART, amount:  8 }, { item: Items.PHILANEMO_MUSHROOM, amount: 30 }, { item: Items.SHIMMERING_NECTAR,    amount: 18 }], 
+            "70+": [{ item: Items.VARUNADA_LAZURITE_CHUNK,    amount: 9 }, { item: Items.CLEANSING_HEART, amount: 12 }, { item: Items.PHILANEMO_MUSHROOM, amount: 45 }, { item: Items.ENERGY_NECTAR,        amount: 12 }], 
+            "80+": [{ item: Items.VARUNADA_LAZURITE_GEMSTONE, amount: 6 }, { item: Items.CLEANSING_HEART, amount: 20 }, { item: Items.PHILANEMO_MUSHROOM, amount: 60 }, { item: Items.ENERGY_NECTAR,        amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.HYDRO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
     static KEQING             = new Character({ name: "KEQING",             /* FINISHED */
         level: { materials: { 
@@ -1565,158 +1563,155 @@ export class CharacterList {
             }
         }]
     });
-    static KLEE               = new Character({ name: "KLEE",               
+    static KLEE               = new Character({ name: "KLEE",               /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.AGNIDUS_AGATE_SLIVER,   amount: 1 },                                             { item: Items.PHILANEMO_MUSHROOM, amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  3 }], 
+            "40+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 3 }, { item: Items.EVERFLAME_SEED, amount:  2 }, { item: Items.PHILANEMO_MUSHROOM, amount: 10 }, { item: Items.DIVINING_SCROLL,        amount: 15 }], 
+            "50+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 6 }, { item: Items.EVERFLAME_SEED, amount:  4 }, { item: Items.PHILANEMO_MUSHROOM, amount: 20 }, { item: Items.SEALED_SCROLL,          amount: 12 }], 
+            "60+": [{ item: Items.AGNIDUS_AGATE_CHUNK,    amount: 3 }, { item: Items.EVERFLAME_SEED, amount:  8 }, { item: Items.PHILANEMO_MUSHROOM, amount: 30 }, { item: Items.SEALED_SCROLL,          amount: 18 }], 
+            "70+": [{ item: Items.AGNIDUS_AGATE_CHUNK,    amount: 6 }, { item: Items.EVERFLAME_SEED, amount: 12 }, { item: Items.PHILANEMO_MUSHROOM, amount: 45 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }], 
+            "80+": [{ item: Items.AGNIDUS_AGATE_GEMSTONE, amount: 6 }, { item: Items.EVERFLAME_SEED, amount: 20 }, { item: Items.PHILANEMO_MUSHROOM, amount: 60 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.PYRO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.RING_OF_BOREAS, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
-    static DIONA              = new Character({ name: "DIONA",              
+    static DIONA              = new Character({ name: "DIONA",              /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.SHIVADA_JADE_SLIVER,   amount: 1 },                                             { item: Items.CALLA_LILY, amount:  3 }, { item: Items.FIRM_ARROWHEAD,     amount:  3 }], 
+            "40+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 3 }, { item: Items.HOARFROST_CORE, amount:  2 }, { item: Items.CALLA_LILY, amount: 10 }, { item: Items.FIRM_ARROWHEAD,     amount: 15 }], 
+            "50+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 6 }, { item: Items.HOARFROST_CORE, amount:  4 }, { item: Items.CALLA_LILY, amount: 20 }, { item: Items.SHARP_ARROWHEAD,    amount: 12 }], 
+            "60+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 3 }, { item: Items.HOARFROST_CORE, amount:  8 }, { item: Items.CALLA_LILY, amount: 30 }, { item: Items.SHARP_ARROWHEAD,    amount: 18 }], 
+            "70+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 6 }, { item: Items.HOARFROST_CORE, amount: 12 }, { item: Items.CALLA_LILY, amount: 45 }, { item: Items.WATHERED_ARROWHEAD, amount: 12 }], 
+            "80+": [{ item: Items.SHIVADA_JADE_GEMSTONE, amount: 6 }, { item: Items.HOARFROST_CORE, amount: 20 }, { item: Items.CALLA_LILY, amount: 60 }, { item: Items.WATHERED_ARROWHEAD, amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.CRYO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.FIRM_ARROWHEAD,     amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SHARP_ARROWHEAD,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SHARP_ARROWHEAD,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  6 }, {item: Items.SHARP_ARROWHEAD,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  9 }, {item: Items.SHARP_ARROWHEAD,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  4 }, {item: Items.WATHERED_ARROWHEAD, amount:  4 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  6 }, {item: Items.WATHERED_ARROWHEAD, amount:  6 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.WATHERED_ARROWHEAD, amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.WATHERED_ARROWHEAD, amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.FIRM_ARROWHEAD,     amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SHARP_ARROWHEAD,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SHARP_ARROWHEAD,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  6 }, {item: Items.SHARP_ARROWHEAD,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  9 }, {item: Items.SHARP_ARROWHEAD,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  4 }, {item: Items.WATHERED_ARROWHEAD, amount:  4 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  6 }, {item: Items.WATHERED_ARROWHEAD, amount:  6 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.WATHERED_ARROWHEAD, amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.WATHERED_ARROWHEAD, amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.FIRM_ARROWHEAD,     amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SHARP_ARROWHEAD,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SHARP_ARROWHEAD,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  6 }, {item: Items.SHARP_ARROWHEAD,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  9 }, {item: Items.SHARP_ARROWHEAD,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  4 }, {item: Items.WATHERED_ARROWHEAD, amount:  4 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  6 }, {item: Items.WATHERED_ARROWHEAD, amount:  6 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.WATHERED_ARROWHEAD, amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.WATHERED_ARROWHEAD, amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
-    static TARTAGLIA          = new Character({ name: "TARTAGLIA",          
+    static TARTAGLIA          = new Character({ name: "TARTAGLIA",          /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.VARUNADA_LAZURITE_SLIVER,   amount: 1 },                                              { item: Items.STARCONCH, amount:  3 }, { item: Items["RECRUIT'S_INSIGNIA"],    amount:  3 }], 
+            "40+": [{ item: Items.VARUNADA_LAZURITE_FRAGMENT, amount: 3 }, { item: Items.CLEANSING_HEART, amount:  2 }, { item: Items.STARCONCH, amount: 10 }, { item: Items["RECRUIT'S_INSIGNIA"],    amount: 15 }], 
+            "50+": [{ item: Items.VARUNADA_LAZURITE_FRAGMENT, amount: 6 }, { item: Items.CLEANSING_HEART, amount:  4 }, { item: Items.STARCONCH, amount: 20 }, { item: Items["SEARGENT'S_INSIGNIA"],   amount: 12 }], 
+            "60+": [{ item: Items.VARUNADA_LAZURITE_CHUNK,    amount: 3 }, { item: Items.CLEANSING_HEART, amount:  8 }, { item: Items.STARCONCH, amount: 30 }, { item: Items["SEARGENT'S_INSIGNIA"],   amount: 18 }], 
+            "70+": [{ item: Items.VARUNADA_LAZURITE_CHUNK,    amount: 6 }, { item: Items.CLEANSING_HEART, amount: 12 }, { item: Items.STARCONCH, amount: 45 }, { item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }], 
+            "80+": [{ item: Items.VARUNADA_LAZURITE_GEMSTONE, amount: 6 }, { item: Items.CLEANSING_HEART, amount: 20 }, { item: Items.STARCONCH, amount: 60 }, { item: Items["LIEUTENANT'S_INSIGNIA"], amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.HYDRO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  6 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  9 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  4 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  4 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  6 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  6 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  6 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  9 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  4 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  4 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  6 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  6 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  6 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  9 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  4 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  4 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount:  6 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  6 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}
             }
         }]
     });
     static XINYAN             = new Character({ name: "XINYAN",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -1806,12 +1801,12 @@ export class CharacterList {
     });
     static ALBEDO             = new Character({ name: "ALBEDO",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -1854,12 +1849,12 @@ export class CharacterList {
     });
     static GANYU              = new Character({ name: "GANYU",              
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -1949,12 +1944,12 @@ export class CharacterList {
     });
     static HU_TAO             = new Character({ name: "HU_TAO",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -1997,12 +1992,12 @@ export class CharacterList {
     });
     static ROSARIA            = new Character({ name: "ROSARIA",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2045,12 +2040,12 @@ export class CharacterList {
     });
     static YANFEI             = new Character({ name: "YANFEI",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2140,12 +2135,12 @@ export class CharacterList {
     });
     static KAEDEHARA_KAZUHA   = new Character({ name: "KAEDEHARA_KAZUHA",   
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2188,12 +2183,12 @@ export class CharacterList {
     });
     static KAMISATO_AYAKA     = new Character({ name: "KAMISATO_AYAKA",     
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2236,12 +2231,12 @@ export class CharacterList {
     });
     static SAYU               = new Character({ name: "SAYU",               
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2284,12 +2279,12 @@ export class CharacterList {
     });
     static YOIMIYA            = new Character({ name: "YOIMIYA",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2332,12 +2327,12 @@ export class CharacterList {
     });
     static ALOY               = new Character({ name: "ALOY",               
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2427,12 +2422,12 @@ export class CharacterList {
     });
     static RAIDEN_SHOGUN      = new Character({ name: "RAIDEN_SHOGUN",      
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2475,12 +2470,12 @@ export class CharacterList {
     });
     static SANGONOMIYA_KOKOMI = new Character({ name: "SANGONOMIYA_KOKOMI", 
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2523,12 +2518,12 @@ export class CharacterList {
     });
     static THOMA              = new Character({ name: "THOMA",              
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2571,12 +2566,12 @@ export class CharacterList {
     });
     static GOROU              = new Character({ name: "GOROU",              
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2713,12 +2708,12 @@ export class CharacterList {
     });
     static SHENHE             = new Character({ name: "SHENHE",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2761,12 +2756,12 @@ export class CharacterList {
     });
     static YAE_MIKO           = new Character({ name: "YAE_MIKO",           
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2809,12 +2804,12 @@ export class CharacterList {
     });
     static KAMISATO_AYATO     = new Character({ name: "KAMISATO_AYATO",     
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2857,12 +2852,12 @@ export class CharacterList {
     });
     static YELAN              = new Character({ name: "YELAN",              
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2905,12 +2900,12 @@ export class CharacterList {
     });
     static KUKI_SHINOBU       = new Character({ name: "KUKI_SHINOBU",       
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -2953,12 +2948,12 @@ export class CharacterList {
     });
     static SHIKANOIN_HEIZOU   = new Character({ name: "SHIKANOIN_HEIZOU",   
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3001,12 +2996,12 @@ export class CharacterList {
     });
     static COLLEI             = new Character({ name: "COLLEI",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3049,12 +3044,12 @@ export class CharacterList {
     });
     static TIGNARI            = new Character({ name: "TIGNARI",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3097,12 +3092,12 @@ export class CharacterList {
     });
     static DORI               = new Character({ name: "DORI",               
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3145,12 +3140,12 @@ export class CharacterList {
     });
     static CANDACE            = new Character({ name: "CANDACE",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3193,12 +3188,12 @@ export class CharacterList {
     });
     static CYNO               = new Character({ name: "CYNO",               
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3241,12 +3236,12 @@ export class CharacterList {
     });
     static NILOU              = new Character({ name: "NILOU",              
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3289,12 +3284,12 @@ export class CharacterList {
     });
     static NAHIDA             = new Character({ name: "NAHIDA",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3337,12 +3332,12 @@ export class CharacterList {
     });
     static LAYLA              = new Character({ name: "LAYLA",              
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3385,12 +3380,12 @@ export class CharacterList {
     });
     static FARUZAN            = new Character({ name: "FARUZAN",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3433,12 +3428,12 @@ export class CharacterList {
     });
     static WANDERER           = new Character({ name: "WANDERER",           
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3528,12 +3523,12 @@ export class CharacterList {
     });
     static ALHAITHAM          = new Character({ name: "ALHAITHAM",          
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3576,12 +3571,12 @@ export class CharacterList {
     });
     static DEHYA              = new Character({ name: "DEHYA",              
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3624,12 +3619,12 @@ export class CharacterList {
     });
     static MIKA               = new Character({ name: "MIKA",               
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3672,12 +3667,12 @@ export class CharacterList {
     });
     static KAVEH              = new Character({ name: "KAVEH",              
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3720,12 +3715,12 @@ export class CharacterList {
     });
     static BAIZHU             = new Character({ name: "BAIZHU",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3768,12 +3763,12 @@ export class CharacterList {
     });
     static KIRARA             = new Character({ name: "KIRARA",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3816,12 +3811,12 @@ export class CharacterList {
     });
     static LYNETTE            = new Character({ name: "LYNETTE",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3864,12 +3859,12 @@ export class CharacterList {
     });
     static LYNEY              = new Character({ name: "LYNEY",              
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -3912,12 +3907,12 @@ export class CharacterList {
     });
     static FREMINET           = new Character({ name: "FREMINET",           
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4008,12 +4003,12 @@ export class CharacterList {
     });
     static CHARLOTTE          = new Character({ name: "CHARLOTTE",          
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4101,12 +4096,12 @@ export class CharacterList {
     })
     static NAVIA              = new Character({ name: "NAVIA",              
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4149,12 +4144,12 @@ export class CharacterList {
     });
     static CHEVREUSE          = new Character({ name: "CHEVREUSE",          
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4244,12 +4239,12 @@ export class CharacterList {
     });
     static XIANYUN            = new Character({ name: "XIANYUN",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4292,12 +4287,12 @@ export class CharacterList {
     });
     static CHIORI             = new Character({ name: "CHIORI",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4340,12 +4335,12 @@ export class CharacterList {
     });
     static ARLECCHINO         = new Character({ name: "ARLECCHINO",         
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4388,12 +4383,12 @@ export class CharacterList {
     });
     static SETHOS             = new Character({ name: "SETHOS",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.VAJRADA_AMETHYST_SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items.VAJRADA_AMETHYST_FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items.VAJRADA_AMETHYST_FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items.VAJRADA_AMETHYST_CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items.VAJRADA_AMETHYST_CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items.VAJRADA_AMETHYST_GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4436,12 +4431,12 @@ export class CharacterList {
     });
     static CLORINDE           = new Character({ name: "CLORINDE",           
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.VAJRADA_AMETHYST_SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items.VAJRADA_AMETHYST_FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items.VAJRADA_AMETHYST_FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items.VAJRADA_AMETHYST_CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items.VAJRADA_AMETHYST_CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items.VAJRADA_AMETHYST_GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4484,12 +4479,12 @@ export class CharacterList {
     });
     static SIGEWINNE          = new Character({ name: "SIGEWINNE",          
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4532,12 +4527,12 @@ export class CharacterList {
     });
     static EMILIE             = new Character({ name: "EMILIE",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4580,12 +4575,12 @@ export class CharacterList {
     });
     static KACHINA            = new Character({ name: "KACHINA",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4628,12 +4623,12 @@ export class CharacterList {
     });
     static MUALANI            = new Character({ name: "MUALANI",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4676,12 +4671,12 @@ export class CharacterList {
     });
     static KINICH             = new Character({ name: "KINICH",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4724,12 +4719,12 @@ export class CharacterList {
     });
     static XILONEN            = new Character({ name: "XILONEN",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4819,12 +4814,12 @@ export class CharacterList {
     });
     static CHASCA             = new Character({ name: "CHASCA",             
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN, amount: 1 },                                      { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN, amount: 9 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER, amount: 1 },                                      { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK, amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK, amount: 9 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4867,12 +4862,12 @@ export class CharacterList {
     });
     static CITLALI            = new Character({ name: "CITLALI",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4915,12 +4910,12 @@ export class CharacterList {
     });
     static MAVUIKA            = new Character({ name: "MAVUIKA",            
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
         }}, 
         elements: [{
             element: Elements.CRYO,
@@ -4961,149 +4956,146 @@ export class CharacterList {
             }
         }]
     });
-    static LAN_YAN            = new Character({ name: "LAN_YAN",            
+    static LAN_YAN            = new Character({ name: "LAN_YAN",            /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.vayuda_turquoise_SLIVER,   amount: 1 },                                                                   { item: Items.CLEARWATER_JADE, amount:  3 }, { item: Items.WHOPPERFLOWER_NECTAR, amount:  3 }], 
+            "40+": [{ item: Items.vayuda_turquoise_FRAGMENT, amount: 3 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount:  2 }, { item: Items.CLEARWATER_JADE, amount: 10 }, { item: Items.WHOPPERFLOWER_NECTAR, amount: 15 }], 
+            "50+": [{ item: Items.vayuda_turquoise_FRAGMENT, amount: 6 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount:  4 }, { item: Items.CLEARWATER_JADE, amount: 20 }, { item: Items.SHIMMERING_NECTAR,    amount: 12 }], 
+            "60+": [{ item: Items.vayuda_turquoise_CHUNK,    amount: 3 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount:  8 }, { item: Items.CLEARWATER_JADE, amount: 30 }, { item: Items.SHIMMERING_NECTAR,    amount: 18 }], 
+            "70+": [{ item: Items.vayuda_turquoise_CHUNK,    amount: 6 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount: 12 }, { item: Items.CLEARWATER_JADE, amount: 45 }, { item: Items.ENERGY_NECTAR,        amount: 12 }], 
+            "80+": [{ item: Items.vayuda_turquoise_GEMSTONE, amount: 6 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount: 20 }, { item: Items.CLEARWATER_JADE, amount: 60 }, { item: Items.ENERGY_NECTAR,        amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.CRYO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILLIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.ERODED_SUNFIRE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.ERODED_SUNFIRE, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILLIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.ERODED_SUNFIRE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.ERODED_SUNFIRE, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILLIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.ERODED_SUNFIRE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.ERODED_SUNFIRE, amount: 2 }] 
+                }}
+            }}
+        ]
+    });
+    static YUMEMIZUKI_MIZUKI  = new Character({ name: "YUMEMIZUKI_MIZUKI",  /* FINISHED */
+        level: { materials: { 
+            "20+": [{ item: Items.SHIVADA_JADE_SLIVER,   amount: 1 },                                                             { item: Items.SEA_GANODERMA, amount:  3 }, { item: Items.OLD_HANDGUARD,      amount:  3 }], 
+            "40+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 3 }, { item: Items.TALISMAN_OF_THE_ENIGMATIC_LAND, amount:  2 }, { item: Items.SEA_GANODERMA, amount: 10 }, { item: Items.OLD_HANDGUARD,      amount: 15 }], 
+            "50+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 6 }, { item: Items.TALISMAN_OF_THE_ENIGMATIC_LAND, amount:  4 }, { item: Items.SEA_GANODERMA, amount: 20 }, { item: Items.KAGEUCHI_HANDGUARD, amount: 12 }], 
+            "60+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 3 }, { item: Items.TALISMAN_OF_THE_ENIGMATIC_LAND, amount:  8 }, { item: Items.SEA_GANODERMA, amount: 30 }, { item: Items.KAGEUCHI_HANDGUARD, amount: 18 }], 
+            "70+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 6 }, { item: Items.TALISMAN_OF_THE_ENIGMATIC_LAND, amount: 12 }, { item: Items.SEA_GANODERMA, amount: 45 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }], 
+            "80+": [{ item: Items.SHIVADA_JADE_GEMSTONE, amount: 6 }, { item: Items.TALISMAN_OF_THE_ENIGMATIC_LAND, amount: 20 }, { item: Items.SEA_GANODERMA, amount: 60 }, { item: Items.FAMED_HANDGUARD,    amount: 24 }]
+        }}, 
+        elements: [
+            { element: Elements.CRYO, talents: { 
+                normal_attack: { min: 1, max: 10, materials: { 
+                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENSE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  6 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  9 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  4 }, {item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  6 }, {item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 12 }, {item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items.FADING_CANDLE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 16 }, {item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items.FADING_CANDLE, amount: 2 }] 
+                }}, 
+                elemental_skill: { min: 1, max: 10, materials: { 
+                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENSE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  6 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  9 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  4 }, {item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  6 }, {item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 12 }, {item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items.FADING_CANDLE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 16 }, {item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items.FADING_CANDLE, amount: 2 }] 
+                }}, 
+                elemental_burst: { min: 1, max: 10, materials: { 
+                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENSE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  6 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  9 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  4 }, {item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  6 }, {item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 12 }, {item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items.FADING_CANDLE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 16 }, {item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items.FADING_CANDLE, amount: 2 }] 
                 }}
             }
         }]
     });
-    static YUMEMIZUKI_MIZUKI  = new Character({ name: "YUMEMIZUKI_MIZUKI",  
+    static IANSAN             = new Character({ name: "IANSAN",             /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.VAJRADA_AMETHYST_SLIVER,   amount: 1 },                                             { item: Items.DRACOLITE, amount:  3 }, { item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  3 }], 
+            "40+": [{ item: Items.VAJRADA_AMETHYST_FRAGMENT, amount: 3 }, { item: Items.ENSNARING_GAZE, amount:  2 }, { item: Items.DRACOLITE, amount: 10 }, { item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount: 15 }], 
+            "50+": [{ item: Items.VAJRADA_AMETHYST_FRAGMENT, amount: 6 }, { item: Items.ENSNARING_GAZE, amount:  4 }, { item: Items.DRACOLITE, amount: 20 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount: 12 }], 
+            "60+": [{ item: Items.VAJRADA_AMETHYST_CHUNK,    amount: 3 }, { item: Items.ENSNARING_GAZE, amount:  8 }, { item: Items.DRACOLITE, amount: 30 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount: 18 }], 
+            "70+": [{ item: Items.VAJRADA_AMETHYST_CHUNK,    amount: 6 }, { item: Items.ENSNARING_GAZE, amount: 12 }, { item: Items.DRACOLITE, amount: 45 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 12 }], 
+            "80+": [{ item: Items.VAJRADA_AMETHYST_GEMSTONE, amount: 6 }, { item: Items.ENSNARING_GAZE, amount: 20 }, { item: Items.DRACOLITE, amount: 60 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.ELECTRO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, {item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  2 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  4 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  6 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  9 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount:  4 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  4 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount:  6 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  6 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount: 12 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  9 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount: 16 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 12 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, {item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  2 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  4 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  6 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  9 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount:  4 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  4 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount:  6 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  6 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount: 12 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  9 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount: 16 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 12 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, {item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  2 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  4 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  6 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  9 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount:  4 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  4 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount:  6 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  6 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount: 12 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  9 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount: 16 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 12 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 2 }] 
                 }}
-            }
-        }]
-    });
-    static IANSAN             = new Character({ name: "IANSAN",             
-        level: { materials: { 
-            "20+": [{ item: Items.UNKNOWN,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items.UNKNOWN, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items.UNKNOWN,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items.UNKNOWN,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items.UNKNOWN, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
-        }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
-                    2: [], 
-                    3: [{ item: Items.GUIDE_TO_CONTENTION, amount: 2 }, { item: Items["WARRIOR'S_METAL_WHISTLE"], amount: 3 }], 
-                    4: [{ item: Items.GUIDE_TO_CONTENTION, amount: 4 }, { item: Items["WARRIOR'S_METAL_WHISTLE"], amount: 4 }], 
-                    5: [],
-                    6: [],
-                    7: [], 
-                    8: [], 
-                    9: [], 
-                    10: [] 
-                }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
-                    2: [], 
-                    3: [{ item: Items.GUIDE_TO_CONTENTION, amount: 2 }, { item: Items["WARRIOR'S_METAL_WHISTLE"], amount: 3 }], 
-                    4: [{ item: Items.GUIDE_TO_CONTENTION, amount: 4 }, { item: Items["WARRIOR'S_METAL_WHISTLE"], amount: 4 }], 
-                    5: [], 
-                    6: [], 
-                    7: [], 
-                    8: [], 
-                    9: [], 
-                    10: [] 
-                }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
-                    2: [], 
-                    3: [{ item: Items.GUIDE_TO_CONTENTION, amount: 2 }, { item: Items["WARRIOR'S_METAL_WHISTLE"], amount: 3 }], 
-                    4: [{ item: Items.GUIDE_TO_CONTENTION, amount: 4 }, { item: Items["WARRIOR'S_METAL_WHISTLE"], amount: 4 }], 
-                    5: [], 
-                    6: [], 
-                    7: [], 
-                    8: [], 
-                    9: [], 
-                    10: [] 
-                }}
-            }
-        }]
+            }}
+        ]
     });
     static VARESA             = new Character({ name: "VARESA",             /* FINISHED */
         level: { materials: {
@@ -5170,7 +5162,7 @@ export class CharacterList {
         let start_ms = performance.now()
         let total_mats = []
         for(let character_name in Characters){
-            const character = Characters.get(character_name)
+            const character = Characters.get(character_name);
             character.get_data().level.min = "1";
             character.get_data().level.max = "90";
             for (let i = 0; i < character.get_data().elements.length; i++) {        
@@ -5182,6 +5174,7 @@ export class CharacterList {
                 character.get_data().elements[i].talents.elemental_burst.max = 10
             }
             for(let mat of character.get_materials()){
+                mat.dest.push(character_name);
                 total_mats.push(mat)
             }
         }

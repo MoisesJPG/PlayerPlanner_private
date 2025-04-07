@@ -1,13 +1,13 @@
-function generate_header() {
+function generate_header(path = "..") {
     document.querySelector("body header").innerHTML = `
-        <h1><a href="../">PlayerPlanner</a></h1>
+        <h1><a href="${path}/">PlayerPlanner</a></h1>
         <div class="close">
             <button onclick="alternate_nav()">Abrir</button>
             <nav>
-                <a href="../genshin-impact/"><span>Genshin Impact</span></a>
-                <a href="../wuthering-waves/"><span>Wuthering Waves</span></a>
-                <a href="../honkai-star-rail/"><span>Honkai Star Rail</span></a>
-                <a href="../league-of-legends/"><span>League Of Legends</span></a>
+                <a href="${path}/genshin-impact/"><span>Genshin Impact</span></a>
+                <a href="${path}/wuthering-waves/"><span>Wuthering Waves</span></a>
+                <a href="${path}/honkai-star-rail/"><span>Honkai Star Rail</span></a>
+                <a href="${path}/league-of-legends/"><span>League Of Legends</span></a>
             </nav>
         </div>
     `;
