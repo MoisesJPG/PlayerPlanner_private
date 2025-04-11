@@ -1,0 +1,289 @@
+
+* {
+    /* outline: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(90deg, 
+        rgb( 32,  64,  96)   0%, 
+        rgb( 64,  96, 128)  33%, 
+        rgb( 64,  96, 128)  66%, 
+        rgb( 32,  64,  96) 100%
+    );
+    color: #fff;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: calc(100% - 32px);
+    padding: 32px 16px 16px 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+main {
+    padding: 16px;
+    text-align: center;
+}
+main nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+main #plannerList {
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px;
+    padding: 16px;
+}
+main #plannerList .item {
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.125);
+}
+main #plannerList .item .head {
+    padding: 8px 16px;
+    height: 24px;
+}
+main #plannerList .item .head .name {
+    font-weight: bold;
+    height: 24px;
+    font-size: 20px;
+    line-height: 24px;
+}
+main #plannerList .item .body {
+    padding: 8px 16px 16px 16px;
+    display: flex;
+    gap: 8px;
+    margin: auto;
+    width: 512px;
+}
+main #plannerList .item .body img {
+    width:  128px;
+    height: 128px;
+}
+main #plannerList .item .body .info {
+    width: 256px;
+}
+main #plannerList .item .body .info .title {
+    color: rgb( 255, 224, 192);
+    width: 100%;
+}
+main #plannerList .item .body .info .row {
+    width: 256px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    display: flex;
+}
+main #plannerList .item .body .info .row .min {
+    width: calc(128px / 3);
+    text-align: center;
+}
+main #plannerList .item .body .info .row .arrow {
+    width: calc(128px / 3);
+    text-align: center;
+}
+main #plannerList .item .body .info .row .max {
+    width: calc(128px / 3);
+    text-align: center;
+}
+main #plannerList .item .body .info .row .full {
+    width: calc(128px / 3 * 3);
+    text-align: center;
+}
+main #plannerList .item .body .info .row .desc {
+    width: 152px;
+    margin-left: 0px;
+    margin-right: -152px;
+    font-size: 12px;
+    flex: 0 0 auto;
+    line-height: 22px;
+    text-align: start;
+}
+main #plannerList .item .foot {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 16px 0 0 0;
+    margin: 0 16px 16px 16px;
+}
+main #plannerList .item .foot .mats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+main #plannerList .item .foot .mats .mat {
+    width: calc((100% - 8px * 7) / 8);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    color: white;
+}
+main #plannerList .item .foot .mats .mat .amount {
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    background-color: black;
+}
+main #plannerList .item .foot .mats .mat .item {
+    border: 0;
+    width: 100%;
+    aspect-ratio: 1;
+}
+footer {
+    text-align: center;
+    padding: 16px 16px 32px 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width : calc(256px * 6.0)) { main #plannerList .item { width: calc((100% - 16px ) / 2); } }
+@media screen and (max-width : calc(256px * 5.0)) { main #plannerList .item { width: calc((100% - 16px ) / 2); } }
+@media screen and (max-width : calc(256px * 4.5)) { main #plannerList .item { width: 100%; } }
+button:hover {
+    background-color: #2e4371;
+}
+
+
+.character-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.character-card {
+    background-color: #1e2633;
+    color: #fff;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+}
+
+.character-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 2px solid #fff;
+}
+
+.character-card h4 {
+    margin: 0.5rem 0 0.2rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+}
+
+.character-card .level {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    color: #bbb;
+}
+
+.materials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.materials img {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+/* Modal */
+dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 32px * 2);
+    height: calc(100% - 32px * 2);
+    margin: 32px;
+    background: linear-gradient(90deg, 
+        rgb( 16,  24,  32)   0%, 
+        rgb( 24,  32, 40)  33%, 
+        rgb( 24,  32, 40)  66%, 
+        rgb( 16,  24,  32) 100%
+    );    
+    border: 1px solid black;
+}
+dialog .head {
+    width: calc(100% - 64px * 2);
+    display: flex;
+    height: 64px;
+    margin: 0 64px;
+}
+dialog .head h2 {
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    line-height: 64px;
+}
+dialog .head button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 12px;
+    margin-right: calc(-12px - 40px);
+    border:2px solid black;
+}
+dialog .body {
+    padding: 16px;
+    height: calc(100% - 96px - 16px);
+    overflow-y: scroll;
+}
+dialog .body .list {
+    gap: 32px 16px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+dialog .body .list li {
+    display: flex;
+    flex-direction: column;
+}
+dialog .body .list.characters li { width: 120px; }
+dialog .body .list.items li { width: 64px; }
+dialog .body .list.items li.common    { background: radial-gradient(circle at 50% 50%, rgb(192, 192, 192), rgb(128, 128, 128)); }
+dialog .body .list.items li.un-common { background: radial-gradient(circle at 50% 50%, rgb(064, 192, 064), rgb(064, 128, 064)); }
+dialog .body .list.items li.rare      { background: radial-gradient(circle at 50% 50%, rgb(064, 192, 192), rgb(064, 128, 128)); }
+dialog .body .list.items li.epic      { background: radial-gradient(circle at 50% 50%, rgb(192, 064, 192), rgb(128, 064, 128)); }
+dialog .body .list.items li.legendary { background: radial-gradient(circle at 50% 50%, rgb(192, 192, 064), rgb(128, 128, 064)); }
+dialog .body .list li .image {
+    aspect-ratio: 1;
+    width: 100%;
+    flex: 0 0 auto;
+}
+dialog .body .list li .name {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    height: 20px;
+    line-height: 16px;
+    flex: 0 0 auto;
+}
+dialog .body .list li input {
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    height: 24px;
+    line-height: 16px;
+    width: 100%;
+    border: 0;
+    flex: 0 0 auto;
+    appearance: none;
+    -moz-appearance: textfield;
+}

@@ -15,7 +15,7 @@ function ToPreHTML(total_mats){
             case 4: p.setAttribute(`class`, `epic`); break;
             case 5: p.setAttribute(`class`, `legendary`); break;
         }
-        let innerHTML = `<span>${mat.item}</span><span>x${mat.amount.toLocaleString("es-ES")}</span>\n`;
+        let innerHTML = `<span>${mat.amount.toLocaleString("es-ES")}</span><span>${mat.item}</span>`;
         p.innerHTML += innerHTML;
         document.querySelector("main div").appendChild(p)
     }
@@ -33,7 +33,9 @@ Characters.AMBER.get_data().elements[0].talents.elemental_skill.min = 1;
 Characters.AMBER.get_data().elements[0].talents.elemental_skill.max = 10;
 Characters.AMBER.get_data().elements[0].talents.elemental_burst.min = 1;
 Characters.AMBER.get_data().elements[0].talents.elemental_burst.max = 10;
-ToPreHTML(Characters.get_materials());
+ToPreHTML(Characters.TRAVELER.get_materials());
 // ToPreHTML(Characters.get_materials());
-console.log(MISSING_ITEMS)
+for(const MISSING_ITEM_id in MISSING_ITEMS){
+    console.log(MISSING_ITEM_id, MISSING_ITEMS[MISSING_ITEM_id]);
+}
 // GeneratePreHTML();

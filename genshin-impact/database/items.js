@@ -547,7 +547,7 @@ export const Items = new Proxy(ItemList, {
     get(target, prop) {
         if (!(prop in target)) {
             MISSING_ITEMS[prop] = (MISSING_ITEMS[prop] || 0) + 1
-            console.error(`Error: La variable 'Items.${prop}' no existe.`); 
+            // console.error(`Error: La variable 'Items.${prop}' no existe.`);
             return Items.UNKNOWN;
         }
         return target[prop];

@@ -13,13 +13,20 @@
             overflow-x: auto;
             white-space: pre-wrap;
             background-color: black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 8px;
         }
         div * {
             font-family: monospace;
         }
         div p           {
             display: flex;
+            flex-direction: column;
+            width: 128px;
             gap: 8px; 
+            border: 1px solid white;
             color: rgb(000,000,000); background-color: rgb(255,255,255, 1); 
         }
         div p.common    { color: rgb(064,064,064); background-color: rgb(128,128,128, 1); }
@@ -29,12 +36,20 @@
         div p.legendary { color: rgb(128,128,000); background-color: rgb(255,255,000, 1); }
         div p span {
             display: block;
-            width: calc((100% - 8px) / 2);
+            width: 100%;
             flex: 0 0 auto;
             overflow: hidden;
         }
-        div p span:first-child { text-align: end;}
-        div p span:last-child { text-align: start;}
+        div p span:first-child { 
+            text-align: center;
+            background-color: black;
+            color:white;
+            width: calc(100% - 8px * 2);
+            padding: 8px;
+        }
+        div p span:last-child { 
+            padding: 8px;
+        }
     </style>
 </head>
 <body>

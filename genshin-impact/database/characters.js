@@ -108,11 +108,35 @@ class CharacterDataElementTalents {
      */
     elemental_burst = new CharacterDataElementTalent();
 }
+class CharacterDataElementConstellation {
+    static min = 0;
+    static max = 6;
+    /**
+     * @type {number}
+     */
+    min = 0;
+    /**
+     * @type {number}
+     */
+    max = 6;
+    fix() {
+        if(!(
+            (max <= CharacterDataElementConstellation.max) && 
+            (min >= CharacterDataElementConstellation.min)
+        )) {
+            console.warn("Class CharacterDataElementConstellation: Value out of limits.")
+        }
+    }
+}
 class CharacterDataElement {
     /**
      * @type {Element|string}
      */
     element;
+    /**
+     * @type {CharacterDataElementConstellation}
+     */
+    constellation = new CharacterDataElementConstellation();
     /**
      * @param {Element} element 
      */
@@ -121,6 +145,16 @@ class CharacterDataElement {
      * @type {CharacterDataElementTalents}
      */
     talents = new CharacterDataElementTalents();
+}
+class CharacterDataFriendship {
+    /**
+     * @type {number}
+     */
+    min = 1;
+    /**
+     * @type {number}
+     */
+    max = 10;
 }
 class CharacterDataLevelMaterials {
     "2"   = [{ item: Items.EXP.get_base_name(), amount:   1000 }];
@@ -254,6 +288,10 @@ class CharacterData {
      * @type {CharacterDataLevel}
      */
     level = new CharacterDataLevel();
+    /**
+     * @type {CharacterDataFriendship}
+     */
+    friendship = new CharacterDataFriendship();
 }
 export class Character {
     static last_id = -1;
@@ -366,7 +404,7 @@ export class Character {
 export class CharacterList {
     
     //#region "LIST"
-    static TRAVELER           = new Character({ name: "TRAVELER",           
+    static TRAVELER           = new Character({ name: "TRAVELER",           /*  */
         level: { materials: {
             "20+": [{ item: Items.BRILLIANT_DIAMOND_SLIVER,   amount: 1 }, { item: Items.WINDWHEEL_ASTER, amount:  3 }, { item: Items.DAMAGED_MASK, amount:  3 }],
             "40+": [{ item: Items.BRILLIANT_DIAMOND_FRAGMENT, amount: 3 }, { item: Items.WINDWHEEL_ASTER, amount: 10 }, { item: Items.DAMAGED_MASK, amount: 15 }],
@@ -378,213 +416,213 @@ export class CharacterList {
         elements: [
             { element: Elements.ANEMO, talents: {
                 normal_attack: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
                 }},
                 elemental_skill: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
                 }},
                 elemental_burst: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
-                }}
+                    2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
+               }}
             }},
             { element: Elements.GEO, talents: {
                 normal_attack: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
                 }},
                 elemental_skill: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
                 }},
                 elemental_burst: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
-                }}
+                    2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
+               }}
             }},
             { element: Elements.ELECTRO, talents: {
                 normal_attack: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, { item: Items.OLD_HANDGUARD,      amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_ELEGANCE,          amount:  2 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_LIGHT,             amount:  4 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  6 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_ELEGANCE,          amount:  9 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount:  4 }, { item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, { item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE,   amount: 12 }, { item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount: 16 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }]
                 }},
                 elemental_skill: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, { item: Items.OLD_HANDGUARD,      amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_ELEGANCE,          amount:  2 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_LIGHT,             amount:  4 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  6 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_ELEGANCE,          amount:  9 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount:  4 }, { item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, { item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE,   amount: 12 }, { item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount: 16 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }]
                 }},
                 elemental_burst: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
-                }}
+                    2: [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, { item: Items.OLD_HANDGUARD,      amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_ELEGANCE,          amount:  2 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_LIGHT,             amount:  4 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  6 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_ELEGANCE,          amount:  9 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount:  4 }, { item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, { item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE,   amount: 12 }, { item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount: 16 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }]
+               }}
             }},
             { element: Elements.DENDRO, talents: {
                 normal_attack: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, { item: Items.FUNGAL_SPORES,         amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_INGENUITY,         amount:  2 }, { item: Items.LUMINESCENT_POLLEN,    amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_PRAXIS,            amount:  4 }, { item: Items.LUMINESCENT_POLLEN,    amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_ADMONITION,        amount:  6 }, { item: Items.LUMINESCENT_POLLEN,    amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_INGENUITY,         amount:  9 }, { item: Items.LUMINESCENT_POLLEN,    amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_PRAXIS,     amount:  4 }, { item: Items.CRYSTALLINE_CYST_DUST, amount:  4 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount:  6 }, { item: Items.CRYSTALLINE_CYST_DUST, amount:  6 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_INGENUITY,  amount: 12 }, { item: Items.CRYSTALLINE_CYST_DUST, amount:  9 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_PRAXIS,     amount: 16 }, { item: Items.CRYSTALLINE_CYST_DUST, amount: 12 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }]
                 }},
                 elemental_skill: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, { item: Items.FUNGAL_SPORES,         amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_INGENUITY,         amount:  2 }, { item: Items.LUMINESCENT_POLLEN,    amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_PRAXIS,            amount:  4 }, { item: Items.LUMINESCENT_POLLEN,    amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_ADMONITION,        amount:  6 }, { item: Items.LUMINESCENT_POLLEN,    amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_INGENUITY,         amount:  9 }, { item: Items.LUMINESCENT_POLLEN,    amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_PRAXIS,     amount:  4 }, { item: Items.CRYSTALLINE_CYST_DUST, amount:  4 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount:  6 }, { item: Items.CRYSTALLINE_CYST_DUST, amount:  6 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_INGENUITY,  amount: 12 }, { item: Items.CRYSTALLINE_CYST_DUST, amount:  9 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_PRAXIS,     amount: 16 }, { item: Items.CRYSTALLINE_CYST_DUST, amount: 12 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }]
                 }},
                 elemental_burst: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
-                }}
+                    2: [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, { item: Items.FUNGAL_SPORES,         amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_INGENUITY,         amount:  2 }, { item: Items.LUMINESCENT_POLLEN,    amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_PRAXIS,            amount:  4 }, { item: Items.LUMINESCENT_POLLEN,    amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_ADMONITION,        amount:  6 }, { item: Items.LUMINESCENT_POLLEN,    amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_INGENUITY,         amount:  9 }, { item: Items.LUMINESCENT_POLLEN,    amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_PRAXIS,     amount:  4 }, { item: Items.CRYSTALLINE_CYST_DUST, amount:  4 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount:  6 }, { item: Items.CRYSTALLINE_CYST_DUST, amount:  6 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_INGENUITY,  amount: 12 }, { item: Items.CRYSTALLINE_CYST_DUST, amount:  9 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_PRAXIS,     amount: 16 }, { item: Items.CRYSTALLINE_CYST_DUST, amount: 12 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }]
+               }}
             }},
             { element: Elements.HYDRO, talents: {
                 normal_attack: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_EQUITY,     amount:  3 }, { item: Items.TRANSOCEANIC_PEARL,    amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_JUSTICE,        amount:  2 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_ORDER,          amount:  4 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_EQUITY,         amount:  6 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_JUSTICE,        amount:  9 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_ORDER,   amount:  4 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  4 }, { item: Items.WORLDSPAN_FERN, amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_EQUITY,  amount:  6 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  6 }, { item: Items.WORLDSPAN_FERN, amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_JUSTICE, amount: 12 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  9 }, { item: Items.WORLDSPAN_FERN, amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_ORDER,   amount: 16 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount: 12 }, { item: Items.WORLDSPAN_FERN, amount: 2 }]
                 }},
                 elemental_skill: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_EQUITY,     amount:  3 }, { item: Items.TRANSOCEANIC_PEARL,    amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_JUSTICE,        amount:  2 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_ORDER,          amount:  4 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_EQUITY,         amount:  6 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_JUSTICE,        amount:  9 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_ORDER,   amount:  4 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  4 }, { item: Items.WORLDSPAN_FERN, amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_EQUITY,  amount:  6 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  6 }, { item: Items.WORLDSPAN_FERN, amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_JUSTICE, amount: 12 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  9 }, { item: Items.WORLDSPAN_FERN, amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_ORDER,   amount: 16 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount: 12 }, { item: Items.WORLDSPAN_FERN, amount: 2 }]
                 }},
                 elemental_burst: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
-                }}
+                    2: [{ item: Items.TEACHINGS_OF_EQUITY,     amount:  3 }, { item: Items.TRANSOCEANIC_PEARL,    amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_JUSTICE,        amount:  2 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_ORDER,          amount:  4 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_EQUITY,         amount:  6 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_JUSTICE,        amount:  9 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_ORDER,   amount:  4 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  4 }, { item: Items.WORLDSPAN_FERN, amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_EQUITY,  amount:  6 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  6 }, { item: Items.WORLDSPAN_FERN, amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_JUSTICE, amount: 12 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  9 }, { item: Items.WORLDSPAN_FERN, amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_ORDER,   amount: 16 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount: 12 }, { item: Items.WORLDSPAN_FERN, amount: 2 }]
+               }}
             }},
             { element: Elements.PYRO, talents: {
                 normal_attack: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, { item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_KINDLING,          amount:  2 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_CONFLICT,          amount:  4 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_CONTENTION,        amount:  6 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_KINDLING,          amount:  9 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_CONFLICT,   amount:  4 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  4 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount:  6 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  6 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_KINDLING,   amount: 12 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  9 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_CONFLICT,   amount: 16 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 12 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 2 }]
                 }},
                 elemental_skill: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
+                    2: [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, { item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_KINDLING,          amount:  2 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_CONFLICT,          amount:  4 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_CONTENTION,        amount:  6 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_KINDLING,          amount:  9 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_CONFLICT,   amount:  4 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  4 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount:  6 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  6 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_KINDLING,   amount: 12 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  9 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_CONFLICT,   amount: 16 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 12 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 2 }]
                 }},
                 elemental_burst: { min: 1, max: 10, materials: {
-                     2: [],
-                     3: [],
-                     4: [],
-                     5: [],
-                     6: [],
-                     7: [],
-                     8: [],
-                     9: [],
-                    10: []
-                }}
+                    2: [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, { item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_KINDLING,          amount:  2 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_CONFLICT,          amount:  4 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_CONTENTION,        amount:  6 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_KINDLING,          amount:  9 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_CONFLICT,   amount:  4 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  4 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount:  6 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  6 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_KINDLING,   amount: 12 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  9 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 2 }],
+                   10: [{ item: Items.PHILOSOPHIES_OF_CONFLICT,   amount: 16 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 12 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 2 }]
+               }}
             }},
             { element: Elements.CRYO, talents: {
                 normal_attack: { min: 1, max: 10, materials: {
@@ -1704,53 +1742,52 @@ export class CharacterList {
             }
         }]
     });
-    static XINYAN             = new Character({ name: "XINYAN",             
+    static XINYAN             = new Character({ name: "XINYAN",             /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.AGNIDUS_AGATE_SLIVER,   amount: 1 },                                             { item: Items.VIOLETGRASS, amount:  3 }, { item: Items.TREASURE_HOARDER_INSIGNIA, amount:  3 }], 
+            "40+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 3 }, { item: Items.EVERFLAME_SEED, amount:  2 }, { item: Items.VIOLETGRASS, amount: 10 }, { item: Items.TREASURE_HOARDER_INSIGNIA, amount: 15 }], 
+            "50+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 6 }, { item: Items.EVERFLAME_SEED, amount:  4 }, { item: Items.VIOLETGRASS, amount: 20 }, { item: Items.SILVER_RAVEN_INSIGNIA,     amount: 12 }], 
+            "60+": [{ item: Items.AGNIDUS_AGATE_CHUNK,    amount: 3 }, { item: Items.EVERFLAME_SEED, amount:  8 }, { item: Items.VIOLETGRASS, amount: 30 }, { item: Items.SILVER_RAVEN_INSIGNIA,     amount: 18 }], 
+            "70+": [{ item: Items.AGNIDUS_AGATE_CHUNK,    amount: 6 }, { item: Items.EVERFLAME_SEED, amount: 12 }, { item: Items.VIOLETGRASS, amount: 45 }, { item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }], 
+            "80+": [{ item: Items.AGNIDUS_AGATE_GEMSTONE, amount: 6 }, { item: Items.EVERFLAME_SEED, amount: 20 }, { item: Items.VIOLETGRASS, amount: 60 }, { item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.PYRO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_GOLD,        amount:  6 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_GOLD,        amount:  9 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  4 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  4 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  6 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  6 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_GOLD,        amount:  6 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_GOLD,        amount:  9 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  4 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  4 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  6 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  6 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_GOLD,        amount:  6 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_GOLD,        amount:  9 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  4 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  4 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  6 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  6 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
     static ZHONGLI            = new Character({ name: "ZHONGLI",            /* FINISHED */
         level: { materials: { 
@@ -1799,101 +1836,99 @@ export class CharacterList {
             }}
         ]
     });
-    static ALBEDO             = new Character({ name: "ALBEDO",             
+    static ALBEDO             = new Character({ name: "ALBEDO",             /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.PRITHIVA_TOPAZ_SLIVER,   amount: 1 },                                            { item: Items.CECILIA, amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  3 }], 
+            "40+": [{ item: Items.PRITHIVA_TOPAZ_FRAGMENT, amount: 3 }, { item: Items.BASALT_PILLAR, amount:  2 }, { item: Items.CECILIA, amount: 10 }, { item: Items.DIVINING_SCROLL,        amount: 15 }], 
+            "50+": [{ item: Items.PRITHIVA_TOPAZ_FRAGMENT, amount: 6 }, { item: Items.BASALT_PILLAR, amount:  4 }, { item: Items.CECILIA, amount: 20 }, { item: Items.SEALED_SCROLL,          amount: 12 }], 
+            "60+": [{ item: Items.PRITHIVA_TOPAZ_CHUNK,    amount: 3 }, { item: Items.BASALT_PILLAR, amount:  8 }, { item: Items.CECILIA, amount: 30 }, { item: Items.SEALED_SCROLL,          amount: 18 }], 
+            "70+": [{ item: Items.PRITHIVA_TOPAZ_CHUNK,    amount: 6 }, { item: Items.BASALT_PILLAR, amount: 12 }, { item: Items.CECILIA, amount: 45 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }], 
+            "80+": [{ item: Items.PRITHIVA_TOPAZ_GEMSTONE, amount: 6 }, { item: Items.BASALT_PILLAR, amount: 20 }, { item: Items.CECILIA, amount: 60 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.GEO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}
             }
         }]
     });
-    static GANYU              = new Character({ name: "GANYU",              
+    static GANYU              = new Character({ name: "GANYU",              /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.SHIVADA_JADE_SLIVER,   amount: 1 },                                             { item: Items.QINGXIN, amount:  3 }, { item: Items.WHOPPERFLOWER_NECTAR, amount:  3 }], 
+            "40+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 3 }, { item: Items.HOARFROST_CORE, amount:  2 }, { item: Items.QINGXIN, amount: 10 }, { item: Items.WHOPPERFLOWER_NECTAR, amount: 15 }], 
+            "50+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 6 }, { item: Items.HOARFROST_CORE, amount:  4 }, { item: Items.QINGXIN, amount: 20 }, { item: Items.SHIMMERING_NECTAR,    amount: 12 }], 
+            "60+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 3 }, { item: Items.HOARFROST_CORE, amount:  8 }, { item: Items.QINGXIN, amount: 30 }, { item: Items.SHIMMERING_NECTAR,    amount: 18 }], 
+            "70+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 6 }, { item: Items.HOARFROST_CORE, amount: 12 }, { item: Items.QINGXIN, amount: 45 }, { item: Items.ENERGY_NECTAR,        amount: 12 }], 
+            "80+": [{ item: Items.SHIVADA_JADE_GEMSTONE, amount: 6 }, { item: Items.HOARFROST_CORE, amount: 20 }, { item: Items.QINGXIN, amount: 60 }, { item: Items.ENERGY_NECTAR,        amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.CRYO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
     static XIAO               = new Character({ name: "XIAO",               /* FINISHED */
         level: { materials: { 
@@ -1942,101 +1977,99 @@ export class CharacterList {
             }}
         ]
     });
-    static HU_TAO             = new Character({ name: "HU_TAO",             
+    static HU_TAO             = new Character({ name: "HU_TAO",             /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.AGNIDUS_AGATE_SLIVER,   amount: 1 },                                            { item: Items.SILK_FLOWER, amount:  3 }, { item: Items.WHOPPERFLOWER_NECTAR, amount:  3 }], 
+            "40+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 3 }, { item: Items.JUVENILE_JADE, amount:  2 }, { item: Items.SILK_FLOWER, amount: 10 }, { item: Items.WHOPPERFLOWER_NECTAR, amount: 15 }], 
+            "50+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 6 }, { item: Items.JUVENILE_JADE, amount:  4 }, { item: Items.SILK_FLOWER, amount: 20 }, { item: Items.SHIMMERING_NECTAR,    amount: 12 }], 
+            "60+": [{ item: Items.AGNIDUS_AGATE_CHUNK,    amount: 3 }, { item: Items.JUVENILE_JADE, amount:  8 }, { item: Items.SILK_FLOWER, amount: 30 }, { item: Items.SHIMMERING_NECTAR,    amount: 18 }], 
+            "70+": [{ item: Items.AGNIDUS_AGATE_CHUNK,    amount: 6 }, { item: Items.JUVENILE_JADE, amount: 12 }, { item: Items.SILK_FLOWER, amount: 45 }, { item: Items.ENERGY_NECTAR,        amount: 12 }], 
+            "80+": [{ item: Items.AGNIDUS_AGATE_GEMSTONE, amount: 6 }, { item: Items.JUVENILE_JADE, amount: 20 }, { item: Items.SILK_FLOWER, amount: 60 }, { item: Items.ENERGY_NECTAR,        amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.PYRO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
-    static ROSARIA            = new Character({ name: "ROSARIA",            
+    static ROSARIA            = new Character({ name: "ROSARIA",            /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.SHIVADA_JADE_SLIVER,   amount: 1 },                                             { item: Items.VALBERRY, amount:  3 }, { item: Items["RECRUIT'S_INSIGNIA"],    amount:  3 }], 
+            "40+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 3 }, { item: Items.HOARFROST_CORE, amount:  2 }, { item: Items.VALBERRY, amount: 10 }, { item: Items["RECRUIT'S_INSIGNIA"],    amount: 15 }], 
+            "50+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 6 }, { item: Items.HOARFROST_CORE, amount:  4 }, { item: Items.VALBERRY, amount: 20 }, { item: Items["SEARGENT'S_INSIGNIA"],   amount: 12 }], 
+            "60+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 3 }, { item: Items.HOARFROST_CORE, amount:  8 }, { item: Items.VALBERRY, amount: 30 }, { item: Items["SEARGENT'S_INSIGNIA"],   amount: 18 }], 
+            "70+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 6 }, { item: Items.HOARFROST_CORE, amount: 12 }, { item: Items.VALBERRY, amount: 45 }, { item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }], 
+            "80+": [{ item: Items.SHIVADA_JADE_GEMSTONE, amount: 6 }, { item: Items.HOARFROST_CORE, amount: 20 }, { item: Items.VALBERRY, amount: 60 }, { item: Items["LIEUTENANT'S_INSIGNIA"], amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.CRYO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  6 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  9 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  4 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  4 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  6 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  6 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  6 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  9 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  4 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  4 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  6 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  6 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  6 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  9 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  4 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  4 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount:  6 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  6 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
     static YANFEI             = new Character({ name: "YANFEI",             
         level: { materials: { 
@@ -2277,53 +2310,52 @@ export class CharacterList {
             }
         }]
     });
-    static YOIMIYA            = new Character({ name: "YOIMIYA",            
+    static YOIMIYA            = new Character({ name: "YOIMIYA",            /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.AGNIDUS_AGATE_SLIVER,   amount: 1 },                                               { item: Items.NAKU_WEED, amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  3 }], 
+            "40+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 3 }, { item: Items.SMOLDERING_PEARL, amount:  2 }, { item: Items.NAKU_WEED, amount: 10 }, { item: Items.DIVINING_SCROLL,        amount: 15 }], 
+            "50+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 6 }, { item: Items.SMOLDERING_PEARL, amount:  4 }, { item: Items.NAKU_WEED, amount: 20 }, { item: Items.SEALED_SCROLL,          amount: 12 }], 
+            "60+": [{ item: Items.AGNIDUS_AGATE_CHUNK,    amount: 3 }, { item: Items.SMOLDERING_PEARL, amount:  8 }, { item: Items.NAKU_WEED, amount: 30 }, { item: Items.SEALED_SCROLL,          amount: 18 }], 
+            "70+": [{ item: Items.AGNIDUS_AGATE_CHUNK,    amount: 6 }, { item: Items.SMOLDERING_PEARL, amount: 12 }, { item: Items.NAKU_WEED, amount: 45 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }], 
+            "80+": [{ item: Items.AGNIDUS_AGATE_GEMSTONE, amount: 6 }, { item: Items.SMOLDERING_PEARL, amount: 20 }, { item: Items.NAKU_WEED, amount: 60 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.PYRO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
     static ALOY               = new Character({ name: "ALOY",               
         level: { materials: { 
@@ -3186,53 +3218,52 @@ export class CharacterList {
             }
         }]
     });
-    static CYNO               = new Character({ name: "CYNO",               
+    static CYNO               = new Character({ name: "CYNO",               /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.VAJRADA_AMETHYST_SLIVER,   amount: 1 },                                                    { item: Items.SCARAB, amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  3 }], 
+            "40+": [{ item: Items.VAJRADA_AMETHYST_FRAGMENT, amount: 3 }, { item: Items.THUNDERCLAP_FRUITCORE, amount:  2 }, { item: Items.SCARAB, amount: 10 }, { item: Items.DIVINING_SCROLL,        amount: 15 }], 
+            "50+": [{ item: Items.VAJRADA_AMETHYST_FRAGMENT, amount: 6 }, { item: Items.THUNDERCLAP_FRUITCORE, amount:  4 }, { item: Items.SCARAB, amount: 20 }, { item: Items.SEALED_SCROLL,          amount: 12 }], 
+            "60+": [{ item: Items.VAJRADA_AMETHYST_CHUNK,    amount: 3 }, { item: Items.THUNDERCLAP_FRUITCORE, amount:  8 }, { item: Items.SCARAB, amount: 30 }, { item: Items.SEALED_SCROLL,          amount: 18 }], 
+            "70+": [{ item: Items.VAJRADA_AMETHYST_CHUNK,    amount: 6 }, { item: Items.THUNDERCLAP_FRUITCORE, amount: 12 }, { item: Items.SCARAB, amount: 45 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }], 
+            "80+": [{ item: Items.VAJRADA_AMETHYST_GEMSTONE, amount: 6 }, { item: Items.THUNDERCLAP_FRUITCORE, amount: 20 }, { item: Items.SCARAB, amount: 60 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.ELECTRO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
     static NILOU              = new Character({ name: "NILOU",              
         level: { materials: { 
@@ -3330,53 +3361,52 @@ export class CharacterList {
             }
         }]
     });
-    static LAYLA              = new Character({ name: "LAYLA",              
+    static LAYLA              = new Character({ name: "LAYLA",              /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.SHIVADA_JADE_SLIVER,   amount: 1 },                                                { item: Items.NILOTPALA_LOTUS, amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  3 }], 
+            "40+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 3 }, { item: Items.PERPETUAL_CALIBER, amount:  2 }, { item: Items.NILOTPALA_LOTUS, amount: 10 }, { item: Items.DIVINING_SCROLL,        amount: 15 }], 
+            "50+": [{ item: Items.SHIVADA_JADE_FRAGMENT, amount: 6 }, { item: Items.PERPETUAL_CALIBER, amount:  4 }, { item: Items.NILOTPALA_LOTUS, amount: 20 }, { item: Items.SEALED_SCROLL,          amount: 12 }], 
+            "60+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 3 }, { item: Items.PERPETUAL_CALIBER, amount:  8 }, { item: Items.NILOTPALA_LOTUS, amount: 30 }, { item: Items.SEALED_SCROLL,          amount: 18 }], 
+            "70+": [{ item: Items.SHIVADA_JADE_CHUNK,    amount: 6 }, { item: Items.PERPETUAL_CALIBER, amount: 12 }, { item: Items.NILOTPALA_LOTUS, amount: 45 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }], 
+            "80+": [{ item: Items.SHIVADA_JADE_GEMSTONE, amount: 6 }, { item: Items.PERPETUAL_CALIBER, amount: 20 }, { item: Items.NILOTPALA_LOTUS, amount: 60 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.CRYO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_INGENUITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.MIRROR_OF_MUSHIN, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.MIRROR_OF_MUSHIN, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.MIRROR_OF_MUSHIN, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.MIRROR_OF_MUSHIN, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_INGENUITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.MIRROR_OF_MUSHIN, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.MIRROR_OF_MUSHIN, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.MIRROR_OF_MUSHIN, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.MIRROR_OF_MUSHIN, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_INGENUITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.MIRROR_OF_MUSHIN, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.MIRROR_OF_MUSHIN, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.MIRROR_OF_MUSHIN, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.MIRROR_OF_MUSHIN, amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
     static FARUZAN            = new Character({ name: "FARUZAN",            
         level: { materials: { 
@@ -4001,6 +4031,54 @@ export class CharacterList {
             }
         }]
     });
+    static WRIOTHESLEY        = new Character({ name: "WRIOTHESLEY",          
+        level: { materials: { 
+            "20+": [{ item: Items._SLIVER,   amount: 1 },                                      { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
+            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
+            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
+            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
+            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+        }}, 
+        elements: [{
+            element: Elements.CRYO,
+            talents: { 
+                normal_attack: { min: 1, max: 10, materials: { 
+                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                }}, 
+                elemental_skill: { min: 1, max: 10, materials: { 
+                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                }}, 
+                elemental_burst: { min: 1, max: 10, materials: { 
+                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                }}
+            }
+        }]
+    });
     static CHARLOTTE          = new Character({ name: "CHARLOTTE",          
         level: { materials: { 
             "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
@@ -4237,53 +4315,52 @@ export class CharacterList {
             }}
         ]
     });
-    static XIANYUN            = new Character({ name: "XIANYUN",            
+    static XIANYUN            = new Character({ name: "XIANYUN",            /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items._SLIVER,   amount: 1 },                             { item: Items.UNKNOWN, amount:  3 }, { item: Items.UNKNOWN, amount:  3 }], 
-            "40+": [{ item: Items._FRAGMENT, amount: 3 }, { item: Items.UNKNOWN, amount:  2 }, { item: Items.UNKNOWN, amount: 10 }, { item: Items.UNKNOWN, amount: 15 }], 
-            "50+": [{ item: Items._FRAGMENT, amount: 6 }, { item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "60+": [{ item: Items._CHUNK,    amount: 3 }, { item: Items.UNKNOWN, amount:  8 }, { item: Items.UNKNOWN, amount: 30 }, { item: Items.UNKNOWN, amount: 18 }], 
-            "70+": [{ item: Items._CHUNK,    amount: 6 }, { item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 45 }, { item: Items.UNKNOWN, amount: 12 }], 
-            "80+": [{ item: Items._GEMSTONE, amount: 6 }, { item: Items.UNKNOWN, amount: 20 }, { item: Items.UNKNOWN, amount: 60 }, { item: Items.UNKNOWN, amount: 24 }]
+            "20+": [{ item: Items.VAYUDA_TURQUOISE_SLIVER,   amount: 1 },                                              { item: Items.CLEARWATER_JADE, amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  3 }], 
+            "40+": [{ item: Items.VAYUDA_TURQUOISE_FRAGMENT, amount: 3 }, { item: Items.CLOUDSEAM_SCALE, amount:  2 }, { item: Items.CLEARWATER_JADE, amount: 10 }, { item: Items.DIVINING_SCROLL,        amount: 15 }], 
+            "50+": [{ item: Items.VAYUDA_TURQUOISE_FRAGMENT, amount: 6 }, { item: Items.CLOUDSEAM_SCALE, amount:  4 }, { item: Items.CLEARWATER_JADE, amount: 20 }, { item: Items.SEALED_SCROLL,          amount: 12 }], 
+            "60+": [{ item: Items.VAYUDA_TURQUOISE_CHUNK,    amount: 3 }, { item: Items.CLOUDSEAM_SCALE, amount:  8 }, { item: Items.CLEARWATER_JADE, amount: 30 }, { item: Items.SEALED_SCROLL,          amount: 18 }], 
+            "70+": [{ item: Items.VAYUDA_TURQUOISE_CHUNK,    amount: 6 }, { item: Items.CLOUDSEAM_SCALE, amount: 12 }, { item: Items.CLEARWATER_JADE, amount: 45 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }], 
+            "80+": [{ item: Items.VAYUDA_TURQUOISE_GEMSTONE, amount: 6 }, { item: Items.CLOUDSEAM_SCALE, amount: 20 }, { item: Items.CLEARWATER_JADE, amount: 60 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 24 }]
         }}, 
-        elements: [{
-            element: Elements.CRYO,
-            talents: { 
+        elements: [
+            { element: Elements.ANEMO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_GOLD,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_GOLD,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_GOLD,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_GOLD,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_,        amount:  6 }, {item: Items.UNKNOWN, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_,        amount:  9 }, {item: Items.UNKNOWN, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_, amount:  4 }, {item: Items.UNKNOWN, amount:  4 }, { item: Items.UNKNOWN, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_, amount:  6 }, {item: Items.UNKNOWN, amount:  6 }, { item: Items.UNKNOWN, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_GOLD,        amount:  6 }, {item: Items.SEALED_SCROLL,          amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_GOLD,        amount:  9 }, {item: Items.SEALED_SCROLL,          amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  4 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount:  6 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 2 }] 
                 }}
-            }
-        }]
+            }}
+        ]
     });
     static CHIORI             = new Character({ name: "CHIORI",             
         level: { materials: { 
@@ -4958,47 +5035,47 @@ export class CharacterList {
     });
     static LAN_YAN            = new Character({ name: "LAN_YAN",            /* FINISHED */
         level: { materials: { 
-            "20+": [{ item: Items.vayuda_turquoise_SLIVER,   amount: 1 },                                                                   { item: Items.CLEARWATER_JADE, amount:  3 }, { item: Items.WHOPPERFLOWER_NECTAR, amount:  3 }], 
-            "40+": [{ item: Items.vayuda_turquoise_FRAGMENT, amount: 3 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount:  2 }, { item: Items.CLEARWATER_JADE, amount: 10 }, { item: Items.WHOPPERFLOWER_NECTAR, amount: 15 }], 
-            "50+": [{ item: Items.vayuda_turquoise_FRAGMENT, amount: 6 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount:  4 }, { item: Items.CLEARWATER_JADE, amount: 20 }, { item: Items.SHIMMERING_NECTAR,    amount: 12 }], 
-            "60+": [{ item: Items.vayuda_turquoise_CHUNK,    amount: 3 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount:  8 }, { item: Items.CLEARWATER_JADE, amount: 30 }, { item: Items.SHIMMERING_NECTAR,    amount: 18 }], 
-            "70+": [{ item: Items.vayuda_turquoise_CHUNK,    amount: 6 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount: 12 }, { item: Items.CLEARWATER_JADE, amount: 45 }, { item: Items.ENERGY_NECTAR,        amount: 12 }], 
-            "80+": [{ item: Items.vayuda_turquoise_GEMSTONE, amount: 6 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount: 20 }, { item: Items.CLEARWATER_JADE, amount: 60 }, { item: Items.ENERGY_NECTAR,        amount: 24 }]
+            "20+": [{ item: Items.VAYUDA_TURQUOISE_SLIVER,   amount: 1 },                                                                   { item: Items.CLEARWATER_JADE, amount:  3 }, { item: Items.WHOPPERFLOWER_NECTAR, amount:  3 }], 
+            "40+": [{ item: Items.VAYUDA_TURQUOISE_FRAGMENT, amount: 3 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount:  2 }, { item: Items.CLEARWATER_JADE, amount: 10 }, { item: Items.WHOPPERFLOWER_NECTAR, amount: 15 }], 
+            "50+": [{ item: Items.VAYUDA_TURQUOISE_FRAGMENT, amount: 6 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount:  4 }, { item: Items.CLEARWATER_JADE, amount: 20 }, { item: Items.SHIMMERING_NECTAR,    amount: 12 }], 
+            "60+": [{ item: Items.VAYUDA_TURQUOISE_CHUNK,    amount: 3 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount:  8 }, { item: Items.CLEARWATER_JADE, amount: 30 }, { item: Items.SHIMMERING_NECTAR,    amount: 18 }], 
+            "70+": [{ item: Items.VAYUDA_TURQUOISE_CHUNK,    amount: 6 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount: 12 }, { item: Items.CLEARWATER_JADE, amount: 45 }, { item: Items.ENERGY_NECTAR,        amount: 12 }], 
+            "80+": [{ item: Items.VAYUDA_TURQUOISE_GEMSTONE, amount: 6 }, { item: Items["GOLD-INSCRIBED_SECRET_SOURCE_CORE"], amount: 20 }, { item: Items.CLEARWATER_JADE, amount: 60 }, { item: Items.ENERGY_NECTAR,        amount: 24 }]
         }}, 
         elements: [
             { element: Elements.CRYO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_DILLIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.ERODED_SUNFIRE, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.ERODED_SUNFIRE, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.ERODED_SUNFIRE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.ERODED_SUNFIRE, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_DILLIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.ERODED_SUNFIRE, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.ERODED_SUNFIRE, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.ERODED_SUNFIRE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.ERODED_SUNFIRE, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_DILLIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_DILLIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.ERODED_SUNFIRE, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_DILLIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.ERODED_SUNFIRE, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  6 }, {item: Items.SHIMMERING_NECTAR,    amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  9 }, {item: Items.SHIMMERING_NECTAR,    amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  4 }, {item: Items.ENERGY_NECTAR,        amount:  4 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount:  6 }, {item: Items.ENERGY_NECTAR,        amount:  6 }, { item: Items.ERODED_SUNFIRE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.ERODED_SUNFIRE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.ERODED_SUNFIRE, amount: 2 }] 
                 }}
             }}
         ]
@@ -5015,37 +5092,37 @@ export class CharacterList {
         elements: [
             { element: Elements.CRYO, talents: { 
                 normal_attack: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENSE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  6 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  9 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  4 }, {item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items.FADING_CANDLE, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  6 }, {item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items.FADING_CANDLE, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 12 }, {item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items.FADING_CANDLE, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 16 }, {item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items.FADING_CANDLE, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  6 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  9 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  4 }, {item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, {item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 12 }, {item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items.FADING_CANDLE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 16 }, {item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items.FADING_CANDLE, amount: 2 }] 
                 }}, 
                 elemental_skill: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENSE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  6 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  9 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  4 }, {item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items.FADING_CANDLE, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  6 }, {item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items.FADING_CANDLE, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 12 }, {item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items.FADING_CANDLE, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 16 }, {item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items.FADING_CANDLE, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  6 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  9 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  4 }, {item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, {item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 12 }, {item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items.FADING_CANDLE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 16 }, {item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items.FADING_CANDLE, amount: 2 }] 
                 }}, 
                 elemental_burst: { min: 1, max: 10, materials: { 
-                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENSE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
-                    3:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
-                    4:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
-                    5:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  6 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],                                             
-                    6:  [{ item: Items.GUIDE_TO_TRANSIENSE,        amount:  9 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],                                             
-                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  4 }, {item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items.FADING_CANDLE, amount: 1 }],
-                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount:  6 }, {item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items.FADING_CANDLE, amount: 1 }],
-                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 12 }, {item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items.FADING_CANDLE, amount: 2 }],
-                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENSE, amount: 16 }, {item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items.FADING_CANDLE, amount: 2 }] 
+                    2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
+                    3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
+                    4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
+                    5:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  6 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  6 }],                                             
+                    6:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  9 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  9 }],                                             
+                    7:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  4 }, {item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, {item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items.FADING_CANDLE, amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 12 }, {item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items.FADING_CANDLE, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 16 }, {item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items.FADING_CANDLE, amount: 2 }] 
                 }}
             }
         }]
