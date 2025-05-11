@@ -88,7 +88,7 @@ class CharacterDataElementTalent {
     /**
      * @type {number}
      */
-    max = 10;
+    max = 1;
     /**
      * @type {CharacterDataElementTalentMaterials}
      */
@@ -261,7 +261,7 @@ class CharacterDataLevel {
     /**
      * @type {number}
      */
-    max = 90;
+    max = 1;
     /**
      * @type {CharacterDataLevelMaterials}
      */
@@ -323,7 +323,7 @@ export class Character {
         }
 
         this.#data.level.min = data.level.min || 1;
-        this.#data.level.max = data.level.max || 90;
+        this.#data.level.max = data.level.max || 1;
         for (const level in data.level.materials) {
             const materials = data.level.materials[level];
             for(const mat of materials){
@@ -415,7 +415,7 @@ export class CharacterList {
         }},
         elements: [
             { element: Elements.ANEMO, talents: {
-                normal_attack: { min: 1, max: 10, materials: {
+                normal_attack: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
@@ -426,7 +426,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
                 }},
-                elemental_skill: { min: 1, max: 10, materials: {
+                elemental_skill: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
@@ -437,7 +437,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
                 }},
-                elemental_burst: { min: 1, max: 10, materials: {
+                elemental_burst: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
@@ -450,7 +450,7 @@ export class CharacterList {
                }}
             }},
             { element: Elements.GEO, talents: {
-                normal_attack: { min: 1, max: 10, materials: {
+                normal_attack: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
@@ -461,7 +461,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
                 }},
-                elemental_skill: { min: 1, max: 10, materials: {
+                elemental_skill: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
@@ -472,7 +472,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
                 }},
-                elemental_burst: { min: 1, max: 10, materials: {
+                elemental_burst: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
@@ -485,7 +485,7 @@ export class CharacterList {
                }}
             }},
             { element: Elements.ELECTRO, talents: {
-                normal_attack: { min: 1, max: 10, materials: {
+                normal_attack: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, { item: Items.OLD_HANDGUARD,      amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_ELEGANCE,          amount:  2 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_LIGHT,             amount:  4 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],
@@ -496,7 +496,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE,   amount: 12 }, { item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount: 16 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }]
                 }},
-                elemental_skill: { min: 1, max: 10, materials: {
+                elemental_skill: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, { item: Items.OLD_HANDGUARD,      amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_ELEGANCE,          amount:  2 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_LIGHT,             amount:  4 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],
@@ -507,7 +507,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE,   amount: 12 }, { item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount: 16 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }]
                 }},
-                elemental_burst: { min: 1, max: 10, materials: {
+                elemental_burst: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, { item: Items.OLD_HANDGUARD,      amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_ELEGANCE,          amount:  2 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_LIGHT,             amount:  4 }, { item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],
@@ -520,7 +520,7 @@ export class CharacterList {
                }}
             }},
             { element: Elements.DENDRO, talents: {
-                normal_attack: { min: 1, max: 10, materials: {
+                normal_attack: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, { item: Items.FUNGAL_SPORES,         amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_INGENUITY,         amount:  2 }, { item: Items.LUMINESCENT_POLLEN,    amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_PRAXIS,            amount:  4 }, { item: Items.LUMINESCENT_POLLEN,    amount:  4 }],
@@ -531,7 +531,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_INGENUITY,  amount: 12 }, { item: Items.CRYSTALLINE_CYST_DUST, amount:  9 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_PRAXIS,     amount: 16 }, { item: Items.CRYSTALLINE_CYST_DUST, amount: 12 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }]
                 }},
-                elemental_skill: { min: 1, max: 10, materials: {
+                elemental_skill: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, { item: Items.FUNGAL_SPORES,         amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_INGENUITY,         amount:  2 }, { item: Items.LUMINESCENT_POLLEN,    amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_PRAXIS,            amount:  4 }, { item: Items.LUMINESCENT_POLLEN,    amount:  4 }],
@@ -542,7 +542,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_INGENUITY,  amount: 12 }, { item: Items.CRYSTALLINE_CYST_DUST, amount:  9 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_PRAXIS,     amount: 16 }, { item: Items.CRYSTALLINE_CYST_DUST, amount: 12 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }]
                 }},
-                elemental_burst: { min: 1, max: 10, materials: {
+                elemental_burst: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, { item: Items.FUNGAL_SPORES,         amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_INGENUITY,         amount:  2 }, { item: Items.LUMINESCENT_POLLEN,    amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_PRAXIS,            amount:  4 }, { item: Items.LUMINESCENT_POLLEN,    amount:  4 }],
@@ -555,7 +555,7 @@ export class CharacterList {
                }}
             }},
             { element: Elements.HYDRO, talents: {
-                normal_attack: { min: 1, max: 10, materials: {
+                normal_attack: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_EQUITY,     amount:  3 }, { item: Items.TRANSOCEANIC_PEARL,    amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_JUSTICE,        amount:  2 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_ORDER,          amount:  4 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  4 }],
@@ -566,7 +566,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_JUSTICE, amount: 12 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  9 }, { item: Items.WORLDSPAN_FERN, amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_ORDER,   amount: 16 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount: 12 }, { item: Items.WORLDSPAN_FERN, amount: 2 }]
                 }},
-                elemental_skill: { min: 1, max: 10, materials: {
+                elemental_skill: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_EQUITY,     amount:  3 }, { item: Items.TRANSOCEANIC_PEARL,    amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_JUSTICE,        amount:  2 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_ORDER,          amount:  4 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  4 }],
@@ -577,7 +577,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_JUSTICE, amount: 12 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  9 }, { item: Items.WORLDSPAN_FERN, amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_ORDER,   amount: 16 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount: 12 }, { item: Items.WORLDSPAN_FERN, amount: 2 }]
                 }},
-                elemental_burst: { min: 1, max: 10, materials: {
+                elemental_burst: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_EQUITY,     amount:  3 }, { item: Items.TRANSOCEANIC_PEARL,    amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_JUSTICE,        amount:  2 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_ORDER,          amount:  4 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  4 }],
@@ -590,7 +590,7 @@ export class CharacterList {
                }}
             }},
             { element: Elements.PYRO, talents: {
-                normal_attack: { min: 1, max: 10, materials: {
+                normal_attack: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, { item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_KINDLING,          amount:  2 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_CONFLICT,          amount:  4 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],
@@ -601,7 +601,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_KINDLING,   amount: 12 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  9 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_CONFLICT,   amount: 16 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 12 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 2 }]
                 }},
-                elemental_skill: { min: 1, max: 10, materials: {
+                elemental_skill: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, { item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_KINDLING,          amount:  2 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_CONFLICT,          amount:  4 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],
@@ -612,7 +612,7 @@ export class CharacterList {
                     9: [{ item: Items.PHILOSOPHIES_OF_KINDLING,   amount: 12 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  9 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 2 }],
                    10: [{ item: Items.PHILOSOPHIES_OF_CONFLICT,   amount: 16 }, { item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 12 }, { item: Items.THE_CORNERSTONE_OF_STARS_AND_FLAMES, amount: 2 }]
                 }},
-                elemental_burst: { min: 1, max: 10, materials: {
+                elemental_burst: { materials: {
                     2: [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, { item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],
                     3: [{ item: Items.GUIDE_TO_KINDLING,          amount:  2 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],
                     4: [{ item: Items.GUIDE_TO_CONFLICT,          amount:  4 }, { item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],
@@ -625,7 +625,7 @@ export class CharacterList {
                }}
             }},
             { element: Elements.CRYO, talents: {
-                normal_attack: { min: 1, max: 10, materials: {
+                normal_attack: { materials: {
                      2: [],
                      3: [],
                      4: [],
@@ -636,7 +636,7 @@ export class CharacterList {
                      9: [],
                     10: []
                 }},
-                elemental_skill: { min: 1, max: 10, materials: {
+                elemental_skill: { materials: {
                      2: [],
                      3: [],
                      4: [],
@@ -647,7 +647,7 @@ export class CharacterList {
                      9: [],
                     10: []
                 }},
-                elemental_burst: { min: 1, max: 10, materials: {
+                elemental_burst: { materials: {
                      2: [],
                      3: [],
                      4: [],
@@ -662,7 +662,7 @@ export class CharacterList {
         ]
     });
     static AMBER              = new Character({ name: "AMBER",              /* FINISHED */ 
-        level: { min: 1, max: 90, materials: {
+        level: { materials: {
             "20+": [{ item: Items.AGNIDUS_AGATE_SLIVER,   amount: 1 },                                             { item: Items.SMALL_LAMP_GRASS, amount:  3 }, { item: Items.FIRM_ARROWHEAD,     amount:  3 }],
             "40+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 3 },                                             { item: Items.SMALL_LAMP_GRASS, amount: 10 }, { item: Items.FIRM_ARROWHEAD,     amount: 15 }],
             "50+": [{ item: Items.AGNIDUS_AGATE_FRAGMENT, amount: 6 }, { item: Items.EVERFLAME_SEED, amount:  4 }, { item: Items.SMALL_LAMP_GRASS, amount: 20 }, { item: Items.SHARP_ARROWHEAD,    amount: 12 }],
@@ -672,7 +672,7 @@ export class CharacterList {
         }},
         elements: [
             { element: Elements.PYRO, talents: {
-                normal_attack: { min: 1, max: 10, materials: {
+                normal_attack: { materials: {
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, { item: Items.FIRM_ARROWHEAD,     amount:  6 }],
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, { item: Items.SHARP_ARROWHEAD,    amount:  3 }],
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, { item: Items.SHARP_ARROWHEAD,    amount:  4 }],
@@ -683,7 +683,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, { item: Items.WATHERED_ARROWHEAD, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, { item: Items.WATHERED_ARROWHEAD, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                 }},
-                elemental_skill: { min: 1, max: 10, materials: {
+                elemental_skill: { materials: {
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, { item: Items.FIRM_ARROWHEAD,     amount:  6 }],
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, { item: Items.SHARP_ARROWHEAD,    amount:  3 }],
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, { item: Items.SHARP_ARROWHEAD,    amount:  4 }],
@@ -694,7 +694,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, { item: Items.WATHERED_ARROWHEAD, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, { item: Items.WATHERED_ARROWHEAD, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                 }},
-                elemental_burst: { min: 1, max: 10, materials: {
+                elemental_burst: { materials: {
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, { item: Items.FIRM_ARROWHEAD,     amount:  6 }],
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, { item: Items.SHARP_ARROWHEAD,    amount:  3 }],
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, { item: Items.SHARP_ARROWHEAD,    amount:  4 }],
@@ -719,7 +719,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.CRYO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }], 
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }], 
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }], 
@@ -730,7 +730,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  9 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }], 
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }], 
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }], 
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }], 
@@ -741,7 +741,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  9 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }], 
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }], 
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }], 
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }], 
@@ -766,7 +766,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ELECTRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.SLIME_CONDENSATE,      amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SLIME_SECRETIONS,      amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SLIME_SECRETIONS,      amount:  4 }],                                             
@@ -777,7 +777,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.SLIME_CONCENTRATE,     amount:  9 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }], 
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.SLIME_CONCENTRATE,     amount: 12 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.SLIME_CONDENSATE,      amount:  6 }], 
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SLIME_SECRETIONS,      amount:  3 }], 
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SLIME_SECRETIONS,      amount:  4 }], 
@@ -788,7 +788,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.SLIME_CONCENTRATE,     amount:  9 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }], 
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.SLIME_CONCENTRATE,     amount: 12 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.SLIME_CONDENSATE,      amount:  6 }], 
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SLIME_SECRETIONS,      amount:  3 }], 
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SLIME_SECRETIONS,      amount:  4 }], 
@@ -813,7 +813,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.HYDRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -824,7 +824,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -835,7 +835,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -860,7 +860,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ELECTRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE   , amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE       , amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE       , amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -871,7 +871,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE   , amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE       , amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE       , amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -882,7 +882,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE   , amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE       , amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE       , amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -907,7 +907,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.PYRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE   , amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE       , amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE       , amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -918,7 +918,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE   , amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE       , amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE       , amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -929,7 +929,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE   , amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE       , amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE       , amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -954,7 +954,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ELECTRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
@@ -965,7 +965,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
@@ -976,7 +976,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
@@ -1001,7 +1001,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.HYDRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1012,7 +1012,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1023,7 +1023,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1048,7 +1048,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.GEO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -1059,7 +1059,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -1070,7 +1070,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -1095,7 +1095,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ELECTRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.FIRM_ARROWHEAD,     amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SHARP_ARROWHEAD,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SHARP_ARROWHEAD,    amount:  4 }],                                             
@@ -1106,7 +1106,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.WATHERED_ARROWHEAD, amount:  9 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.WATHERED_ARROWHEAD, amount: 12 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.FIRM_ARROWHEAD,     amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SHARP_ARROWHEAD,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SHARP_ARROWHEAD,    amount:  4 }],                                             
@@ -1117,7 +1117,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.WATHERED_ARROWHEAD, amount:  9 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.WATHERED_ARROWHEAD, amount: 12 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.FIRM_ARROWHEAD,     amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SHARP_ARROWHEAD,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SHARP_ARROWHEAD,    amount:  4 }],                                             
@@ -1142,7 +1142,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.PYRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
@@ -1153,7 +1153,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  9 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
@@ -1164,7 +1164,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  9 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
@@ -1189,7 +1189,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.GEO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1200,7 +1200,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1211,7 +1211,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items["DVALIN'S_CLAW"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1236,7 +1236,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.CRYO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1247,7 +1247,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1258,7 +1258,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1283,7 +1283,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ANEMO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1294,7 +1294,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1305,7 +1305,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SPIRIT_LOCKET_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1330,7 +1330,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ANEMO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1341,7 +1341,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1352,7 +1352,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -1377,7 +1377,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.PYRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -1388,7 +1388,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -1399,7 +1399,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items["DVALIN'S_PLUME"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -1424,7 +1424,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.CRYO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -1435,7 +1435,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -1446,7 +1446,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -1471,7 +1471,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.HYDRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1482,7 +1482,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1493,7 +1493,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1518,7 +1518,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ELECTRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1529,7 +1529,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1540,7 +1540,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1565,7 +1565,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ANEMO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -1576,7 +1576,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -1587,7 +1587,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -1612,7 +1612,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.PYRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -1623,7 +1623,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -1634,7 +1634,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.RING_OF_BOREAS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.RING_OF_BOREAS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -1659,7 +1659,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.CRYO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.FIRM_ARROWHEAD,     amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SHARP_ARROWHEAD,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SHARP_ARROWHEAD,    amount:  4 }],                                             
@@ -1670,7 +1670,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.WATHERED_ARROWHEAD, amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.WATHERED_ARROWHEAD, amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.FIRM_ARROWHEAD,     amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SHARP_ARROWHEAD,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SHARP_ARROWHEAD,    amount:  4 }],                                             
@@ -1681,7 +1681,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items.WATHERED_ARROWHEAD, amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items.WATHERED_ARROWHEAD, amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items.FIRM_ARROWHEAD,     amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items.SHARP_ARROWHEAD,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items.SHARP_ARROWHEAD,    amount:  4 }],                                             
@@ -1706,7 +1706,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.HYDRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -1717,7 +1717,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -1728,7 +1728,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_FREEDOM, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_FREEDOM,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_FREEDOM,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -1753,7 +1753,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.PYRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
@@ -1764,7 +1764,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
@@ -1775,7 +1775,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.GOLDEN_RAVEN_INSIGNIA,     amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.TREASURE_HOARDER_INSIGNIA, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SILVER_RAVEN_INSIGNIA,     amount:  4 }],                                             
@@ -1800,7 +1800,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.GEO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -1811,7 +1811,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -1822,7 +1822,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -1847,7 +1847,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.GEO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -1858,7 +1858,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -1869,7 +1869,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.TUSK_OF_MONOCEROS_CAELI, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -1894,7 +1894,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.CRYO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1905,7 +1905,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1916,7 +1916,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1941,7 +1941,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ANEMO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -1952,7 +1952,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -1963,7 +1963,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -1988,7 +1988,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.PYRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -1999,7 +1999,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -2010,7 +2010,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.SHARD_OF_A_FOUL_LEGACY, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -2035,7 +2035,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.CRYO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -2046,7 +2046,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -2057,7 +2057,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 12 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount:  9 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_BALLAD, amount: 16 }, {item: Items["LIEUTENANT'S_INSIGNIA"], amount: 12 }, { item: Items.SHADOW_OF_THE_WARRIOR, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_BALLAD,    amount:  3 }, {item: Items["RECRUIT'S_INSIGNIA"],    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  2 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_BALLAD,        amount:  4 }, {item: Items["SEARGENT'S_INSIGNIA"],   amount:  4 }],                                             
@@ -2083,7 +2083,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2094,7 +2094,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2105,7 +2105,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2130,7 +2130,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.CRYO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -2141,7 +2141,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -2152,7 +2152,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_RESISTANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -2178,7 +2178,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2189,7 +2189,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2200,7 +2200,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2226,7 +2226,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2237,7 +2237,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2248,7 +2248,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2274,7 +2274,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2285,7 +2285,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2296,7 +2296,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2321,7 +2321,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.PYRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -2332,7 +2332,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -2343,7 +2343,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -2369,7 +2369,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2380,7 +2380,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2391,7 +2391,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2416,7 +2416,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ELECTRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_ELEGANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -2427,7 +2427,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_ELEGANCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items.ASHEN_HEART, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items.ASHEN_HEART, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_ELEGANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -2438,7 +2438,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_ELEGANCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items.ASHEN_HEART, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items.ASHEN_HEART, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_ELEGANCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -2464,7 +2464,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2475,7 +2475,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2486,7 +2486,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2512,7 +2512,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2523,7 +2523,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2534,7 +2534,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2560,7 +2560,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2571,7 +2571,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2582,7 +2582,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2608,7 +2608,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2619,7 +2619,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2630,7 +2630,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2655,7 +2655,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.GEO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_ELEGANCE,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -2666,7 +2666,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_ELEGANCE, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items.ASHEN_HEART, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items.ASHEN_HEART, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_ELEGANCE,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -2677,7 +2677,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_ELEGANCE, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items.ASHEN_HEART, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items.ASHEN_HEART, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_ELEGANCE,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_ELEGANCE,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -2702,7 +2702,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.GEO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -2713,7 +2713,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items.ASHEN_HEART, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items.ASHEN_HEART, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -2724,7 +2724,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.OMINOUS_MASK, amount:  9 }, { item: Items.ASHEN_HEART, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.OMINOUS_MASK, amount: 12 }, { item: Items.ASHEN_HEART, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.DAMAGED_MASK, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.STAINED_MASK, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.STAINED_MASK, amount:  4 }],                                             
@@ -2750,7 +2750,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2761,7 +2761,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2772,7 +2772,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2798,7 +2798,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2809,7 +2809,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2820,7 +2820,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2846,7 +2846,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2857,7 +2857,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2868,7 +2868,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2894,7 +2894,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2905,7 +2905,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2916,7 +2916,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2942,7 +2942,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2953,7 +2953,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2964,7 +2964,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -2990,7 +2990,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3001,7 +3001,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3012,7 +3012,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3038,7 +3038,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3049,7 +3049,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3060,7 +3060,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3086,7 +3086,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3097,7 +3097,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3108,7 +3108,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3134,7 +3134,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3145,7 +3145,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3156,7 +3156,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3182,7 +3182,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3193,7 +3193,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3204,7 +3204,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3229,7 +3229,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ELECTRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -3240,7 +3240,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -3251,7 +3251,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_ADMONITION, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.MUDRA_OF_THE_MALEFIC_GENERAL, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_ADMONITION,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_ADMONITION,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -3277,7 +3277,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3288,7 +3288,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3299,7 +3299,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3325,7 +3325,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3336,7 +3336,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3347,7 +3347,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3372,7 +3372,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.CRYO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_INGENUITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -3383,7 +3383,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.MIRROR_OF_MUSHIN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.MIRROR_OF_MUSHIN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_INGENUITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -3394,7 +3394,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.MIRROR_OF_MUSHIN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_INGENUITY, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.MIRROR_OF_MUSHIN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_INGENUITY,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_INGENUITY,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -3420,7 +3420,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3431,7 +3431,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3442,7 +3442,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3468,7 +3468,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3479,7 +3479,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3490,7 +3490,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3515,7 +3515,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.DENDRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -3526,7 +3526,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items["DAKA'S_BELL"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items["DAKA'S_BELL"], amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -3537,7 +3537,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items["DAKA'S_BELL"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items["DAKA'S_BELL"], amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -3563,7 +3563,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3574,7 +3574,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3585,7 +3585,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3611,7 +3611,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3622,7 +3622,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3633,7 +3633,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3659,7 +3659,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3670,7 +3670,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3681,7 +3681,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3707,7 +3707,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3718,7 +3718,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3729,7 +3729,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3755,7 +3755,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3766,7 +3766,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3777,7 +3777,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3803,7 +3803,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3814,7 +3814,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3825,7 +3825,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3851,7 +3851,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3862,7 +3862,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3873,7 +3873,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3899,7 +3899,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3910,7 +3910,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3921,7 +3921,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3947,7 +3947,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3958,7 +3958,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3969,7 +3969,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -3995,7 +3995,7 @@ export class CharacterList {
         elements: [{
             element: Elements.HYDRO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_EQUITY,    amount:  3 }, { item: Items.TRANSOCEANIC_PEARL,    amount:  6 }], 
                     3:  [{ item: Items.GUIDE_TO_EQUITY,        amount:  2 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  3 }], 
                     4:  [{ item: Items.GUIDE_TO_EQUITY,        amount:  4 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  4 }], 
@@ -4006,7 +4006,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_EQUITY, amount: 12 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  9 }, { item: Items.EVERAMBER, amount: 2 }], 
                     10: [{ item: Items.PHILOSOPHIES_OF_EQUITY, amount: 16 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount: 12 }, { item: Items.EVERAMBER, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_EQUITY,    amount:  3 }, { item: Items.TRANSOCEANIC_PEARL,    amount:  6 }], 
                     3:  [{ item: Items.GUIDE_TO_EQUITY,        amount:  2 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  3 }], 
                     4:  [{ item: Items.GUIDE_TO_EQUITY,        amount:  4 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  4 }], 
@@ -4017,7 +4017,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_EQUITY, amount: 12 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount:  9 }, { item: Items.EVERAMBER, amount: 2 }], 
                     10: [{ item: Items.PHILOSOPHIES_OF_EQUITY, amount: 16 }, { item: Items.XENOCHROMATIC_CRYSTAL, amount: 12 }, { item: Items.EVERAMBER, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_EQUITY,    amount:  3 }, { item: Items.TRANSOCEANIC_PEARL,    amount:  6 }], 
                     3:  [{ item: Items.GUIDE_TO_EQUITY,        amount:  2 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  3 }], 
                     4:  [{ item: Items.GUIDE_TO_EQUITY,        amount:  4 }, { item: Items.TRANSOCEANIC_CHUNK,    amount:  4 }], 
@@ -4043,7 +4043,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4054,7 +4054,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4065,7 +4065,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4091,7 +4091,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4102,7 +4102,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4113,7 +4113,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4137,7 +4137,7 @@ export class CharacterList {
             "80+": [{ item: Items.VARUNADA_LAZURITE_GEMSTONE, amount: 6 }, { item: Items.WATER_THAT_FAILED_TO_TRANSCEND, amount: 20 }, { item: Items.LAKELIGHT_LILY, amount: 60 }, { item: Items.ENERGY_NECTAR,        amount: 24 }],
         }},
         elements: [{ element: Elements.HYDRO, talents: {
-            normal_attack: { min: 1, max: 10, materials: {
+            normal_attack: { materials: {
                  2: [],
                  3: [{ item: Items.GUIDE_TO_JUSTICE, amount: 2}, { item: Items.SHIMMERING_NECTAR, amount: 3 }],
                  4: [{ item: Items.GUIDE_TO_JUSTICE, amount: 4}, { item: Items.SHIMMERING_NECTAR, amount: 4 }],
@@ -4148,7 +4148,7 @@ export class CharacterList {
                  9: [],
                 10: []
             }},
-            elemental_skill: { min: 1, max: 10, materials: {
+            elemental_skill: { materials: {
                  2: [],
                  3: [{ item: Items.GUIDE_TO_JUSTICE, amount: 2}, { item: Items.SHIMMERING_NECTAR, amount: 3 }],
                  4: [{ item: Items.GUIDE_TO_JUSTICE, amount: 4}, { item: Items.SHIMMERING_NECTAR, amount: 4 }],
@@ -4159,7 +4159,7 @@ export class CharacterList {
                  9: [],
                 10: []
             }},
-            elemental_burst: { min: 1, max: 10, materials: {
+            elemental_burst: { materials: {
                  2: [],
                  3: [{ item: Items.GUIDE_TO_JUSTICE, amount: 2}, { item: Items.SHIMMERING_NECTAR, amount: 3 }],
                  4: [{ item: Items.GUIDE_TO_JUSTICE, amount: 4}, { item: Items.SHIMMERING_NECTAR, amount: 4 }],
@@ -4184,7 +4184,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4195,7 +4195,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4206,7 +4206,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4232,7 +4232,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4243,7 +4243,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4254,7 +4254,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4279,7 +4279,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.PYRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -4290,7 +4290,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items.LIGHTLESS_MASS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items.LIGHTLESS_MASS, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -4301,7 +4301,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 12 }, {item: Items.SLIME_CONCENTRATE, amount:  9 }, { item: Items.LIGHTLESS_MASS, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_PROSPERITY, amount: 16 }, {item: Items.SLIME_CONCENTRATE, amount: 12 }, { item: Items.LIGHTLESS_MASS, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_PROSPERITY,    amount:  3 }, {item: Items.SLIME_CONDENSATE,  amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  2 }, {item: Items.SLIME_SECRETIONS,  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_PROSPERITY,        amount:  4 }, {item: Items.SLIME_SECRETIONS,  amount:  4 }],                                             
@@ -4326,7 +4326,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ANEMO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -4337,7 +4337,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -4348,7 +4348,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 12 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_GOLD, amount: 16 }, {item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items.LIGHTLESS_EYE_OF_THE_MAELSTROM, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_GOLD,    amount:  3 }, {item: Items.DIVINING_SCROLL,        amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_GOLD,        amount:  2 }, {item: Items.SEALED_SCROLL,          amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_GOLD,        amount:  4 }, {item: Items.SEALED_SCROLL,          amount:  4 }],                                             
@@ -4374,7 +4374,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4385,7 +4385,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4396,7 +4396,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4422,7 +4422,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4433,7 +4433,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4444,7 +4444,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4470,7 +4470,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4481,7 +4481,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4492,7 +4492,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4518,7 +4518,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4529,7 +4529,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4540,7 +4540,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4566,7 +4566,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4577,7 +4577,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4588,7 +4588,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4614,7 +4614,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4625,7 +4625,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4636,7 +4636,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4662,7 +4662,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4673,7 +4673,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4684,7 +4684,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4710,7 +4710,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4721,7 +4721,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4732,7 +4732,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4758,7 +4758,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4769,7 +4769,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4780,7 +4780,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4806,7 +4806,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4817,7 +4817,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4828,7 +4828,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4853,7 +4853,7 @@ export class CharacterList {
         }},
         elements: [
             { element: Elements.ELECTRO, talents: {
-                normal_attack: { min: 1, max: 10, materials: {
+                normal_attack: { materials: {
                     2:  [{ item: Items.TEACHINGS_OF_KINDLING,    amount:  3 }, { item: Items.JUVENILE_FANG,    amount:  6 }],
                     3:  [{ item: Items.GUIDE_TO_KINDLING,        amount:  2 }, { item: Items.SEASONED_FANG,    amount:  3 }],
                     4:  [{ item: Items.GUIDE_TO_KINDLING,        amount:  4 }, { item: Items.SEASONED_FANG,    amount:  4 }],
@@ -4864,7 +4864,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_KINDLING, amount: 12 }, { item: Items["TYRANT'S_FANG"], amount:  9 }, { item: Items.LIGHTLESS_SILK_STRING, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_KINDLING, amount: 16 }, { item: Items["TYRANT'S_FANG"], amount: 12 }, { item: Items.LIGHTLESS_SILK_STRING, amount: 2 }]
                 }},
-                elemental_skill: { min: 1, max: 10, materials: {
+                elemental_skill: { materials: {
                     2:  [{ item: Items.TEACHINGS_OF_KINDLING,    amount:  3 }, { item: Items.JUVENILE_FANG,    amount:  6 }],
                     3:  [{ item: Items.GUIDE_TO_KINDLING,        amount:  2 }, { item: Items.SEASONED_FANG,    amount:  3 }],
                     4:  [{ item: Items.GUIDE_TO_KINDLING,        amount:  4 }, { item: Items.SEASONED_FANG,    amount:  4 }],
@@ -4875,7 +4875,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_KINDLING, amount: 12 }, { item: Items["TYRANT'S_FANG"], amount:  9 }, { item: Items.LIGHTLESS_SILK_STRING, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_KINDLING, amount: 16 }, { item: Items["TYRANT'S_FANG"], amount: 12 }, { item: Items.LIGHTLESS_SILK_STRING, amount: 2 }]
                 }},
-                elemental_burst: { min: 1, max: 10, materials: {
+                elemental_burst: { materials: {
                     2:  [{ item: Items.TEACHINGS_OF_KINDLING,    amount:  3 }, { item: Items.JUVENILE_FANG,    amount:  6 }],
                     3:  [{ item: Items.GUIDE_TO_KINDLING,        amount:  2 }, { item: Items.SEASONED_FANG,    amount:  3 }],
                     4:  [{ item: Items.GUIDE_TO_KINDLING,        amount:  4 }, { item: Items.SEASONED_FANG,    amount:  4 }],
@@ -4901,7 +4901,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4912,7 +4912,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4923,7 +4923,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4949,7 +4949,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4960,7 +4960,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4971,7 +4971,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -4997,7 +4997,7 @@ export class CharacterList {
         elements: [{
             element: Elements.CRYO,
             talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -5008,7 +5008,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -5019,7 +5019,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, {item: Items.UNKNOWN, amount:  9 }, { item: Items.UNKNOWN, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_, amount: 16 }, {item: Items.UNKNOWN, amount: 12 }, { item: Items.UNKNOWN, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_,    amount:  3 }, {item: Items.UNKNOWN, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_,        amount:  2 }, {item: Items.UNKNOWN, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_,        amount:  4 }, {item: Items.UNKNOWN, amount:  4 }],                                             
@@ -5044,7 +5044,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.CRYO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -5055,7 +5055,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.ERODED_SUNFIRE, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.ERODED_SUNFIRE, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -5066,7 +5066,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 12 }, {item: Items.ENERGY_NECTAR,        amount:  9 }, { item: Items.ERODED_SUNFIRE, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_DILIGENCE, amount: 16 }, {item: Items.ENERGY_NECTAR,        amount: 12 }, { item: Items.ERODED_SUNFIRE, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_DILIGENCE,    amount:  3 }, {item: Items.WHOPPERFLOWER_NECTAR, amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  2 }, {item: Items.SHIMMERING_NECTAR,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_DILIGENCE,        amount:  4 }, {item: Items.SHIMMERING_NECTAR,    amount:  4 }],                                             
@@ -5091,7 +5091,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.CRYO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
@@ -5102,7 +5102,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 12 }, {item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items.FADING_CANDLE, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 16 }, {item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items.FADING_CANDLE, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
@@ -5113,7 +5113,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 12 }, {item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items.FADING_CANDLE, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount: 16 }, {item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items.FADING_CANDLE, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, {item: Items.OLD_HANDGUARD,      amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  2 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_TRANSIENCE,        amount:  4 }, {item: Items.KAGEUCHI_HANDGUARD, amount:  4 }],                                             
@@ -5138,7 +5138,7 @@ export class CharacterList {
         }}, 
         elements: [
             { element: Elements.ELECTRO, talents: { 
-                normal_attack: { min: 1, max: 10, materials: { 
+                normal_attack: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, {item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  2 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  4 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],                                             
@@ -5149,7 +5149,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount: 12 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  9 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount: 16 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 12 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 2 }] 
                 }}, 
-                elemental_skill: { min: 1, max: 10, materials: { 
+                elemental_skill: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, {item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  2 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  4 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],                                             
@@ -5160,7 +5160,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount: 12 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount:  9 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_CONTENTION, amount: 16 }, {item: Items["SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"], amount: 12 }, { item: Items.DENIAL_AND_JUDGMENT, amount: 2 }] 
                 }}, 
-                elemental_burst: { min: 1, max: 10, materials: { 
+                elemental_burst: { materials: { 
                     2:  [{ item: Items.TEACHINGS_OF_CONTENTION,    amount:  3 }, {item: Items["SENTY'S_WOODEN_WHISTLE"],                   amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  2 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_CONTENTION,        amount:  4 }, {item: Items["WARRIOR'S_METAL_WHISTLE"],                  amount:  4 }],                                             
@@ -5185,7 +5185,7 @@ export class CharacterList {
         }},
         elements: [
             { element: Elements.ELECTRO, talents: {
-                normal_attack: { min: 1, max: 10, materials: {
+                normal_attack: { materials: {
                     2:  [{ item: Items.TEACHINGS_OF_CONFLICT,    amount:  3 }, {item: Items.JUVENILE_FANG,    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_CONFLICT,        amount:  2 }, {item: Items.SEASONED_FANG,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_CONFLICT,        amount:  4 }, {item: Items.SEASONED_FANG,    amount:  4 }],                                             
@@ -5196,7 +5196,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_CONFLICT, amount: 12 }, {item: Items["TYRANT'S_FANG"], amount:  9 }, { item: Items["ERODED_SCALE-FEATHER"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_CONFLICT, amount: 16 }, {item: Items["TYRANT'S_FANG"], amount: 12 }, { item: Items["ERODED_SCALE-FEATHER"], amount: 2 }] 
                 }},
-                elemental_skill: { min: 1, max: 10, materials: {
+                elemental_skill: { materials: {
                     2:  [{ item: Items.TEACHINGS_OF_CONFLICT,    amount:  3 }, {item: Items.JUVENILE_FANG,    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_CONFLICT,        amount:  2 }, {item: Items.SEASONED_FANG,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_CONFLICT,        amount:  4 }, {item: Items.SEASONED_FANG,    amount:  4 }],                                             
@@ -5207,7 +5207,7 @@ export class CharacterList {
                     9:  [{ item: Items.PHILOSOPHIES_OF_CONFLICT, amount: 12 }, {item: Items["TYRANT'S_FANG"], amount:  9 }, { item: Items["ERODED_SCALE-FEATHER"], amount: 2 }],
                     10: [{ item: Items.PHILOSOPHIES_OF_CONFLICT, amount: 16 }, {item: Items["TYRANT'S_FANG"], amount: 12 }, { item: Items["ERODED_SCALE-FEATHER"], amount: 2 }] 
                 }},
-                elemental_burst: { min: 1, max: 10, materials: {
+                elemental_burst: { materials: {
                     2:  [{ item: Items.TEACHINGS_OF_CONFLICT,    amount:  3 }, {item: Items.JUVENILE_FANG,    amount:  6 }],                                             
                     3:  [{ item: Items.GUIDE_TO_CONFLICT,        amount:  2 }, {item: Items.SEASONED_FANG,    amount:  3 }],                                             
                     4:  [{ item: Items.GUIDE_TO_CONFLICT,        amount:  4 }, {item: Items.SEASONED_FANG,    amount:  4 }],                                             
@@ -5240,16 +5240,16 @@ export class CharacterList {
         let total_mats = []
         for(let character_name in Characters){
             const character = Characters.get(character_name);
-            character.get_data().level.min = "1";
-            character.get_data().level.max = "90";
-            for (let i = 0; i < character.get_data().elements.length; i++) {        
-                character.get_data().elements[i].talents.normal_attack.min   = 1
-                character.get_data().elements[i].talents.normal_attack.max   = 10
-                character.get_data().elements[i].talents.elemental_skill.min = 1
-                character.get_data().elements[i].talents.elemental_skill.max = 10
-                character.get_data().elements[i].talents.elemental_burst.min = 1
-                character.get_data().elements[i].talents.elemental_burst.max = 10
-            }
+            // character.get_data().level.min = "1";
+            // character.get_data().level.max = "90";
+            // for (let i = 0; i < character.get_data().elements.length; i++) {        
+            //     character.get_data().elements[i].talents.normal_attack.min   = 1
+            //     character.get_data().elements[i].talents.normal_attack.max   = 10
+            //     character.get_data().elements[i].talents.elemental_skill.min = 1
+            //     character.get_data().elements[i].talents.elemental_skill.max = 10
+            //     character.get_data().elements[i].talents.elemental_burst.min = 1
+            //     character.get_data().elements[i].talents.elemental_burst.max = 10
+            // }
             for(let mat of character.get_materials()){
                 mat.dest.push(character_name);
                 total_mats.push(mat)

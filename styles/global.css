@@ -16,7 +16,7 @@ html, body {
 header {
     background-color: rgba(0,0,0,0.875);
     width: 1280px;
-    max-width: calc(100% - 32px);
+    max-width: 100%;
     padding: 16px max((100% - 1280px) / 2, 16px);
     padding-top: 32px;
     display: flex;
@@ -123,10 +123,9 @@ header div nav a span {
 }
 main {
     width: 1280px;
-    max-width: calc(100% - 32px);
-    margin: 0px max((100% - 1280px - 32px) / 2, 0px);
+    max-width: calc(100%);
+    margin: 0px max((100% - 1280px) / 2, 0px);
     display: flex;
-    padding: 16px;
     flex-direction: column;
     gap: 16px;
 }

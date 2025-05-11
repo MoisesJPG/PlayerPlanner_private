@@ -1,7 +1,7 @@
 import { Characters } from "./database/characters.js";
 import { Items } from "./database/items.js";
 // import "./database/main.js";
-
+let player_data = [];
 const modal = document.getElementById("modal");
 
 for(const character in Characters){
@@ -36,9 +36,7 @@ function addCharacter(name) {
     const item = document.createElement("div");
     item.className = `item character ${name}`
     let innerHTML = `
-        <div class="head">
-            <p class="name">${name}</p>
-        </div>
+        <div class="head"><p class="name">${name}</p></div>
         <div class="body">
             <img src="./images/character/${name}.png" alt="">
             <div class="info">
@@ -48,9 +46,7 @@ function addCharacter(name) {
                 <div class="elementsData"></div>
             </div>
         </div>
-        <div class="foot">
-            <div class="mats"></div>
-        </div>
+        <div class="foot"><div class="mats"></div></div>
     `;
     item.innerHTML = innerHTML;
     let active = 0;
