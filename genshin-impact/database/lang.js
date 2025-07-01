@@ -1919,7 +1919,7 @@ export class Lang {
      * @param {String} key 
      * @returns {String}
      */
-    static get_active(key){
+    static getActive(key){
         return Lang.get(Lang.active, key);
     }
     /**

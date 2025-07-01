@@ -1,5 +1,5 @@
 import ItemMap from "./ItemMap.js";
-import { Lang } from "./lang.js";
+import { Lang } from "./Lang.js";
 import ResumenTypes from "./ResumenTypes.js";
 
 class ItemData {
@@ -70,10 +70,10 @@ export class Item {
     constructor(name, rarity = 1, type, resumenType = ResumenTypes.UNKNOWN) {
         this.#data.id          = ++Item.last_id;
         this.#data.basename    = name;
-        this.#data.name        = Lang.get_active(`ITEM.${name}.NAME`);
-        this.#data.type        = Lang.get_active(`ITEM_TYPE.${type}.NAME`);
+        this.#data.name        = Lang.getActive(`ITEM.${name}.NAME`);
+        this.#data.type        = Lang.getActive(`ITEM_TYPE.${type}.NAME`);
         this.#data.rarity      = rarity;
-        this.#data.description = Lang.get_active(`ITEM.${name}.DESCRIPTION`);
+        this.#data.description = Lang.getActive(`ITEM.${name}.DESCRIPTION`);
         this.#data.resumenType = resumenType;
         ItemMap.set(this.#data.id, name);
     }

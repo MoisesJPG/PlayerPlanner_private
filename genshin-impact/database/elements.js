@@ -1,6 +1,4 @@
-
-
-import { Lang } from "./lang.js";
+import { Lang } from "./Lang.js";
 
 
 export class ElementMap {
@@ -43,7 +41,7 @@ export class Element {
     constructor(name) {
         this.#data.id        = ++Element.last_id;
         this.#data.base_name = name;
-        this.#data.name      = Lang.get_active(`ELEMENT.${name}.NAME`);
+        this.#data.name      = Lang.getActive(`ELEMENT.${name}.NAME`);
         ElementMap.set(this.#data.id, name);
     }
     

@@ -1,5 +1,5 @@
-import { Characters } from "./characters.js";
-import { Inventory } from "./misc.js";
+import { Characters } from "./CharacterList.js";
+import { Inventory } from "./Inventory.js";
 import { MISSING_ITEMS } from "./ItemList.js";
 
 //#region "Obtained Characters"
