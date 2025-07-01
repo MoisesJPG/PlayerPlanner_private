@@ -8,7 +8,7 @@ for(const character in Characters){
     const li = document.createElement("li");
     li.className = `character ${character}`
     li.innerHTML += `<img class="image" src="./images/character/AMBER.png">`;
-    li.innerHTML += `<p class="name">${Characters.get(character).get_base_name().replaceAll("_", " ")}</p>`;
+    li.innerHTML += `<p class="name">${Characters.get(character).getBasename().replaceAll("_", " ")}</p>`;
     li.addEventListener("click", () => {
         addCharacter(character);
     })
@@ -27,7 +27,7 @@ for(const item in Items) {
     }
     li.innerHTML += `<img class="image" src="./images/item/MORA.png">`;
     li.innerHTML += `<input min=0 type="number" value=0>`
-    // li.innerHTML += `<p class="name">${Items.get(item).get_base_name().replaceAll("_", " ")}</p>`;
+    // li.innerHTML += `<p class="name">${Items.get(item).getBasename().replaceAll("_", " ")}</p>`;
     modal.querySelector(".list.items").appendChild(li)
 }
 

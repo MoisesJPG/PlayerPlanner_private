@@ -14,7 +14,7 @@ export class Lang {
         "ITEM.MORA.NAME": "Mora",
         "RARITY.COMMON_CURRENCY.NAME": "",
         "ITEM.MORA.DESCRIPTION": "",
-        "ITEM.PRIMOGEM.NAME": "",
+        "ITEM.PRIMOGEM.NAME": "Protogema",
         "RARITY.SPECIAL_CURRENCY.NAME": "",
         "ITEM.PRIMOGEM.DESCRIPTION": "",
         "ITEM.CRIMSON_AGATE.NAME": "",

@@ -49,7 +49,7 @@ export class Element {
     
     get_data()      { return this.#data;           }
     get_id()        { return this.#data.id;        }
-    get_base_name() { return this.#data.base_name; }
+    getBasename() { return this.#data.base_name; }
 }
 export class ElementList {
     

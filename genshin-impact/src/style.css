@@ -1,0 +1,123 @@
+#characters .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#characters .head h1 {
+    height:      32px;
+    font-size:   32px;
+    line-height: 32px;
+    font-weight: bold;
+    color: white;
+}
+#characters .head p {
+    height:      16px;
+    font-size:   16px;
+    line-height: 16px;
+    color: white;
+    padding-left: 16px;
+}
+#characters .body { 
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+#characters .body p {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 2px * 2);
+    gap: 16px;
+    align-content: flex-start;
+    border-radius: 8px;
+    border: 2px solid black;
+    color: rgb(000, 000, 000);
+    background-color: rgba(128, 128, 128, 0.0625);
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+#characters .body p .title {
+    display: block;
+    font-weight: bold;
+    height: 16px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    text-align: center;
+    /* background-color: black; */
+    color: white;
+    border-radius: 6px 6px 0 0;
+    width: calc(100% - 16px * 2);
+    padding: 8px 16px;
+}
+#characters .body p .icon {
+    width: 128px;
+    height: 128px;
+    z-index: 1;
+    margin-left: 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+    position: relative;
+}
+#characters .body p .mats {
+    width: 100%;
+    position: relative;
+    display: grid;
+    margin: 0 16px 16px 16px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    justify-content: center;
+}
+
+#resumen .body { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#resumen .body details {
+    width: 100%;
+}
+#resumen .body details summary {
+    color: white;
+}
+#resumen .body details .content {
+    padding: 16px 0;
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 16px;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+.item .amount {
+    width: calc(100% - 4px * 2);
+    display: block;
+    background-color: black;
+    color: white;
+    height: 16px;
+    font-size: 16px;
+    padding: 4px;
+    line-height: 16px;
+    text-align: center;
+}
+.item .image {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+
+.COMMON    { background: linear-gradient(135deg, rgba(128, 128, 128, 1) 25%, rgba(064, 064, 064, 1) 75%);}
+.UN-COMMON { background: linear-gradient(135deg, rgba(000, 128, 000, 1) 25%, rgba(000, 064, 000, 1) 75%);}
+.RARE      { background: linear-gradient(135deg, rgba(000, 128, 192, 1) 25%, rgba(000, 064, 096, 1) 75%);}
+.EPIC      { background: linear-gradient(135deg, rgba(128, 000, 192, 1) 25%, rgba(064, 000, 096, 1) 75%);}
+.LEGENDARY { background: linear-gradient(135deg, rgba(192, 128, 000, 1) 25%, rgba(096, 064, 000, 1) 75%);}

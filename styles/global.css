@@ -1,134 +1,189 @@
+:root {
+    --max-width: 1536px;
+    --main-color: 16, 16, 32;
+}
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    /* outline: 1px solid red; */
-    /* background-color: transparent !important; */
+    border: 0;
+    border-radius: 0;
+    font-family: sans-serif;
 }
-html, body {
+html, body {    
     display: flex;
     flex-direction: column;
-    height: 100%;
-    background-color: rgba(64,128,255);
+    width: 100vw;
+    background-color: rgb(var(--main-color));
+    overflow-x: clip;
+    align-items: center;
 }
+
+/* #region // === HEADER === // */ 
+*::-webkit-scrollbar {
+    height: 0.5vw;
+    width:  0.5vw;
+}
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+*::-webkit-scrollbar-track:hover {
+  background-color: transparent;
+}
+*::-webkit-scrollbar-track:active {
+  background-color: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 0.5vw;
+  background-color: rgb(64, 64, 128);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #62A34B;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #62A34B;
+}
+/* #endregion // === HEADER === // */ 
+/* #region // === HEADER === // */ 
 header {
-    background-color: rgba(0,0,0,0.875);
-    width: 1280px;
-    max-width: 100%;
-    padding: 16px max((100% - 1280px) / 2, 16px);
-    padding-top: 32px;
+    background-color: rgb(var(--main-color));
+    position: fixed;
+    width: 100vw;
+}
+header .content {
+    width: calc(var(--max-width) - 16px * 2);
+    max-width: calc(100% -  16px * 2);
+    height: calc(100% - 16px * 2);
+    padding: 16px;
     display: flex;
-    gap: 16px;
-    height: 40px;
+    justify-content: space-between;
+    margin: auto;
 }
-header h1 {
-    width: 100%;
+header .content h1 {
+    width: fit-content;
+    height: 100%;
 }
-header h1 a {
+header .content h1 a {
     display: block;
-    height: 40px;
-    line-height: 40px;
-    font-size: 36px;
-    color: white;
+    height: 100%;
+    line-height: 32px;
+    font-size: 32px;
+    color: white;    font-family: 'Quicksand', sans-serif;
+
 }
-header div {
+header .content .nav {
     display: flex;
+    align-items: flex-end;
     flex: 0 0 auto;
 } 
-header div button {
+header .content .nav button {
     display: none;
 }
-header div nav { 
+header .content .nav nav { 
     flex: 0 0 auto;
     display: flex;
+    width: 100%;
 }
-header div nav a {
+header .content .nav nav a {
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
     padding: 8px 16px;
 }
-header div nav a span {
-    width: 100%;
-    height: 24px;
-    line-height: 24px;
-    display: block;
+header .content .nav nav a span {
     color: white;
+    text-align: center;
+    width: 100%;
 }
-@media screen and (max-width:calc(512px + 256px + 128px + 16px)) {
-    
-    
-    header div.close {
-        width: 40px;
-    }
-    header div.close button {
+@media screen and (max-width: calc(512px + 256px + 128px + 16px)) {
+    header .content .nav button {
         display: block;
-        width: 40px;
-    } 
-    header div.close nav {
+        width: 32px;
+        height: 32px;
+        flex: 0 0 auto;
+    }
+    header .content .nav.close {
+        width: 32px;
+    }
+    header .content .nav.close nav {
         display: none;
     }
-
-    header div.open {
-        position: absolute;
-        right: 0;
-        margin-top: -32px;
-        height: calc(100vh - 64px);
-        padding: 32px;
-        margin-right: 0px;
+    header .content .nav.open {
+        position: fixed;
+        right: -0.5vw;
+        top: 0;
+        height: 100%;
+        width: 192px;
+        max-height: calc(100vh - 32px);
+        padding: 16px;
         z-index: 2;
-        gap: 16px;
-    
+        background-color: rgb(var(--main-color));
         flex-direction: column;
     }
-    header div.open::before {
-        position: absolute;
-        right: 0;
+    header .content .nav.open::before {
+        position: fixed;
         top: 0;
-        z-index: -1;
-        background-color: rgb(0, 0, 0, 0.25);
-        width: 100vw;
+        left: 0;
+        background-color: rgb(8, 8, 16, 0.75);
+        width: calc(100% - 192px - 16px * 2 + 0.5vw);
         height: 100vh;
         content: '';
     }
-    header div.open button {
-        display: block;
-        height: 20px;
-        border: 0px;
-    } 
-    header div.open nav {
+    header .content .nav.open nav {
         display: flex;
         flex-direction: column;
     }
-    header div.open nav a { 
+    header .content .nav.open nav a { 
         height: 16px;
         min-height: 16px;
         display:flex; 
     }
-    header div.open nav a:hover::before { 
+    header .content .nav.open nav a:hover::before { 
         content: '>';
         display: block;
         width: 16px;
         margin-left: -32px;
         margin-right: 16px;
-        text-align: center;
+        text-align: end;
     }
-    header div.open nav a:hover::after  { 
+    header .content .nav.open nav a:hover::after  { 
         content: '<'; 
         display:block; 
         width: 16px;
         height: 16px;
         margin-right: -32px;
         margin-left: 16px;
+        text-align: start;
     }
 }
+/* #endregion // === HEADER === // */
+/* #region // === MAIN === // */
 main {
-    width: 1280px;
-    max-width: calc(100%);
-    margin: 0px max((100% - 1280px) / 2, 0px);
+    width: var(--max-width);
+    max-width: 100%;
+    margin: 0px max((100% - var(--max-width)) / 2, 0px);
     display: flex;
     flex-direction: column;
+    margin-top: 64px;
     gap: 16px;
 }
+main > .content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+main > .content section {
+    /* border-radius: 5px; */
+    overflow-x: auto;
+    white-space: pre-wrap;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+/* #endregion // === MAIN === // */
 main nav {
     display: flex;
     width: 100%;
@@ -186,15 +241,25 @@ main ul li {
 @media screen and (max-width: calc(128px *  2)) { main ul li { width: calc((100% - 16px * 0) / 1); } }
 @media screen and (max-width: calc(128px *  1)) { main ul li { width: calc((100% - 16px * 0) / 1); } }
 footer {
-    background-color: rgba(0,0,0,0.875);
-    width: 1280px;
-    max-width: calc(100% - 32px);
-    padding: 16px max((100% - 1280px )/ 2, 16px);
-    padding-bottom: 32px;
-    display: flex;
-    gap: 16px;
+    background-color: rgb(var(--main-color));
+    width: 100vw;
 }
-footer div {
-    width: calc(100% / 3);
+footer .content {
+    width: calc(var(--max-width) - 16px * 2);
+    max-width: calc(100% - 16px * 2);
+    height: calc(100% - 16px * 2);
     padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin: auto;
+}
+footer .content p {
+    color: white;
+    width: 100%;
+}
+footer .content div {
+    width: calc((100% - 16px * 2) / 3);
+    padding: 16px 0;
 }
