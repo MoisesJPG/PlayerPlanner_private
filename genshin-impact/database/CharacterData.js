@@ -1,4 +1,5 @@
 import CharacterLevelMaterials from "./CharacterLevelMaterials.js";
+import { Element, Elements } from "./elements.js";
 import { Items } from "./ItemList.js";
 
 export class CharacterDataElementTalentMaterials {
@@ -76,24 +77,21 @@ export class CharacterDataElementConstellation {
 	}
 }
 export class CharacterDataElement {
-	/** 
-	 * @type {Element|string} 
-	 **/
-	element;
-	/** 
-	 * @type {CharacterDataElementConstellation} 
-	 **/
 	constellation = new CharacterDataElementConstellation();
+	#elementName;
+	#talents = new CharacterDataElementTalents();
 	/** 
 	 * @param {Element} element 
 	 **/
 	setElement(element) {
-		this.element = element.getBasename();
+		this.#elementName = element.getBasename();
 	}
 	/** 
-	 * @type {CharacterDataElementTalents} 
+	 * @returns {Element} 
 	 **/
-	#talents = new CharacterDataElementTalents();
+	getElement() {
+		return Elements.get(this.#elementName);
+	}
 	/** 
 	 * @type {CharacterDataElementTalents} 
 	 **/
@@ -125,10 +123,20 @@ export class CharacterData {
 	 * @type {Number} 
 	 **/
 	rarity;
+	#elements = [];
 	/**
-	 *  @type {CharacterDataElement[]} 
+	 *  @returns {CharacterDataElement[]} 
 	 **/
-	elements = [];
+	getElements() {
+		return this.#elements;
+	}
+	/**
+	 *  @param {Number} id 
+	 *  @returns {CharacterDataElement} 
+	 **/
+	getElement(id) {
+		return this.#elements[id];
+	}
 	level = {
 		min: 1,
 		max: 1,

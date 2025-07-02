@@ -1,17 +1,9 @@
-import CharacterLevelMaterials from "./CharacterLevelMaterials";
+import CharacterLevelMaterials from "./CharacterLevelMaterials.js";
 
 export class CharacterConstructor {
-    /** 
-     * @type {String} 
-     **/
-    name;
-    /** 
-     * @type {Number} 
-     **/
-    rarity;
-    /**
-     *  @type {CharacterDataElement[]} 
-     **/
+    name = "";
+    rarity = 0;
+    /** @type {CharacterDataElement[]} **/
     elements = [];
     level = {
         min: 1,

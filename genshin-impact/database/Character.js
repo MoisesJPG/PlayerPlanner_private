@@ -40,14 +40,14 @@ export class Character {
                     element.getTalent(talentName).materials[level] = Inventory.mergeMaterials(baseMats[level],  dataElement.talents[talentName].materials[level]);
                 }
             }
-            this.#data.elements.push(element); 
+            this.#data.getElements().push(element); 
         }
 
-        this.#data.level.min = data.level.min || 1;
-        this.#data.level.max = data.level.max || 1;
+        this.#data.level.min = data.level_min || 1;
+        this.#data.level.max = data.level_max || 1;
 
-        for (const level in data.level.materials) {
-            const materials = data.level.materials[level];
+        for (const level in data.level_materials) {
+            const materials = data.level_materials[level];
             for(const mat of materials) {
                 mat.item = mat.item.getData().basename;
             }
@@ -61,12 +61,7 @@ export class Character {
         CharacterMap.set(this.#data.id, this.#data.basename);
     }
     
-    getId() { return this.#data.id; }
-    getRarity() { return this.#data.rarity; }
     getData() { return this.#data; }
-    getName() { return this.#data.name; }
-    getBasename(){ return this.#data.basename; }
-    getElement(id = 0) { return Elements.get(this.elements[id].element); }
     /**
      * @returns {InventoryMat[]}
      */
@@ -120,7 +115,7 @@ export class Character {
      **/
     #getTalentMaterials(){
         let mats = [];
-        for(const element of this.#data.elements){
+        for(const element of this.getData().getElements()) {
             for(const talentName in element.getTalents()) {
                 const talent = element.getTalent(talentName);
                 for (let level = talent.min + 1; level <= talent.max; level++) {

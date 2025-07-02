@@ -51,22 +51,21 @@ export class Inventory {
              * @param {*} data 
              */
             static setData(data) {
-                console.log(character)
                 character.getData().level.min = data.l[0];
                 character.getData().level.max = data.l[1];
                 for(let i = 0; i < data.e.length; i++) {
-                    character.getData().elements[i].constellation.min = data.e[i].c[0];
-                    character.getData().elements[i].constellation.max = data.e[i].c[1];
-                    character.getData().elements[i].talents.normal_attack.min = data.e[i].n[0];
-                    character.getData().elements[i].talents.normal_attack.max = data.e[i].n[1];
-                    character.getData().elements[i].talents.elemental_skill.min = data.e[i].s[0];
-                    character.getData().elements[i].talents.elemental_skill.max = data.e[i].s[1];
-                    character.getData().elements[i].talents.elemental_burst.min = data.e[i].b[0];
-                    character.getData().elements[i].talents.elemental_burst.max = data.e[i].b[1];
+                    character.getData().getElement(i).constellation.min = data.e[i].c[0];
+                    character.getData().getElement(i).constellation.max = data.e[i].c[1];
+                    character.getData().getElement(i).getTalent('normal_attack').min = data.e[i].n[0];
+                    character.getData().getElement(i).getTalent('normal_attack').max = data.e[i].n[1];
+                    character.getData().getElement(i).getTalent('elemental_skill').min = data.e[i].s[0];
+                    character.getData().getElement(i).getTalent('elemental_skill').max = data.e[i].s[1];
+                    character.getData().getElement(i).getTalent('elemental_burst').min = data.e[i].b[0];
+                    character.getData().getElement(i).getTalent('elemental_burst').max = data.e[i].b[1];
                 }
                 for (const itemData of character.getMaterials()){
                     const item = Items.get(itemData.item);
-                    item.getPrivate().characters.set(character.getBasename(), itemData.amount);
+                    item.getPrivate().characters.set(character.getData().basename, itemData.amount);
                     item.getPrivate().calculateRequired();
                 }
             }
@@ -100,18 +99,18 @@ export class Inventory {
             const character = Characters.get(characterId);
             let valid = 1;
             if(character.getData().level.max > character.getData().level.min) valid = 0
-            for(let i = 0; i < character.getData().elements.length; i++){
-                if(character.getData().elements[i].getTalents().normal_attack.max   >= character.getData().elements[i].getTalents().normal_attack.min) valid = 0;
-                if(character.getData().elements[i].getTalents().elemental_skill.max >= character.getData().elements[i].getTalents().elemental_skill.min) valid = 0;
-                if(character.getData().elements[i].getTalents().elemental_burst.max >= character.getData().elements[i].getTalents().elemental_burst.min) valid = 0;
+            for(let i = 0; i < character.getData().getElements().length; i++){
+                if(character.getData().getElement(i).getTalents().normal_attack.max   >= character.getData().getElement(i).getTalents().normal_attack.min) valid = 0;
+                if(character.getData().getElement(i).getTalents().elemental_skill.max >= character.getData().getElement(i).getTalents().elemental_skill.min) valid = 0;
+                if(character.getData().getElement(i).getTalents().elemental_burst.max >= character.getData().getElement(i).getTalents().elemental_burst.min) valid = 0;
             }
             if(character.getData().level.max == 1 && character.getData().level.min == 1) valid = -1;
             if(valid == 0){
                 const mats = character.getMaterials();
                 innerHTML += `
-                    <p character-id="${character.getId()}" character-name="${character.getBasename()}">
-                        <span class="title ${rarityNames[character.getRarity()-1]}">${character.getBasename()}</span>
-                        <img class="icon ${rarityNames[character.getRarity()-1]}" alt="${character.getBasename()}" src="./images/character/${Misc.sanetizeFilename(character.getBasename())}.png">
+                    <p character-id="${character.getData().id}" character-name="${character.getData().basename}">
+                        <span class="title ${rarityNames[character.getData().rarity-1]}">${character.getData().basename}</span>
+                        <img class="icon ${rarityNames[character.getData().rarity-1]}" alt="${character.getData().basename}" src="./images/character/${Misc.sanetizeFilename(character.getData().basename)}.png">
                 `;
                 if(mats.length > 0){
                     innerHTML += `<span class="mats">`;

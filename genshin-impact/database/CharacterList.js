@@ -5,7 +5,7 @@ import { Items } from "./ItemList.js";
 
 class CharacterList {
     //#region // === LIST === //
-    static TRAVELER           = new Character({ name: "TRAVELER",           rarity: 5, /*  */ 
+    static TRAVELER           = new Character({name: "TRAVELER",           rarity: 5, /*  */
         level: { materials: {
             "20+": [{ item: Items.BRILLIANT_DIAMOND_SLIVER,   amount: 1 }, { item: Items.WINDWHEEL_ASTER, amount:  3 }, { item: Items.DAMAGED_MASK, amount:  3 }],
             "40+": [{ item: Items.BRILLIANT_DIAMOND_FRAGMENT, amount: 3 }, { item: Items.WINDWHEEL_ASTER, amount: 10 }, { item: Items.DAMAGED_MASK, amount: 15 }],
@@ -14,74 +14,75 @@ class CharacterList {
             "70+": [{ item: Items.BRILLIANT_DIAMOND_CHUNK,    amount: 6 }, { item: Items.WINDWHEEL_ASTER, amount: 45 }, { item: Items.OMINOUS_MASK, amount: 12 }],
             "80+": [{ item: Items.BRILLIANT_DIAMOND_GEMSTONE, amount: 6 }, { item: Items.WINDWHEEL_ASTER, amount: 60 }, { item: Items.OMINOUS_MASK, amount: 24 }],
         }},
-        elements: [{ element: Elements.ANEMO, talents: {
-            normal_attack: { materials: {
-                2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
-                3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
-                4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
-                5: [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
-                6: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
-                7: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
-                8: [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
-                9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
-                   10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
-            }},
-            elemental_skill: { materials: {
-                2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
-                3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
-                4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
-                5: [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
-                6: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
-                7: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
-                8: [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
-                9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
-                   10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
-            }},
-            elemental_burst: { materials: {
-                2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
-                3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
-                4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
-                5: [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
-                6: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
-                7: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
-                8: [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
-                9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
-                   10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
-               }}
+        elements: [
+            { element: Elements.ANEMO, talents: {
+                normal_attack: { materials: {
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
+                    3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
+                    4:  [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
+                    6:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
+                    7:  [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
+                }},
+                elemental_skill: { materials: {
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
+                    3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
+                    4:  [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
+                    6:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
+                    7:  [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
+                }},
+                elemental_burst: { materials: {
+                    2:  [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
+                    3:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
+                    4:  [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
+                    5:  [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
+                    6:  [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
+                    7:  [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    8:  [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    9:  [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
+                }}
             }},
             { element: Elements.GEO, talents: {
-            normal_attack: { materials: {
-                2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
-                3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
-                4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
-                5: [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
-                6: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
-                7: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
-                8: [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
-                9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
-                   10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
-            }},
-            elemental_skill: { materials: {
-                2: [{ item: Items.TEACHINGS_OF_,       amount:  3 }, { item: Items.FIRM_ARROWHEAD,      amount:  6 }],
-                3: [{ item: Items.GUIDE_TO_,        amount:  2 }, { item: Items.SHARP_ARROWHEAD,     amount:  3 }],
-                4: [{ item: Items.GUIDE_TO_,            amount:  4 }, { item: Items.SHARP_ARROWHEAD,     amount:  4 }],
-                5: [{ item: Items.GUIDE_TO_,           amount:  6 }, { item: Items.SHARP_ARROWHEAD,     amount:  6 }],
-                6: [{ item: Items.GUIDE_TO_,        amount:  9 }, { item: Items.SHARP_ARROWHEAD,     amount:  9 }],
-                7: [{ item: Items.PHILOSOPHIES_OF_,     amount:  4 }, { item: Items.WEATHERED_ARROWHEAD, amount:  4 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
-                8: [{ item: Items.PHILOSOPHIES_OF_,    amount:  6 }, { item: Items.WEATHERED_ARROWHEAD, amount:  6 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
-                9: [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, { item: Items.WEATHERED_ARROWHEAD, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
-                   10: [{ item: Items.PHILOSOPHIES_OF_,     amount: 16 }, { item: Items.WEATHERED_ARROWHEAD, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }]
-            }},
-            elemental_burst: { materials: {
-                2: [{ item: Items.TEACHINGS_OF_,       amount:  3 }, { item: Items.FIRM_ARROWHEAD,      amount:  6 }],
-                3: [{ item: Items.GUIDE_TO_,        amount:  2 }, { item: Items.SHARP_ARROWHEAD,     amount:  3 }],
-                4: [{ item: Items.GUIDE_TO_,            amount:  4 }, { item: Items.SHARP_ARROWHEAD,     amount:  4 }],
-                5: [{ item: Items.GUIDE_TO_,           amount:  6 }, { item: Items.SHARP_ARROWHEAD,     amount:  6 }],
-                6: [{ item: Items.GUIDE_TO_,        amount:  9 }, { item: Items.SHARP_ARROWHEAD,     amount:  9 }],
-                7: [{ item: Items.PHILOSOPHIES_OF_,     amount:  4 }, { item: Items.WEATHERED_ARROWHEAD, amount:  4 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
-                8: [{ item: Items.PHILOSOPHIES_OF_,    amount:  6 }, { item: Items.WEATHERED_ARROWHEAD, amount:  6 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
-                9: [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, { item: Items.WEATHERED_ARROWHEAD, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
-                   10: [{ item: Items.PHILOSOPHIES_OF_,     amount: 16 }, { item: Items.WEATHERED_ARROWHEAD, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }]
+                normal_attack: { materials: {
+                    2: [{ item: Items.TEACHINGS_OF_FREEDOM,       amount:  3 }, { item: Items.DIVINING_SCROLL,        amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  2 }, { item: Items.SEALED_SCROLL,          amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_BALLAD,            amount:  4 }, { item: Items.SEALED_SCROLL,          amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_FREEDOM,           amount:  6 }, { item: Items.SEALED_SCROLL,          amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_RESISTANCE,        amount:  9 }, { item: Items.SEALED_SCROLL,          amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount:  4 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  4 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_FREEDOM,    amount:  6 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  6 }, { item: Items["DVALIN'S_SIGH"], amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_RESISTANCE, amount: 12 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount:  9 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_BALLAD,     amount: 16 }, { item: Items.FORBIDDEN_CURSE_SCROLL, amount: 12 }, { item: Items["DVALIN'S_SIGH"], amount: 2 }]
+                }},
+                elemental_skill: { materials: {
+                    2: [{ item: Items.TEACHINGS_OF_,       amount:  3 }, { item: Items.FIRM_ARROWHEAD,      amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_,        amount:  2 }, { item: Items.SHARP_ARROWHEAD,     amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_,            amount:  4 }, { item: Items.SHARP_ARROWHEAD,     amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_,           amount:  6 }, { item: Items.SHARP_ARROWHEAD,     amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_,        amount:  9 }, { item: Items.SHARP_ARROWHEAD,     amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_,     amount:  4 }, { item: Items.WEATHERED_ARROWHEAD, amount:  4 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_,    amount:  6 }, { item: Items.WEATHERED_ARROWHEAD, amount:  6 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, { item: Items.WEATHERED_ARROWHEAD, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_,     amount: 16 }, { item: Items.WEATHERED_ARROWHEAD, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }]
+                }},
+                elemental_burst: { materials: {
+                    2: [{ item: Items.TEACHINGS_OF_,       amount:  3 }, { item: Items.FIRM_ARROWHEAD,      amount:  6 }],
+                    3: [{ item: Items.GUIDE_TO_,        amount:  2 }, { item: Items.SHARP_ARROWHEAD,     amount:  3 }],
+                    4: [{ item: Items.GUIDE_TO_,            amount:  4 }, { item: Items.SHARP_ARROWHEAD,     amount:  4 }],
+                    5: [{ item: Items.GUIDE_TO_,           amount:  6 }, { item: Items.SHARP_ARROWHEAD,     amount:  6 }],
+                    6: [{ item: Items.GUIDE_TO_,        amount:  9 }, { item: Items.SHARP_ARROWHEAD,     amount:  9 }],
+                    7: [{ item: Items.PHILOSOPHIES_OF_,     amount:  4 }, { item: Items.WEATHERED_ARROWHEAD, amount:  4 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
+                    8: [{ item: Items.PHILOSOPHIES_OF_,    amount:  6 }, { item: Items.WEATHERED_ARROWHEAD, amount:  6 }, { item: Items.TAIL_OF_BOREAS, amount: 1 }],
+                    9: [{ item: Items.PHILOSOPHIES_OF_, amount: 12 }, { item: Items.WEATHERED_ARROWHEAD, amount:  9 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }],
+                    10: [{ item: Items.PHILOSOPHIES_OF_,     amount: 16 }, { item: Items.WEATHERED_ARROWHEAD, amount: 12 }, { item: Items.TAIL_OF_BOREAS, amount: 2 }]
                }}
             }},
             { element: Elements.ELECTRO, talents: {
@@ -94,7 +95,7 @@ class CharacterList {
                 7: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount:  4 }, { item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
                 8: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, { item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
                 9: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE,   amount: 12 }, { item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
-                   10: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount: 16 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }]
+                10: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount: 16 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }]
             }},
             elemental_skill: { materials: {
                 2: [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, { item: Items.OLD_HANDGUARD,      amount:  6 }],
@@ -105,7 +106,7 @@ class CharacterList {
                 7: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount:  4 }, { item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
                 8: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, { item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
                 9: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE,   amount: 12 }, { item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
-                   10: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount: 16 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }]
+                10: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount: 16 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }]
             }},
             elemental_burst: { materials: {
                 2: [{ item: Items.TEACHINGS_OF_TRANSIENCE,    amount:  3 }, { item: Items.OLD_HANDGUARD,      amount:  6 }],
@@ -116,7 +117,7 @@ class CharacterList {
                 7: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount:  4 }, { item: Items.FAMED_HANDGUARD,    amount:  4 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
                 8: [{ item: Items.PHILOSOPHIES_OF_TRANSIENCE, amount:  6 }, { item: Items.FAMED_HANDGUARD,    amount:  6 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 1 }],
                 9: [{ item: Items.PHILOSOPHIES_OF_ELEGANCE,   amount: 12 }, { item: Items.FAMED_HANDGUARD,    amount:  9 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }],
-                   10: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount: 16 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }]
+                10: [{ item: Items.PHILOSOPHIES_OF_LIGHT,      amount: 16 }, { item: Items.FAMED_HANDGUARD,    amount: 12 }, { item: Items["DRAGON_LORD'S_CROWN"], amount: 2 }]
                }}
             }},
             { element: Elements.DENDRO, talents: {
@@ -258,8 +259,10 @@ class CharacterList {
                      9: [],
                 10: []
             }}
-            }}]
+            }}
+        ]
     });
+    
     static AMBER              = new Character({ name: "AMBER",              rarity: 4, /* FINISHED */ 
         level: { materials: {
             "20+": [{ item: Items.AGNIDUS_AGATE_SLIVER,   amount: 1 },                                             { item: Items.SMALL_LAMP_GRASS, amount:  3 }, { item: Items.FIRM_ARROWHEAD,     amount:  3 }],
@@ -4792,7 +4795,7 @@ class CharacterList {
 export const Characters = new Proxy(CharacterList, {
     get(target, prop) {
         if (!(prop in target)) {
-            console.error(`Error: La variable 'Characters.${prop}' no existe.`);
+            // console.error(`Error: La variable 'Characters.${prop}' no existe.`);
             return undefined;
         }
         return target[prop];
