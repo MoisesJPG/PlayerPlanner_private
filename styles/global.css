@@ -14,11 +14,21 @@ html, body {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    background-color: rgb(var(--main-color));
     overflow-x: clip;
     align-items: center;
 }
-
+html:has(body.dark) body {
+    background-color: hsl(225, 25%, 25%);
+}
+html:has(body.dark) * {
+    outline-color: hsl(225, 25%, 12.5%) !important;
+}
+html:has(body.light) body{
+    background-color: hsl(225, 25%, 75%);
+}
+html:has(body.light) * {
+    outline-color: black !important;
+}
 /* #region // === HEADER === // */ 
 *::-webkit-scrollbar {
     height: 0.5vw;
@@ -170,7 +180,7 @@ main {
     gap: 16px;
 }
 main > .content {
-    padding: 16px;
+    padding: 8px;
     display: flex;
     flex-direction: column;
 }

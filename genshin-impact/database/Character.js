@@ -9,17 +9,9 @@ import { Items } from "./ItemList.js";
 import { Lang } from "./Lang.js";
 
 export class Character {
-    /**
-     * @type {Number}
-     */
-    static last_id = -1;
-    /**
-     * @type {CharacterData}
-     */
-    #data = new CharacterData();
-    /**
-     * @param {CharacterConstructor} data
-     */
+    /** @type {Number}                     **/ static last_id = -1;
+    /** @type {CharacterData}              **/ #data = new CharacterData();
+    /** @param {CharacterConstructor} data **/
     constructor(data) {
         this.#data.id = ++Character.last_id;
         this.#data.rarity = data.rarity;
@@ -28,17 +20,16 @@ export class Character {
 
         let baseMats = new CharacterDataElementTalentMaterials();
         for (const dataElement of data.elements) {
-            let element = new CharacterDataElement();
+            const element = new CharacterDataElement();
             element.setElement(dataElement.element);
-            for(const talentName in dataElement.talents){
-                const materials = dataElement.talents[talentName].materials;
-                for(const level in materials){
-                    const mats = materials[level];
-                    for(const mat of mats) {
-                        mat.item = mat.item.getData().basename;
-                    }
-                    element.getTalent(talentName).materials[level] = Inventory.mergeMaterials(baseMats[level],  dataElement.talents[talentName].materials[level]);
+            for(const talentLevel in dataElement.materials) {
+                for(const talentMaterial of dataElement.materials[talentLevel]) {                        
+                    talentMaterial.item = talentMaterial.item.getData().basename;
                 }
+                const materials = Inventory.mergeMaterials(baseMats[talentLevel], dataElement.materials[talentLevel]);
+                element.getTalent("normal_attack"  ).materials[talentLevel] = materials;
+                element.getTalent("elemental_skill").materials[talentLevel] = materials;
+                element.getTalent("elemental_burst").materials[talentLevel] = materials;
             }
             this.#data.getElements().push(element); 
         }
@@ -46,8 +37,8 @@ export class Character {
         this.#data.level.min = data.level_min || 1;
         this.#data.level.max = data.level_max || 1;
 
-        for (const level in data.level_materials) {
-            const materials = data.level_materials[level];
+        for (const level in data.level.materials) {
+            const materials = data.level.materials[level];
             for(const mat of materials) {
                 mat.item = mat.item.getData().basename;
             }

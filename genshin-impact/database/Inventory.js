@@ -10,6 +10,9 @@ export class Inventory {
     static characters_element = document.querySelector("#characters");
     static resumen_element = document.querySelector("#resumen");
 
+    static #characterOrder = new Map();
+
+
     /**
      * @param   {InventoryMat[]} now_mats
      * @param   {InventoryMat[]} new_mats
@@ -46,11 +49,14 @@ export class Inventory {
      * @param {Character} character 
      */
     static updateCharacter(character) {
+        this.#characterOrder.set(this.#characterOrder.size, character.getData().basename);
         return class {
             /**
              * @param {*} data 
              */
             static setData(data) {
+                character.getData().friendship.min = data.f ? data.f[0] : 1;
+                character.getData().friendship.max = data.f ? data.f[1] : 10;
                 character.getData().level.min = data.l[0];
                 character.getData().level.max = data.l[1];
                 for(let i = 0; i < data.e.length; i++) {
@@ -95,8 +101,8 @@ export class Inventory {
     static GenerateCharactersHTML() {
         const rarityNames = [ `COMMON` , `UN-COMMON` , `RARE` , `EPIC` , `LEGENDARY` ];
         let innerHTML = "";
-        for (let characterId = 0; characterId < Object.values(Characters).length; characterId++) {
-            const character = Characters.get(characterId);
+        for(const characterName of Inventory.#characterOrder.values()){
+            const character = Characters.get(characterName);
             let valid = 1;
             if(character.getData().level.max > character.getData().level.min) valid = 0
             for(let i = 0; i < character.getData().getElements().length; i++){
@@ -106,11 +112,11 @@ export class Inventory {
             }
             if(character.getData().level.max == 1 && character.getData().level.min == 1) valid = -1;
             if(valid == 0){
-                const mats = character.getMaterials();
+                const mats = character.getMaterials();                
                 innerHTML += `
                     <p character-id="${character.getData().id}" character-name="${character.getData().basename}">
                         <span class="title ${rarityNames[character.getData().rarity-1]}">${character.getData().basename}</span>
-                        <img class="icon ${rarityNames[character.getData().rarity-1]}" alt="${character.getData().basename}" src="./images/character/${Misc.sanetizeFilename(character.getData().basename)}.png">
+                        <img class="icon ${rarityNames[character.getData().rarity-1]}" alt="${decodeURIComponent(character.getData().basename)}" src="./images/character/${Misc.sanetizeFilename(character.getData().basename)}.png">
                 `;
                 if(mats.length > 0){
                     innerHTML += `<span class="mats">`;
@@ -177,9 +183,9 @@ export class Inventory {
             }
             title = (title+";").replace("\n;","")
             innerHTMLs[item.getData().resumenType] += `
-                <p item-id="${item.getData().id}" item-name="${item.getData().basename}" class="item" ${item.getPrivate().amount.remaining <= 0 ? " style='display: none'": ""} title="${title}">
+                <p item-id="${item.getData().id}" item-name="${item.getData().basename}" class="item" ${item.getPrivate().amount.remaining <= 0 ? " style='display: none'": ""} title="${Misc.sanetizeFilename(title)}">
                     <span class="amount">${remaining}</span>
-                    <img class="image ${rarityNames[item.getData().rarity-1]}" alt="${item.getData().basename}" src="./images/item/${Misc.sanetizeFilename(item.getData().basename)}.WEBP">
+                    <img class="image ${rarityNames[item.getData().rarity-1]}" alt="${Misc.sanetizeFilename(item.getData().basename)}" src="./images/item/${Misc.sanetizeFilename(item.getData().basename)}.WEBP">
                 </p>\n
             `;
         };

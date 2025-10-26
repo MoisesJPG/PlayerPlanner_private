@@ -135,6 +135,14 @@ class ItemList {
     static "SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE"= new Item("SAURIAN-CROWNED_WARRIOR'S_GOLDEN_WHISTLE", 3, ItemTypes.CHARACTER_AND_WEAPON_ENHANCEMENT_MATERIAL, ResumenTypes.COMMON);
     static "WARRIOR'S_METAL_WHISTLE"                 = new Item("WARRIOR'S_METAL_WHISTLE",                  2, ItemTypes.CHARACTER_AND_WEAPON_ENHANCEMENT_MATERIAL, ResumenTypes.COMMON);
     static "SENTRY'S_WOODEN_WHISTLE"                 = new Item("SENTRY'S_WOODEN_WHISTLE",                  1, ItemTypes.CHARACTER_AND_WEAPON_ENHANCEMENT_MATERIAL, ResumenTypes.COMMON);
+    static "FROST-ETCHED_WARRANT"                    = new Item("FROST-ETCHED_WARRANT",                     3, ItemTypes.CHARACTER_AND_WEAPON_ENHANCEMENT_MATERIAL, ResumenTypes.COMMON);
+    static IMMACULATE_WARRANT                        = new Item("IMMACULATE_WARRANT",                       2, ItemTypes.CHARACTER_AND_WEAPON_ENHANCEMENT_MATERIAL, ResumenTypes.COMMON);
+    static TATTERED_WARRANT                          = new Item("TATTERED_WARRANT",                         1, ItemTypes.CHARACTER_AND_WEAPON_ENHANCEMENT_MATERIAL, ResumenTypes.COMMON);
+    
+    // static JUVENILE_FANG                             = new Item("JUVENILE_FANG",                            3, ItemTypes.CHARACTER_AND_WEAPON_ENHANCEMENT_MATERIAL, ResumenTypes.COMMON);
+    // static JUVENILE_FANG                             = new Item("JUVENILE_FANG",                            2, ItemTypes.CHARACTER_AND_WEAPON_ENHANCEMENT_MATERIAL, ResumenTypes.COMMON);
+    // static JUVENILE_FANG                             = new Item("JUVENILE_FANG",                            1, ItemTypes.CHARACTER_AND_WEAPON_ENHANCEMENT_MATERIAL, ResumenTypes.COMMON);
+    
     //#endregion
     //#region "WEEKLY BOSS"
     static "DVALIN'S_PLUME"                   = new Item("DVALIN'S_PLUME",                      5, ItemTypes["CHARACTER_LEVEL-UP_MATERIAL"], ResumenTypes.WEEKLY_BOSS);
@@ -451,8 +459,8 @@ export const Items = new Proxy(ItemList, {
     get(target, prop) {
         if (!(prop in target)) {
             MISSING_ITEMS[prop] = (MISSING_ITEMS[prop] || 0) + 1
-            // console.error(`Error: La variable 'Items.${prop}' no existe.`);
-            return Items.UNKNOWN;
+            console.error(`Error: La variable 'Items.${prop}' no existe.`);
+            ItemList[prop] = new Item(prop,                               1, ItemTypes.UNKNOWN   , ResumenTypes.UNKNOWN);
         }
         return target[prop];
     }

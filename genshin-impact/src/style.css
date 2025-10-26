@@ -19,23 +19,25 @@
 }
 #characters .body { 
     display: grid;
-    flex-direction: row;
-    flex-wrap: wrap;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
+@media screen and (max-width: calc(512px * 2.0) ) { #characters .body { grid-template-columns: repeat(3, 1fr); } }
+@media screen and (max-width: calc(512px * 1.5) ) { #characters .body { grid-template-columns: repeat(2, 1fr); } }
+@media screen and (max-width: calc(512px * 1.0) ) { #characters .body { grid-template-columns: repeat(1, 1fr); } }
+
 #characters .body p {
     display: flex;
     flex-direction: row;
     width: calc(100% - 2px * 2);
-    gap: 16px;
     align-content: flex-start;
-    border-radius: 8px;
-    border: 2px solid black;
+    border-radius: 8px 8px 16px 16px;
     color: rgb(000, 000, 000);
-    background-color: rgba(128, 128, 128, 0.0625);
+    background-color: rgba(255, 255, 255, 0.0625);
     overflow: hidden;
     flex-wrap: wrap;
+    outline: 2px solid black;
+    margin: 2px;
 }
 #characters .body p .title {
     display: block;
@@ -43,30 +45,32 @@
     height: 16px;
     flex: 0 0 auto;
     overflow: hidden;
-    text-align: center;
-    /* background-color: black; */
     color: white;
     border-radius: 6px 6px 0 0;
-    width: calc(100% - 16px * 2);
-    padding: 8px 16px;
+    width: calc(100% - 8px * 2);
+    padding: 8px 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 #characters .body p .icon {
     width: 128px;
     height: 128px;
     z-index: 1;
-    margin-left: 16px;
+    margin-top: 8px;
     border: 1px solid black;
     border-radius: 8px;
     position: relative;
+    margin: 8px;
 }
 #characters .body p .mats {
     width: 100%;
     position: relative;
     display: grid;
-    margin: 0 16px 16px 16px;
     grid-template-columns: repeat(5, 1fr);
     gap: 8px;
     justify-content: center;
+    margin: 0px 8px 8px 8px;
 }
 
 #resumen .body { 
@@ -90,7 +94,7 @@
 }
 
 .item {
-    width: 100%;
+    width: calc(100% - 1px * 2);
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -116,8 +120,8 @@
 }
 
 
-.COMMON    { background: linear-gradient(135deg, rgba(128, 128, 128, 1) 25%, rgba(064, 064, 064, 1) 75%);}
-.UN-COMMON { background: linear-gradient(135deg, rgba(000, 128, 000, 1) 25%, rgba(000, 064, 000, 1) 75%);}
-.RARE      { background: linear-gradient(135deg, rgba(000, 128, 192, 1) 25%, rgba(000, 064, 096, 1) 75%);}
-.EPIC      { background: linear-gradient(135deg, rgba(128, 000, 192, 1) 25%, rgba(064, 000, 096, 1) 75%);}
-.LEGENDARY { background: linear-gradient(135deg, rgba(192, 128, 000, 1) 25%, rgba(096, 064, 000, 1) 75%);}
+.COMMON    { background: linear-gradient(135deg, rgba(128, 128, 128, 1) 000%, rgba(064, 064, 064, 1) 100%); color: white !important;}
+.UN-COMMON { background: linear-gradient(135deg, rgba(000, 128, 000, 1) 000%, rgba(000, 064, 000, 1) 100%); color: white !important;}
+.RARE      { background: linear-gradient(135deg, rgba(000, 128, 192, 1) 000%, rgba(000, 064, 096, 1) 100%); color: white !important;}
+.EPIC      { background: linear-gradient(135deg, rgba(128, 000, 192, 1) 000%, rgba(064, 000, 096, 1) 100%); color: white !important;}
+.LEGENDARY { background: linear-gradient(135deg, rgba(192, 160, 000, 1) 000%, rgba(096, 080, 000, 1) 100%); color: black !important;}
