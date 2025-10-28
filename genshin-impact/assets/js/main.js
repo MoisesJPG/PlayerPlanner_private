@@ -3,142 +3,134 @@ import { MISSING_ITEMS } from "./collection/ItemList.js";
 import { Inventory } from "./entity/InventoryEntity.js";
 
 //#region "Obtained Characters"
-const debug = true;
+const debug = false;
 if (debug){
     for(const characterName of Object.keys(Character).reverse()){
         const character = Character.get(characterName);
         const elements = [];
         for(const element of character.getData().getElements()){
-            elements.push({c:[0,6],n:[ 1,10],s:[ 1,10],b:[ 1,10]});
+            elements.push([[0,6],[ 1,10],[ 1,10],[ 1,10]]);
         }
-        Inventory.updateCharacter(character).setData({l:[1,90],e:elements});
+        Inventory.updateCharacter(character).setData([1,90], [1,10], elements);
     }
 } else {
-    Inventory.updateCharacter(Character.TRAVELER          ).setData({l:[90,90],e:[{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]},{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]},{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]},{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 7, 9]},{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]},{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 9, 9]},{c:[0,0],n:[ 1, 1],s:[ 1, 1],b:[ 1, 1]}]});
-    Inventory.updateCharacter(Character.ZHONGLI           ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.WANDERER          ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.KAEDEHARA_KAZUHA  ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.GANYU             ).setData({l:[90,90],e:[{c:[0,6],n:[10,10],s:[ 9, 9],b:[ 9, 9]}]});
+    Inventory.updateCharacter(Character.TRAVELER          ).setData([90,90],[ 1,10],[[[6,6],[ 6, 9],[ 6, 9],[ 6, 9]]
+                                                                                    ,[[6,6],[ 6, 9],[ 6, 9],[ 6, 9]]
+                                                                                    ,[[6,6],[ 6, 9],[ 6, 9],[ 6, 9]]
+                                                                                    ,[[6,6],[ 6, 9],[ 6, 9],[ 7, 9]]
+                                                                                    ,[[6,6],[ 6, 9],[ 6, 9],[ 6, 9]]
+                                                                                    ,[[6,6],[ 6, 9],[ 6, 9],[ 9, 9]]
+                                                                                    ,[[0,0],[ 1, 1],[ 1, 1],[ 1, 1]]]);
+    Inventory.updateCharacter(Character.ZHONGLI           ).setData([90,90],[10,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.WANDERER          ).setData([90,90],[10,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.KAEDEHARA_KAZUHA  ).setData([90,90],[10,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.GANYU             ).setData([90,90],[10,10],[[[0,6],[10,10],[ 9, 9],[ 9, 9]]]);
 
-    Inventory.updateCharacter(Character.QIQI              ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.VARESA            ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.YAE_MIKO          ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.RAIDEN_SHOGUN     ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.KEQING            ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-
-    Inventory.updateCharacter(Character.ALHAITHAM         ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.NAHIDA            ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.TIGHNARI          ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.FURINA            ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.NEUVILLETTE       ).setData({l:[90,90],e:[{c:[0,6],n:[10,10],s:[ 9, 9],b:[ 9, 9]}]});
-
-    Inventory.updateCharacter(Character.NILOU             ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.KAMISATO_AYATO    ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.YELAN             ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.MONA              ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.MAVUIKA           ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-
-    Inventory.updateCharacter(Character.DEHYA             ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.YOIMIYA           ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.HU_TAO            ).setData({l:[90,90],e:[{c:[0,6],n:[10,10],s:[10,10],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.LYNETTE           ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.DIONA             ).setData({l:[90,90],e:[{c:[6,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-
-    Inventory.updateCharacter(Character.KUKI_SHINOBU      ).setData({l:[90,90],f:[10,10],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.RAZOR             ).setData({l:[90,90],f:[10,10],e:[{c:[0,6],n:[10,10],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.XINGQIU           ).setData({l:[90,90],f:[10,10],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.BENNETT           ).setData({l:[90,90],f:[10,10],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.XIANGLING         ).setData({l:[90,90],f:[10,10],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-
-    Inventory.updateCharacter(Character.BEIDOU            ).setData({l:[81,90],f:[ 6,10],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
-    Inventory.updateCharacter(Character.AINO              ).setData({l:[70,90],f:[ 1,10],e:[{c:[0,6],n:[ 2, 9],s:[ 2, 9],b:[ 5, 9]}]});
-    Inventory.updateCharacter(Character.MANEKIN           ).setData({l:[20,90],e:[{c:[0,0],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-    Inventory.updateCharacter(Character.XILONEN           ).setData({l:[90,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.JEAN              ).setData({l:[90,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 7, 9]}]});
-
-    Inventory.updateCharacter(Character.SKIRK             ).setData({l:[70,90],e:[{c:[0,6],n:[ 2, 9],s:[ 4, 9],b:[ 3, 9]}]});
-    Inventory.updateCharacter(Character.CITLALI           ).setData({l:[90,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.ALOY              ).setData({l:[90,90],e:[{c:[0,0],n:[ 6, 9],s:[ 7, 9],b:[ 8, 9]}]});
-    Inventory.updateCharacter(Character.LAUMA             ).setData({l:[90,90],e:[{c:[0,0],n:[ 6, 9],s:[ 7, 9],b:[ 8, 9]}]});
-    Inventory.updateCharacter(Character.BAIZHU            ).setData({l:[90,90],e:[{c:[0,6],n:[ 6, 9],s:[ 7, 9],b:[ 6, 9]}]});
-
-    Inventory.updateCharacter(Character.LISA              ).setData({l:[90,90],e:[{c:[0,6],n:[ 3, 9],s:[ 5, 9],b:[ 5, 9]}]});
-    Inventory.updateCharacter(Character.GAMING            ).setData({l:[90,90],e:[{c:[0,6],n:[ 7, 9],s:[ 9, 9],b:[ 8, 9]}]});
-    Inventory.updateCharacter(Character.AMBER             ).setData({l:[86,90],e:[{c:[3,6],n:[ 7, 9],s:[ 6, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.YANFEI            ).setData({l:[83,90],e:[{c:[0,6],n:[ 7, 9],s:[ 6, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.KACHINA           ).setData({l:[82,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
-
-    Inventory.updateCharacter(Character.YUN_JIN           ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 8, 9]}]});
-    Inventory.updateCharacter(Character.GOROU             ).setData({l:[81,90],e:[{c:[0,6],n:[ 7, 9],s:[ 8, 9],b:[ 8, 9]}]});
-    Inventory.updateCharacter(Character.NOELLE            ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 8, 9],b:[ 7, 9]}]});
-    Inventory.updateCharacter(Character.NINGGUANG         ).setData({l:[81,90],e:[{c:[0,6],n:[ 7, 9],s:[ 6, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.LAN_YAN           ).setData({l:[80,90],e:[{c:[0,6],n:[ 4, 9],s:[ 4, 9],b:[ 4, 9]}]});
-
-    Inventory.updateCharacter(Character.FARUZAN           ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 7, 9]}]});
-    Inventory.updateCharacter(Character.SHIKANOIN_HEIZOU  ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 8, 9],b:[ 8, 9]}]});
-    Inventory.updateCharacter(Character.SAYU              ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 7, 9]}]});
-    Inventory.updateCharacter(Character.SUCROSE           ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 8, 9]}]});
-    Inventory.updateCharacter(Character.CHARLOTTE         ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
-
-    Inventory.updateCharacter(Character.FREMINET          ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.MIKA              ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 7, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.LAYLA             ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.ROSARIA           ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 8, 9]}]});
-    Inventory.updateCharacter(Character.CHONGYUN          ).setData({l:[81,90],e:[{c:[0,6],n:[ 3, 9],s:[ 4, 9],b:[ 6, 9]}]});
-
-    Inventory.updateCharacter(Character.KAEYA             ).setData({l:[81,90],e:[{c:[0,6],n:[ 4, 9],s:[ 5, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.IANSAN            ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.ORORON            ).setData({l:[81,90],e:[{c:[0,6],n:[ 4, 9],s:[ 5, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.DORI              ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 7, 9]}]});
-    Inventory.updateCharacter(Character.KUJOU_SARA        ).setData({l:[81,90],e:[{c:[0,6],n:[ 7, 9],s:[ 8, 9],b:[ 8, 9]}]});
-
-    Inventory.updateCharacter(Character.FISCHL            ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 8, 9],b:[ 8, 9]}]});
-    Inventory.updateCharacter(Character.KAVEH             ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.YAO_YAO           ).setData({l:[81,90],e:[{c:[0,6],n:[ 4, 9],s:[ 5, 9],b:[ 4, 9]}]});
-    Inventory.updateCharacter(Character.COLLEI            ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.KIRARA            ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 8, 9],b:[ 7, 9]}]});
-
-    Inventory.updateCharacter(Character.CANDACE           ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 8, 9]}]});
-    Inventory.updateCharacter(Character.BARBARA           ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
-    Inventory.updateCharacter(Character.CHEVREUSE         ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 8, 9],b:[ 7, 9]}]});
-    Inventory.updateCharacter(Character.THOMA             ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 8, 9],b:[ 8, 9]}]});
-    Inventory.updateCharacter(Character.XINYAN            ).setData({l:[81,90],e:[{c:[0,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
-
-    Inventory.updateCharacter(Character.MANEKINA          ).setData({l:[20,90],e:[{c:[0,0],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]}]});
+    Inventory.updateCharacter(Character.QIQI              ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.VARESA            ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.YAE_MIKO          ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.RAIDEN_SHOGUN     ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.KEQING            ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.ALHAITHAM         ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.NAHIDA            ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.TIGHNARI          ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.FURINA            ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.NEUVILLETTE       ).setData([90,90],[ 1,10],[[[0,6],[10,10],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.NILOU             ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.KAMISATO_AYATO    ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.YELAN             ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.MONA              ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.MAVUIKA           ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.DEHYA             ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.YOIMIYA           ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.HU_TAO            ).setData([90,90],[ 1,10],[[[0,6],[10,10],[10,10],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.LYNETTE           ).setData([90,90],[ 1,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.DIONA             ).setData([90,90],[ 1,10],[[[6,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.KUKI_SHINOBU      ).setData([90,90],[10,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.RAZOR             ).setData([90,90],[10,10],[[[0,6],[10,10],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.XINGQIU           ).setData([90,90],[10,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.BENNETT           ).setData([90,90],[10,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.XIANGLING         ).setData([90,90],[10,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.BEIDOU            ).setData([81,90],[ 6,10],[[[0,6],[ 9, 9],[ 9, 9],[ 9, 9]]]);
+    Inventory.updateCharacter(Character.AINO              ).setData([70,90],[ 1,10],[[[0,6],[ 2, 9],[ 2, 9],[ 5, 9]]]);
+    Inventory.updateCharacter(Character.MANEKIN           ).setData([20,90],[ 1,10],[[[0,0],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+    Inventory.updateCharacter(Character.XILONEN           ).setData([90,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.JEAN              ).setData([90,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 7, 9]]]);
+    Inventory.updateCharacter(Character.SKIRK             ).setData([90,90],[ 1,10],[[[0,6],[ 2, 9],[ 4, 9],[ 3, 9]]]);
+    Inventory.updateCharacter(Character.CITLALI           ).setData([90,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.ALOY              ).setData([90,90],[ 1,10],[[[0,0],[ 6, 9],[ 7, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.LAUMA             ).setData([90,90],[ 1,10],[[[0,0],[ 6, 9],[ 7, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.BAIZHU            ).setData([90,90],[ 1,10],[[[0,6],[ 6, 9],[ 7, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.LISA              ).setData([90,90],[ 1,10],[[[0,6],[ 4, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.GAMING            ).setData([90,90],[ 1,10],[[[0,6],[ 7, 9],[ 9, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.AMBER             ).setData([86,90],[ 1,10],[[[3,6],[ 7, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.YANFEI            ).setData([83,90],[ 1,10],[[[0,6],[ 7, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.KACHINA           ).setData([82,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.YUN_JIN           ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.GOROU             ).setData([81,90],[ 1,10],[[[0,6],[ 7, 9],[ 8, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.NOELLE            ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 8, 9],[ 7, 9]]]);
+    Inventory.updateCharacter(Character.NINGGUANG         ).setData([81,90],[ 1,10],[[[0,6],[ 7, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.LAN_YAN           ).setData([81,90],[ 1,10],[[[0,6],[ 4, 9],[ 4, 9],[ 4, 9]]]);
+    Inventory.updateCharacter(Character.FARUZAN           ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 7, 9]]]);
+    Inventory.updateCharacter(Character.SHIKANOIN_HEIZOU  ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 8, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.SAYU              ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 7, 9]]]);
+    Inventory.updateCharacter(Character.SUCROSE           ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.CHARLOTTE         ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.FREMINET          ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.MIKA              ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 7, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.LAYLA             ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.ROSARIA           ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.CHONGYUN          ).setData([81,90],[ 1,10],[[[0,6],[ 3, 9],[ 4, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.KAEYA             ).setData([81,90],[ 1,10],[[[0,6],[ 4, 9],[ 5, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.IANSAN            ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.ORORON            ).setData([81,90],[ 1,10],[[[0,6],[ 4, 9],[ 5, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.DORI              ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 7, 9]]]);
+    Inventory.updateCharacter(Character.KUJOU_SARA        ).setData([81,90],[ 1,10],[[[0,6],[ 7, 9],[ 8, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.FISCHL            ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 8, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.KAVEH             ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.YAO_YAO           ).setData([81,90],[ 1,10],[[[0,6],[ 4, 9],[ 5, 9],[ 4, 9]]]);
+    Inventory.updateCharacter(Character.COLLEI            ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.KIRARA            ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 8, 9],[ 7, 9]]]);
+    Inventory.updateCharacter(Character.CANDACE           ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.BARBARA           ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.CHEVREUSE         ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 8, 9],[ 7, 9]]]);
+    Inventory.updateCharacter(Character.THOMA             ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 8, 9],[ 8, 9]]]);
+    Inventory.updateCharacter(Character.XINYAN            ).setData([81,90],[ 1,10],[[[0,6],[ 6, 9],[ 6, 9],[ 6, 9]]]);
+    Inventory.updateCharacter(Character.MANEKINA          ).setData([20,90],[ 1,10],[[[0,0],[ 6, 9],[ 6, 9],[ 6, 9]]]);
 
 }
 //#endregion "Obtained Characters"
 
 // Unobtained Characters
-// Inventory.updateCharacter(Character.KLEE              ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.SETHOS            ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.ALBEDO            ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.VENTI             ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.XIAO              ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.TARTAGLIA         ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.EULA              ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.CYNO              ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.KAMISATO_AYAKA    ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.DILUC             ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.SHENHE            ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.ARATAKI_ITTO      ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.SANGONOMIYA_KOKOMI).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.LYNEY             ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.WRIOTHESLEY       ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.NAVIA             ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.XIANYUN           ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.CHIORI            ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.ARLECCHINO        ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.CLORINDE          ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.SIGEWINNE         ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.EMILIE            ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.MUALANI           ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.KINICH            ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.CHASCA            ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.YUMEMIZUKI_MIZUKI ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.IFA               ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.DAHLIA            ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
-// Inventory.updateCharacter(Character.ESCOFFIER         ).setData({l:[1,90],e:[{c:[0,6],n:[ 1, 9],s:[ 1, 9],b:[ 1, 9]}]});
+// Inventory.updateCharacter(Character.KLEE              ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.SETHOS            ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.ALBEDO            ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.VENTI             ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.XIAO              ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.TARTAGLIA         ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.EULA              ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.CYNO              ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.KAMISATO_AYAKA    ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.DILUC             ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.SHENHE            ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.ARATAKI_ITTO      ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.SANGONOMIYA_KOKOMI).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.LYNEY             ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.WRIOTHESLEY       ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.NAVIA             ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.XIANYUN           ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.CHIORI            ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.ARLECCHINO        ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.CLORINDE          ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.SIGEWINNE         ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.EMILIE            ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.MUALANI           ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.KINICH            ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.CHASCA            ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.YUMEMIZUKI_MIZUKI ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.IFA               ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.DAHLIA            ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
+// Inventory.updateCharacter(Character.ESCOFFIER         ).setData([1,90],[ 1,10],[[[0,6],[ 1, 9],[ 1, 9],[ 1, 9]]]);
 //
 
 /* Materials

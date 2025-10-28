@@ -7,7 +7,7 @@ import { ItemEntity } from "./ItemEntity.js";
 
 export class Inventory {
 
-    static characters_element = document.querySelector("#characters");
+    static charactersElement = document.querySelector("#characters");
     static resumenElement = document.querySelector("#resumen");
 
     static #characterOrder = new Map();
@@ -51,23 +51,20 @@ export class Inventory {
     static updateCharacter(character) {
         this.#characterOrder.set(this.#characterOrder.size, character.getData().basename);
         return class {
-            /**
-             * @param {*} data 
-             */
-            static setData(data) {
-                character.getData().friendship.min = data.f ? data.f[0] : 1;
-                character.getData().friendship.max = data.f ? data.f[1] : 10;
-                character.getData().level.min = data.l[0];
-                character.getData().level.max = data.l[1];
-                for(let i = 0; i < data.e.length; i++) {
-                    character.getData().getElement(i).constellation.min = data.e[i].c[0];
-                    character.getData().getElement(i).constellation.max = data.e[i].c[1];
-                    character.getData().getElement(i).getTalent('normal_attack').min = data.e[i].n[0];
-                    character.getData().getElement(i).getTalent('normal_attack').max = data.e[i].n[1];
-                    character.getData().getElement(i).getTalent('elemental_skill').min = data.e[i].s[0];
-                    character.getData().getElement(i).getTalent('elemental_skill').max = data.e[i].s[1];
-                    character.getData().getElement(i).getTalent('elemental_burst').min = data.e[i].b[0];
-                    character.getData().getElement(i).getTalent('elemental_burst').max = data.e[i].b[1];
+            static setData(level, friendship, elements) {
+                character.getData().level.min                                          = level[0];
+                character.getData().level.max                                          = level[1];
+                character.getData().friendship.min                                     = friendship[0];
+                character.getData().friendship.max                                     = friendship[1];
+                for(let i = 0; i < elements.length; i++) {
+                    character.getData().getElement(i).constellation.min                = elements[i][0][0];
+                    character.getData().getElement(i).constellation.max                = elements[i][0][1];
+                    character.getData().getElement(i).getTalent('normal_attack').min   = elements[i][1][0];
+                    character.getData().getElement(i).getTalent('normal_attack').max   = elements[i][1][1];
+                    character.getData().getElement(i).getTalent('elemental_skill').min = elements[i][2][0];
+                    character.getData().getElement(i).getTalent('elemental_skill').max = elements[i][2][1];
+                    character.getData().getElement(i).getTalent('elemental_burst').min = elements[i][3][0];
+                    character.getData().getElement(i).getTalent('elemental_burst').max = elements[i][3][1];
                 }
                 for (const itemData of character.getMaterials()){
                     const item = Item.get(itemData.item);
@@ -144,7 +141,7 @@ export class Inventory {
                 `;
             }
         };
-        this.characters_element.querySelector(".body").innerHTML = innerHTML;
+        this.charactersElement.querySelector(".body").innerHTML = innerHTML;
     }
     static GenerateResumenHTML() {
         this.resumenElement.querySelector(".body").innerHTML += '<details name="UNKNOWN" open><summary>UNKNOWN</summary><div class="content"></div></details>';
@@ -183,7 +180,7 @@ export class Inventory {
             }
             title = (title+";").replace("\n;","")
             innerHTMLs[item.getData().resumenType] += `
-                <p item-id="${item.getData().id}" item-name="${item.getData().basename}" class="item" ${item.getPrivate().amount.remaining < 0 ? " style='display: none'": ""} title="${Misc.sanetizeFilename(title)}">
+                <p item-id="${item.getData().id}" item-name="${item.getData().basename}" class="item" ${item.getPrivate().amount.remaining <= 0 ? " style='display: none'": ""} title="${Misc.sanetizeFilename(title)}">
                     <span class="amount">${remaining}</span>
                     <img class="image ${rarityNames[item.getData().rarity-1]}" alt="${Misc.sanetizeFilename(item.getData().basename)}" src="./assets/images/item/${Misc.sanetizeFilename(item.getData().basename)}.WEBP">
                 </p>\n

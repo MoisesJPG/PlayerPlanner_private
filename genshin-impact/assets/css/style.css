@@ -20,22 +20,21 @@
 }
 #characters .body { 
     display: grid;
+    flex-direction: row;    
+    flex-wrap: wrap;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
 
-@media screen and (max-width: calc(512px * 2.0) ) { #characters .body { grid-template-columns: repeat(3, 1fr); } }
-@media screen and (max-width: calc(512px * 1.5) ) { #characters .body { grid-template-columns: repeat(2, 1fr); } }
-@media screen and (max-width: calc(512px * 1.0) ) { #characters .body { grid-template-columns: repeat(1, 1fr); } }
 
 #characters .body p {
+    width: calc(100% - 2px * 2);
     display: flex;
     flex-direction: row;
-    width: calc(100% - 2px * 2);
     align-content: flex-start;
     border-radius: 8px 8px 16px 16px;
-    color: rgb(000, 000, 000);
     background-color: rgba(255, 255, 255, 0.0625);
+    color: rgb(000, 000, 000);
     overflow: hidden;
     flex-wrap: wrap;
     outline: 2px solid black;
@@ -49,15 +48,15 @@
     overflow: hidden;
     color: white;
     border-radius: 6px 6px 0 0;
-    width: calc(100% - 8px * 2);
-    padding: 8px 8px;
+    width: calc(100% - 16px * 2);
+    padding: 8px 16px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 #characters .body p .icon {
-    width: 128px;
-    height: 128px;
+    width: 30%;
+    aspect-ratio: 1;
     margin-top: 8px;
     border: 1px solid black;
     border-radius: 8px;
@@ -65,13 +64,14 @@
 }
 #characters .body p .mats {
     width: 100%;
-    /* position: relative; */
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
     margin: 0px 8px 8px 8px;
 }
+
 
 #resumen .body { 
     display: flex;
@@ -87,18 +87,24 @@
 #resumen .body details .content {
     padding: 16px 0;
     display: grid;
+    grid-template-columns: repeat(21, 1fr);
     flex-direction: row;
     flex-wrap: wrap;
-    grid-template-columns: repeat(18, 1fr);
     gap: 16px;
 }
+@media screen and (max-width: calc(128px * 9.00) ) { #characters .body { grid-template-columns: repeat(3, 1fr); } #characters .body p .mats{ grid-template-columns: repeat(6, 1fr);} #resumen .body details .content { grid-template-columns: repeat(21, 1fr);} }
+@media screen and (max-width: calc(128px * 8.00) ) { #characters .body { grid-template-columns: repeat(3, 1fr); } #characters .body p .mats{ grid-template-columns: repeat(6, 1fr);} #resumen .body details .content { grid-template-columns: repeat(11, 1fr);} }
+@media screen and (max-width: calc(128px * 7.00) ) { #characters .body { grid-template-columns: repeat(3, 1fr); } #characters .body p .mats{ grid-template-columns: repeat(5, 1fr);} #resumen .body details .content { grid-template-columns: repeat(10, 1fr);} }
+@media screen and (max-width: calc(128px * 6.00) ) { #characters .body { grid-template-columns: repeat(2, 1fr); } #characters .body p .mats{ grid-template-columns: repeat(6, 1fr);} #resumen .body details .content { grid-template-columns: repeat(9, 1fr);} }
+@media screen and (max-width: calc(128px * 5.00) ) { #characters .body { grid-template-columns: repeat(2, 1fr); } #characters .body p .mats{ grid-template-columns: repeat(6, 1fr);} #resumen .body details .content { grid-template-columns: repeat(8, 1fr);} }
+@media screen and (max-width: calc(128px * 4.00) ) { #characters .body { grid-template-columns: repeat(1, 1fr); } #characters .body p .mats{ grid-template-columns: repeat(6, 1fr);} #resumen .body details .content { grid-template-columns: repeat(7, 1fr);} }
+@media screen and (max-width: calc(128px * 3.00) ) { #characters .body { grid-template-columns: repeat(1, 1fr); } #characters .body p .mats{ grid-template-columns: repeat(6, 1fr);} #resumen .body details .content { grid-template-columns: repeat(6, 1fr);} }
+
 
 .item {
-    width: calc(100% - 1px * 2);
+    width: 100%;
     display: flex;
     flex-direction: column;
-    /* z-index: 1; */
-    /* position: relative; */
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid black;
@@ -108,10 +114,10 @@
     display: block;
     background-color: black;
     color: white;
-    height: 16px;
-    font-size: 16px;
-    padding: 4px;
+    height:      16px;
+    font-size:   16px;
     line-height: 16px;
+    padding: 4px;
     text-align: center;
 }
 .item .image {
