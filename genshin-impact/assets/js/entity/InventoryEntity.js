@@ -1,4 +1,4 @@
-import { Character } from "../collection/CharacterList.js";
+import Character from "../collection/CharacterList.js";
 import { Item } from "../collection/ItemList.js";
 import { Misc } from "../tools/Misc.js";
 import { CharacterEntity } from "./CharacterEntity.js";

@@ -1,4 +1,4 @@
-import { Character } from "./collection/CharacterList.js";
+import Character from "./collection/CharacterList.js";
 import { MISSING_ITEMS } from "./collection/ItemList.js";
 import { Inventory } from "./entity/InventoryEntity.js";
 
@@ -14,6 +14,7 @@ if (debug){
         Inventory.updateCharacter(character).setData({l:[1,90],e:elements});
     }
 } else {
+    
     Inventory.updateCharacter(Character.TRAVELER          ).setData({l:[90,90],e:[{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]},{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]},{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]},{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 7, 9]},{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 6, 9]},{c:[6,6],n:[ 6, 9],s:[ 6, 9],b:[ 9, 9]},{c:[0,0],n:[ 1, 1],s:[ 1, 1],b:[ 1, 1]}]});
     Inventory.updateCharacter(Character.ZHONGLI           ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});
     Inventory.updateCharacter(Character.WANDERER          ).setData({l:[90,90],e:[{c:[0,6],n:[ 9, 9],s:[ 9, 9],b:[ 9, 9]}]});

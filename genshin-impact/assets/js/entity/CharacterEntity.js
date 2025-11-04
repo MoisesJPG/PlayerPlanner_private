@@ -34,8 +34,8 @@ export class CharacterEntity {
         this.#data.level.min = data.level_min || 1;
         this.#data.level.max = data.level_max || 1;
 
-        for (const level in data.level.materials) {
-            const materials = data.level.materials[level];
+        for (const level in data.levelMaterials) {
+            const materials = data.levelMaterials[level];
             for(const mat of materials) {
                 mat.item = mat.item.getData().basename;
             }
@@ -73,7 +73,7 @@ export class CharacterEntity {
         let min_level_key = CharacterLevelMap.getKey(this.#data.level.min)
         let max_level_key = CharacterLevelMap.getKey(this.#data.level.max)
         for (let cur_level_key = min_level_key + 1; cur_level_key <= max_level_key; cur_level_key++) {
-            const cur_level_value = CharacterLevelMap.getValue(cur_level_key);
+            const cur_level_value = CharacterLevelMap.getValue(cur_level_key);            
             for(const mat of this.#data.level.materials[cur_level_value]){
                 if(mat.item === "EXP"){
                     if(cur_level_key >=  0 && cur_level_key <= 19) mats_exp[0].push(mat);
