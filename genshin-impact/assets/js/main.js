@@ -13,7 +13,7 @@ if (debug){
         }
         Inventory.updateCharacter(character).setData([1,90], [1,10], elements);
     }
-} else {
+} else if(1 == 2){
     Inventory.updateCharacter(Character.TRAVELER          ).setData([90,90],[ 1,10],[[[6,6],[ 6, 9],[ 6, 9],[ 6, 9]]
                                                                                     ,[[6,6],[ 6, 9],[ 6, 9],[ 6, 9]]
                                                                                     ,[[6,6],[ 6, 9],[ 6, 9],[ 6, 9]]

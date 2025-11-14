@@ -235,6 +235,32 @@ main ul li {
     height: 16px;
     border-radius: 2px;
 }
+
+
+
+#floatingNav {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    display: flex;
+    padding: 16px;
+    background-color: rgb(64, 64, 128);
+    flex-direction: column-reverse;
+    gap: 16px;
+}
+#floatingNav button {
+    width:  48px;
+    height: 48px;
+    border-radius: 8px;
+}
+#floatingNav div {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+}
+#floatingNav button:active ~ div {
+    display: flex;
+}
 @media screen and (max-width: calc(128px * 15)) { main ul li { width: calc((100% - 16px * 4) / 5); } }
 @media screen and (max-width: calc(128px * 14)) { main ul li { width: calc((100% - 16px * 4) / 5); } }
 @media screen and (max-width: calc(128px * 13)) { main ul li { width: calc((100% - 16px * 4) / 5); } }
